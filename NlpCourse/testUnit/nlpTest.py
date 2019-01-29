@@ -7,8 +7,9 @@ Created on 2019年1月28日
 from NlpTookit.NlpTookit import NlpTookit
 
 
-line="自。然.语？言！处理?"
+line="自。然.语？言！处理?3.1415926。"
 
 tookit = NlpTookit()
 sentences = tookit.toSentenceList(line)
+print(line)
 print(sentences)
