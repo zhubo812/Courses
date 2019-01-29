@@ -1,9 +1,11 @@
 eclipse.preferences.version=1
 encoding//BasicSyntax/DictionaryProcess.py=utf-8
 encoding//BasicSyntax/ListProcess.py=utf-8
+encoding//BasicSyntax/StringPrc.py=utf-8
 encoding//FileProcess/FileUtil.py=utf-8
 encoding//NlpTookit/NlpTookit.py=utf-8
 encoding//Segment/FMM.py=utf-8
+encoding//Segment/JiebaDemo.py=utf-8
 encoding//Segment/test.py=utf-8
 encoding//testUnit/FileUtilTest.py=utf-8
 encoding//testUnit/nlpTest.py=utf-8

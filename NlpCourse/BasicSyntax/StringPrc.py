@@ -12,7 +12,7 @@ var2 = "Runoob"
 #2访问字符串中的值
 print("===========2访问字符串中的值============")
 print ("var1[0]: ", var1[0])
-print ("var2[1:5]: ", var2[1:5])
+print ("var2[1:5]: ", var2[1:2])
 
 #3 字符串拼接
 print("===========3 字符串连接============")
@@ -86,4 +86,15 @@ str3= "  "+ var1+"   "
 print(str3)
 str3= str3.strip()
 print(str3)
+
+print("===========8.1 用for 循环字符串中的每个字符.===========")
+for c in var1:
+    print(c)
+
+
+print("===========8.2 用range 循环字符串中的每个字符.===========")
+for i in range(0,len(var1)):
+    print(("第%d个字符是%s")%(i,var1[i]))
+
+
 
