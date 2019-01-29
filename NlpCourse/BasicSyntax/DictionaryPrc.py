@@ -20,13 +20,13 @@ print(dct)
 #3. query some key's value in a dictionary
 key = "星期四"
 value =dct[key]
-print("key's value = %s"%(value))
+print("%s的 value = %s"%(key,value))
 
 #4. modify some element of a dictionay
 key = "星期四"
 dct[key] = 4
 value =dct[key]
-print("key's value = %s"%(value))
+print("%s的value = %s"%(key,value))
 
 #5. append some elements into dictionay
 list=["星期五","星期六","星期日"]
