@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//BasicSyntax/DictionaryPrc.py=utf-8
 encoding//BasicSyntax/DictionaryProcess.py=utf-8
 encoding//BasicSyntax/ListProcess.py=utf-8
+encoding//BasicSyntax/PathPrc.py=utf-8
 encoding//BasicSyntax/StringPrc.py=utf-8
 encoding//FileProcess/FileUtil.py=utf-8
 encoding//NlpTookit/NlpTookit.py=utf-8

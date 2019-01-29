@@ -9,9 +9,11 @@ import os
 
 fu = FileUtil()
 
-fu.getFiles("data")
+#fu.getFiles("data")
+path = os.path.abspath('..')
 
-path = "E:/github/nlpcourse/NlpCourse/data/test.txt"
+path = path+"/data/test.txt"
+print(path)
 
 content = fu.readFile(path, "UTF-8")
 print(content)

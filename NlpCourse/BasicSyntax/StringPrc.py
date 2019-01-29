@@ -97,4 +97,3 @@ for i in range(0,len(var1)):
     print(("第%d个字符是%s")%(i,var1[i]))
 
 
-
