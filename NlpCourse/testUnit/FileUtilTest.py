@@ -9,7 +9,8 @@ import os
 
 fu = FileUtil()
 
-#fu.getFiles("data")
+filelist = fu.getFiles("data/sports")
+print(filelist)
 path = os.path.abspath('..')
 
 path = path+"/data/test.txt"

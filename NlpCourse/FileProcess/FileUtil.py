@@ -28,12 +28,16 @@ class FileUtil(object):
         return lines
     
     def getFiles(self,dir):
+        pathList =[]
         path = os.path.abspath('..')+"/"+dir+"/"
         print(path)
         for parent,dirnames,filenames in os.walk(path):    #三个参数：分别返回1.父目录 2.所有文件夹名字（不含路径） 3.所有文件名字
-            for dirname in  dirnames:                       #输出文件夹信息
-                print( "parent is:" + parent)
-                print(  "dirname is" + dirname)
+#             for dirname in  dirnames:                       #输出文件夹信息
+#                 print(  "dirname is" + dirname)
+            print(filenames)
+            for filename in filenames:
+                pathList.append(path+filename)
+        return pathList
     
     
     
