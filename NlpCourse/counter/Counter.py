@@ -14,11 +14,15 @@ class Counter(object):
         '''
         Constructor
         '''
-        dic={}
+        dict={}
     def add(self,k):
         dict[k]=dict[k]+1
         
     def addWithFreq(self,k,v):
         dict[k]=dict[k]+v
+    
+    def clear(self):
+        dict= {}
+    
     def getResult(self):
         return dict
