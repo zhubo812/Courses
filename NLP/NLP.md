@@ -133,25 +133,10 @@ print("Hello, World!")
 
 ----
 字符串(String)
-- python中单引号和双引号使用完全相同。
-- 使用三引号('''或""")可以指定一个多行字符串。
-- 转义符 '\'
-- 反斜杠可以用来转义，使用r可以让反斜杠不发生转义。。 如 r"this is a line with \n" 则\n会显示，并不是换行。
-- 按字面意义级联字符串，如"this " "is " "string"会被自动转换为this is string。
 
-----
-字符串运算(String)
-- 字符串可以用 + 运算符连接在一起，用 * 运算符重复。
-- Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。
-- Python中的字符串不能改变。
-- Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。
-- 字符串的截取的语法格式如下：变量[头下标:尾下标:步长]
-```python
-word = '字符串'
-sentence = "这是一个句子。"
-paragraph = """这是一个段落，
-可以由多行组成"""
-```
+字符串是 Python 中最常用的数据类型。我们可以使用引号( ' 或 " )来创建字符串。  
+创建字符串很简单，只要为变量分配一个值即可。
+
 
 ----
 单行注释
@@ -185,7 +170,53 @@ print ("Hello, Python!")
 ```
 
 ----
-字符串操作
+字符串运算符
+
+字符串可以用运算符"<font color=yellow>+</font>"连接在一起，用运算符"<font color=yellow>*</font>"重复。
+----
+```python
+#!/usr/bin/python3
+ 
+str='Trump'
+print(str + '你好')        # 连接字符串
+
+print(str*3)
+
+```
+----
+字符串连接结果
+```python
+Trump你好
+```
+字符串重复结果
+```python
+TrumpTrumpTrump
+```
+----
+字符串索引
+- Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。
+- Python中的字符串不能改变。
+- Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。
+- 字符串的截取的语法格式如下：变量[头下标:尾下标:步长]
+----
+Python访问字符串中的值
+```python
+#!/usr/bin/python3
+ 
+var1 = 'Hello World!'
+var2 = "Runoob"
+ 
+print ("var1[0]: ", var1[0])
+print ("var2[1:5]: ", var2[1:5])
+```
+----
+访问结果
+```python
+var1[0]:  H
+var2[1:5]:  unoo
+```
+----
+练习
 ```python
 #!/usr/bin/python3
  
@@ -198,10 +229,81 @@ print(str[2:5])            # 输出从第三个开始到第五个的字符
 print(str[2:])             # 输出从第三个开始的后的所有字符
 print(str * 2)             # 输出字符串两次
 print(str + '你好')        # 连接字符串
-print('------------------------------')
-print('hello\nrunoob')      # 使用反斜杠(\)+n转义特殊字符
-print(r'hello\nrunoob')     # 在字符串前面添加一个 r，表示原始字符串，不会发生转义
 ```
+----
+输出结果
+
+```python
+str: Runoo
+str[0:-1]: R
+str[2:5]: noo
+str[2:]: noob
+str * 2: RunoobRunoob
+str + '你好': Runoob你好
+```
+----
+Python字符串运算符
+
+下表实例变量a值为字符串 "Hello"，b变量值为字符串 "Python"：
+
+操作符 | 描述 | 实例 | 输出结果
+---|---|--- | --- 
++| 字符串链接 | a + b | HelloPython
+\* | 重复输出字符串 | a\*2 | HelloHello
+[] | 通过索引获取字符串中字符 | a[1] | e
+[:] | 截取字符串中的一部分，遵循左闭右开原则，str[0,2] 是不包含第 3 个字符的。 | a[1:4] | ell
+in | 成员运算符 - 如果字符串中包含给定的字符返回 True | 'H' in a | True
+not in | 成员运算符 - 如果字符串中不包含给定的字符返回 True | 'M' not in a | True
+
+----
+Python转义字符
+
+转义字符 | 描述
+---|---
+\\ | 反斜杠符号
+\' | 单引号
+\" | 双引号
+\t | 横向制表符
+\n | 换行
+\r | 回车
+----
+转义字符在Python中的使用
+```python
+print('hello\nrunoob')      # 使用反斜杠(\)+n转义特殊字符
+print('hello\trunoob')      # 使用反斜杠(\)+t转义特殊字符
+```
+
+----
+输出结果
+```python
+"hello\nrunoob":
+hello
+runoob
+"hello\trunoob":hello	runoob
+```
+
+----
+Python字符串格式化
+```python
+#!/usr/bin/python3
+ 
+print ("我叫 %s 今年 %d 岁!" % ('小明', 10))
+```
+----
+输出结果
+```python
+我叫 小明 今年 10 岁!
+```
+----
+python字符串格式化常用符号:
+
+符号 | 描述
+---|---
+%s |  格式化字符串
+%d | 格式化整数
+
+
+
 ---
 
 ## NLTK
