@@ -102,7 +102,7 @@ Anaconda指的是一个开源的Python发行版本，其包含了conda、Python�
 
 ----
 ### Python介绍
-
+Python is a <font color=yellow>programming language</font> that lets you work quickly and integrate systems more effectively.
 ----
 ### Python基本语法
 
@@ -348,7 +348,7 @@ list3 = ["a", "b", "c", "d"];
 ----
 访问列表中的值
 
-使用下标索引来访问列表中的值，同样你也可以使用方括号的形式截取字符，如下所示
+使用<font color=yellow>下标索引</font>来访问列表中的值，同样你也可以使用方括号的形式截取字符，如下所示
 ```python
 #!/usr/bin/python3
  
@@ -364,7 +364,472 @@ print ("list2[1:5]: ", list2[1:5])
 list1[0]:  Google
 list2[1:5]:  [2, 3, 4, 5]
 ```
+
+----
+更新列表
+```python
+#!/usr/bin/python3
+ 
+list = ['Google', 'Runoob', 1997, 2000]
+ 
+print ("第三个元素为 : ", list[2])
+list[2] = 2001
+print ("更新后的第三个元素为 : ", list[2])
+```
+
+----
+
+以上实例输出结果：
+```
+第三个元素为 :  1997
+更新后的第三个元素为 :  2001
+```
+----
+删除列表元素
+```python
+#!/usr/bin/python3
+ 
+list = ['Google', 'Runoob', 1997, 2000]
+ 
+print ("原始列表 : ", list)
+del list[2]
+print ("删除第三个元素 : ", list)
+```
+----
+以上实例输出结果：
+```
+原始列表 :  ['Google', 'Runoob', 1997, 2000]
+删除第三个元素 :  ['Google', 'Runoob', 2000]
+```
+----
+#### Python列表函数&方法
+
+Python函数与方法的区别
+1. 形式方面
+	- 函数：通过“函数名（）”的方式进行调用。
+
+	- 方法：通过“对象.方法名”的方式进行调用。
+2. 作用域方面
+	- 函数执行完成后使用的空间会自动释放
+	- 通过实例化的对象进行方法的调用，调用后开辟的空间不会释放
+----
+Python包含以下函数:
+
+序号 | 函数 | 功能
+---|---|---
+1 | len(list) | 列表元素个数
+2 | max(list) | 返回列表元素最大值
+3 | min(list) | 返回列表元素最小值
+4 | list(seq) | 将元组转换为列表
+----
+Python包含以下方法:
+
+序号 | 方法 | 功能
+---|---|---
+1 | list.append(obj) | 在列表末尾添加新的对象
+2 | list.count(obj) | 统计某个元素在列表中出现的次数
+3 | list.index(obj) | 从列表中找出某个值第一个匹配项的索引位置
+4 | list.insert(index, obj) | 将对象插入列表
+----
+Python包含以下方法:
+
+序号 | 方法 | 功能
+---|---|---
+5 | list.remove(obj) | 移除列表中某个值的第一个匹配项
+6 | list.reverse() | 反向列表中元素
+7 | list.sort(cmp=None, key=None, reverse=False) | 对原列表进行排序
+8 | list.clear() | 清空列表
+----
+Python 字典
+
+字典是另一种可变容器模型，且可存储任意类型对象。
+
+字典的每个键值(key=>value)对用冒号(:)分割，每个对之间用逗号(,)分割，整个字典包括在花括号({})中 ,格式如下所示：
+```python
+d = {key1 : value1, key2 : value2 }
+```
+----
+Python 字典
+
+键必须是唯一的，但值则不必。
+
+值可以取任何数据类型，但键必须是不可变的，如字符串，数字或元组。
+一个简单的字典实例：
+```python 
+dict = {'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}
+```
+也可如此创建字典：
+```python
+dict1 = { 'abc': 456 };
+dict2 = { 'abc': 123, 98.6: 37 };
+```
+----
+访问字典里的值
+把相应的键放入到方括号中，如下实例:
+```python
+#!/usr/bin/python3
+ 
+dict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'}
+ 
+print ("dict['Name']: ", dict['Name'])
+print ("dict['Age']: ", dict['Age'])
+```
+----
+以上实例输出结果：
+```
+dict['Name']:  Runoob
+dict['Age']:  7
+```
+----
+如果用字典里没有的键访问数据，会输出错误如下：
+```python
+#!/usr/bin/python3
+ 
+dict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'};
+ 
+print ("dict['Alice']: ", dict['Alice'])
+```
+----
+以上实例输出结果：
+```
+Traceback (most recent call last):
+  File "test.py", line 5, in <module>
+    print ("dict['Alice']: ", dict['Alice'])
+KeyError: 'Alice'
+```
+----
+修改字典
+向字典添加新内容的方法是增加新的键/值对，修改或删除已有键/值对如下实例:
+```python
+#!/usr/bin/python3
+ 
+dict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'}
+ 
+dict['Age'] = 8;               # 更新 Age
+dict['School'] = "渤海大学"  # 添加信息
+ 
+print ("dict['Age']: ", dict['Age'])
+print ("dict['School']: ", dict['School'])
+```
+----
+以上实例输出结果：
+```
+dict['Age']:  8
+dict['School']:  渤海大学
+```
+----
+删除字典元素
+```python
+#!/usr/bin/python3
+ 
+dict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'}
+ 
+del dict['Name'] # 删除键 'Name'
+dict.clear()     # 清空字典
+del dict         # 删除字典
+ 
+print ("dict['Age']: ", dict['Age'])
+print ("dict['School']: ", dict['School'])
+```
+这会引发异常，因为执行 del 操作后字典不再存在：
+```
+Traceback (most recent call last):
+  File "test.py", line 9, in <module>
+    print ("dict['Age']: ", dict['Age'])
+TypeError: 'type' object is not subscriptable
+```
+----
+字典内置函数&方法
+----
+字典包含以下函数:
+
+序号 | 函数及描述 | 功能
+---|---|---
+1 | len(dict) | 计算字典元素个数
+2 | str(dict) | 输出字典
+3 | type(var) | 返回输入的变量类型
+----
+字典包含以下主要方法:
+
+序号 | 方法及描述 | 功能
+---|---|---
+1 | key in dict | 如果键在字典dict里返回true，否则返回false
+2 | radiansdict.items() | 以列表返回可遍历的(键, 值) 元组数组
+3 | radiansdict.keys() | 返回一个迭代器，可以使用 list() 来转换为列表
+4 | radiansdict.values() | 返回一个迭代器，可以使用 list() 来转换为列表
+5 | pop(key[,default]) | 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
+----
+#### Python 条件控制语句
+
+Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
+
+可以通过下图来简单了解条件语句的执行过程:
+
+![avatar](./pic/conditioncontrol.jpg)
+----
+ if 语句
+Python中if语句的一般形式如下所示：
+
+```python
+if condition_1:
+    statement_block_1
+elif condition_2:
+    statement_block_2
+else:
+    statement_block_3
+```
+----
+<font color=yellow>注意：</font>
+
+1. 每个条件后面要使用冒号<font color=yellow>:</font>，表示接下来是满足条件后要执行的语句块。
+2. 使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。
+3. 在Python中没有switch – case语句。
+----
+以下是一个简单的 if 实例：
+```python
+#!/usr/bin/python3
+ 
+var1 = 100
+if var1>10:
+    print ("var1>10 - if 表达式条件为 true")
+    print (var1)
+ 
+var2 = 0
+if var2>10:
+    print ("var2>10 - if 表达式条件为 true")
+    print (var2)
+print ("Good bye!")
+```
+----
+执行以上代码，输出结果为：
+
+```
+var1>10 - if 表达式条件为 true
+100
+Good bye!
+```
+----
+if语句中常用的操作运算符:
+
+操作符 | 描述
+---|---
+< | 小于
+<= | 小于或等于
+\> | 大于
+\>= | 大于或等于
+== | 等于，比较对象是否相等
+!= | 不等于
+----
+实例
+```python
+#!/usr/bin/python3
+ 
+# 程序演示了 == 操作符
+# 使用数字
+print(5 == 6)
+# 使用变量
+x = 5
+y = 8
+print(x == y)
+```
+----
+以上实例输出结果：
+```
+False
+False
+```
+
+----
+#### Python 循环语句
+
+
+循环语句的控制结构图如下所示：
+![image](./pic/forwhile.png)
+
+Python中的循环语句有 for 和 while。
+----
+while 循环
+
+Python中while语句的一般形式：
+```python
+while 判断条件：
+    语句
+```
+同样需要注意冒号和缩进。
+
+另外，在Python中没有do..while循环。
+----
+以下实例使用了 while 来计算 1 到 100 的总和：
+```python
+#!/usr/bin/python3
+ 
+n = 100
+ 
+sum = 0
+counter = 1
+while counter <= n:
+    sum = sum + counter
+    counter += 1
+ 
+print("1 到 %d 之和为: %d" % (n,sum))
+```
+----
+执行结果如下：
+```
+1 到 100 之和为: 5050
+```
+----
+for 语句
+
+Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串。
+
+for循环的一般格式如下：
+```python
+for variable in sequence:
+	statements
+else:
+    statements
+```
+----
+for循环实例
+```python
+languages = ["C", "C++", "Perl", "Python"] 
+for x in languages:
+	print (x)
+```
+----
+执行结果如下：
+```
+C
+C++
+Perl
+Python
+```
+----
+以下 for 实例中使用了 break 语句，break 语句用于跳出当前循环体：
+```python
+#!/usr/bin/python3
+ 
+sites = ["Baidu", "Google","Runoob","Taobao"]
+for site in sites:
+    if site == "Runoob":
+        print("菜鸟教程!")
+        break
+    print("循环数据 " + site)
+else:
+    print("没有循环数据!")
+print("完成循环!")
+```
+----
+执行以上脚本输出结果为：
+```
+当前字母为 : R
+当前字母为 : u
+当前字母为 : n
+当前字母为 : o
+当前字母为 : o
+当期变量值为 : 10
+当期变量值为 : 9
+当期变量值为 : 8
+当期变量值为 : 7
+当期变量值为 : 6
+Good bye!
+```
+
+----
+continue语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。
+```python
+#!/usr/bin/python3
+ 
+for letter in 'Runoob':     # 第一个实例
+   if letter == 'o':        # 字母为 o 时跳过输出
+      continue
+   print ('当前字母 :', letter)
+ 
+var = 10                    # 第二个实例
+while var > 0:              
+   var = var -1
+   if var == 5:             # 变量为 5 时跳过输出
+      continue
+   print ('当前变量值 :', var)
+print ("Good bye!")
+```
+----
+执行以上脚本输出结果为：
+```
+当前字母 : R
+当前字母 : u
+当前字母 : n
+当前字母 : b
+当前变量值 : 9
+当前变量值 : 8
+当前变量值 : 7
+当前变量值 : 6
+当前变量值 : 4
+当前变量值 : 3
+当前变量值 : 2
+当前变量值 : 1
+当前变量值 : 0
+Good bye!
+```
+----
+#### Python File(文件) 方法
+open() 方法
+
+open() 方法用于打开一个文件，并返回文件对象，在对文件进行处理过程都需要使用到这个函数，如果该文件无法被打开，会抛出 OSError。
+
+<font color=yellow>使用 open() 方法一定要保证关闭文件对象，即调用 close() 方法。</font>
+----
+open() 函数常用形式是接收两个参数：文件名(file)和模式(mode)。
+```python
+open(file, mode='r')
+```
+完整的语法格式为：
+```python
+open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+```
+----
+- file: 必需，文件路径（相对或者绝对路径）。
+- mode: 可选，文件打开模式
+- buffering: 设置缓冲
+- encoding: 一般使用utf8
+- errors: 报错级别
+- newline: 区分换行符
+- closefd: 传入的file参数类型
+- opener:
+
+----
+mode 参数有：
+
+模式 | 描述
+---|---
+t | 文本模式 (默认)。
+\+ | 打开一个文件进行更新(可读可写)。
+r | 以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。
+w | 打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。
+w+ | 打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。
+----
+file 对象
+
+file 对象使用 open 函数来创建，下表列出了 file 对象常用的函数：
+
+序号 | 方法 | 描述
+---|--- | ---
+1 | file.close() | 关闭文件。关闭后文件不能再进行读写操作。
+2 | file.next() | 返回文件下一行。
+3 | file.readline([size]) | 读取整行，包括 "\n" 字符。
+
+----
+
+序号 | 方法 | 描述
+---|--- | ---
+4 | file.readlines([sizeint]) | 读取所有行并返回列表
+5 | file.write(str) | 将字符串写入文件，返回的是写入的字符长度。
+6 | file.writelines(sequence) | 向文件写入一个序列字符串列表。
+
+
 ---
+
 
 ## NLTK
 
