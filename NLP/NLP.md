@@ -77,7 +77,8 @@ Anaconda指的是一个开源的Python发行版本，其包含了conda、Python�
 
 ----
 ### Sublime介绍
-
+A sophisticated text editor for
+code, markup and prose
 
 ----
 ### Sublime安装
