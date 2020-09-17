@@ -46,9 +46,9 @@
 7. 汉语语言与计算学报
 ----
 ###  相关学术会议
-1. Annual Meeting of the Association for Computational Linguistics(ACL)
+1. [Annual Meeting of the Association for Computational Linguistics(ACL)](https://www.aclweb.org/anthology/)
 2. International Conferenceon Computational Linguistics(COLING)
-3. 全国计算语言学联合学术会议(JSCL)
+3. 全国计算语言学联合学术会议(JSCL)[CCL历年论文集,NLP-NABD历年论文集](http://cips-cl.org/anthology)
 4. 全国学生计算语言学研讨会(SWCL)
 
 ----
