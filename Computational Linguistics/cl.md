@@ -718,8 +718,66 @@ BahdanauAttention与LuongAttention的区别
 1. BahdanauAttention对Encoder和Decoder的双向的RNN的state拼接起来作为输出，LuongAttention仅使用最上层的RNN输出
 1. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t → c_t → h_t$`，它使用前一个位置`$t-1$`的state计算t时刻的ht$`。LuongAttention计算流程为`$h_t → a_t → c_t → h^t 使用t位置的state当前位置的`$h_t$`
 1. BahdanauAttention只在concat对齐函数上进行了实验，LuongAttention在多种对齐函数进行了实验。
+----
+<font color=yellow>基于记忆的神经网络</font>
+
+记忆网络可以看做一个框架，用于QA或者分类等任务。
+传统的记忆架构做关系推理时有困难，DeepMind和伦敦大学学院提出关系推理模块[RMC](https://arxiv.org/pdf/1806.01822.pdf)，能够在序列信息中执行关系推理，在WikiText-103, Project Gutenberg和GigaWord 数据集上达到了当前最佳性能。
 
 
+----
+<font color=yellow>预训练的语言模型(Pre-trained Models)</font>
+
+预训练语言模型可以在数据量十分少的情况下有效学习。由于语言模型的训练只需要无标签的数据，因此他们对于数据稀缺的低资源语言特别有利。
+
+----
+<font color=yellow>预训练模型的发展</font>
+1. 词嵌入（Word Embedding）
+	- Word2Vec和[GloVe(Global  Vectors for Word Representation)](http://nlp.stanford.edu/projects/glove/)
+2. 上下文嵌入(Context Word Embedding)
+	- CoVe(Context Vectors)和[ELMo](https://allennlp.org/elmo)
+3. 预训练模型
+	- GPT和BERT(Bidirectional Encoder Representation from Transformers)
+4. 改进型和领域定制型预训练模型
+	- 改进型的代表为ALBERT和XLNet
+	- 领域定制化代表为SciBert (Scientific Bert) 和BioBert(Biomedical Bert)
+----
+<font color=yellow>小结</font>
+
+为什么各类神经网络被广泛应用于NLP任务?
+
+<font color=yellow>缓解特征工程问题</font>。非神经NLP方法通常严重依赖于离散的手工特征，而神经方法通常使用低维和稠密的向量(又称分布式表示)隐式地表示语言的语法或语义特征。这些表示是在特定的NLP任务中学习的。因此，神经方法使人们可以很容易地开发各种NLP系统。
+----
+<font color=yellow>预训练模型--GloVe</font>
+
+GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space. 
+----
+<font color=yellow>预训练模型--GloVe</font>
+
+GloVe与skip-gram和CBOW相比，skip-gram与CBOW每次用一个窗口中的信息更新出词向量，GloVe则是用了全局的信息（共现矩阵），即同时使用多个窗口进行更新词向量。
+----
+<font color=yellow>预训练模型--CoVe</font>
+
+[Bryan McCann et al.2017](https://arxiv.org/pdf/1708.00107.pdf)提出CoVe。与GloVe作为模型的输入时候的效果进行比较。实验结果表明他们提出的 Context Vectors 在不同任务中都带来了不同程度效果的提升。
+
+CoVe更侧重于如何将现有数据上预训练得到的表征迁移到新任务场景中，而之前的句子级任务中大多数都只把迁移过程当做一个评估他们表征效果的手段，因此观念上有所不同。
+----
+<font color=yellow>预训练模型--ELMo(Embeddings from Language Models)</font>
+
+[ELMo](https://www.aclweb.org/anthology/N18-1202/) is a deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy). 
+----
+<font color=yellow>预训练模型--ELMo(Embeddings from Language Models)</font>
+
+双向语言模型（Bidirectionbbal language models, biLM）
+![elmo](pic\elmo.png)
+----
+<font color=yellow>预训练模型--GPT</font>
+
+[GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)的核心思想是先通过无标签的文本去训练生成语言模型，再根据具体的NLP任务利用有标签的数据对模型进行fine-tuning。
+----
+<font color=yellow>预训练模型--BERT</font>
+
+GloVe与skip-gram和CBOW相比，skip-gram与CBOW每次用一个窗口中的信息更新出词向量，GloVe则是用了全局的信息（共现矩阵），即同时使用多个窗口进行更新词向量。
 ---
 基本概念
 
@@ -748,7 +806,7 @@ BahdanauAttention与LuongAttention的区别
 期望
 方差
 ----
-概率是从随机实验中的事件到实数域的函数，用以 表示事件发生的可能性。如果用`$P(A)$`作为事件`$A$`的概 率，`$\Omega$`是实验的样本空间，则概率函数必须满足如下公理：<br> 
+概率是从随机实验中的事件到实数域的函数，用以 表示事件发生的可能性。如果用`$P(A)$`作为事件`$A$`的概率，`$\Omega$`是实验的样本空间，则概率函数必须满足如下公理：<br> 
 公理1：`$P(A)\geq0$`<br> 
 公理2：`$P(\Omega)=1$`<br> 
 公理3：如果对任意的`$i$`和`$j(i\neq j)$`,事件`$A_i$`和`$A_j$`不相交`$(A_i\bigcap A_j=\phi)$`,则有：`$P(\bigcup_{i=0}^\infty A_i)=\sum_{i=0}^\infty P(A_i)$`<br> 
