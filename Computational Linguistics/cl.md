@@ -733,11 +733,11 @@ BahdanauAttention与LuongAttention的区别
 ----
 <font color=yellow>预训练模型的发展</font>
 1. 词嵌入（Word Embedding）
-	- Word2Vec和[GloVe(Global  Vectors for Word Representation)](http://nlp.stanford.edu/projects/glove/)
+	- Word2Vec和[GloVe](#/2/118)[(Global  Vectors for Word Representation)](http://nlp.stanford.edu/projects/glove/)
 2. 上下文嵌入(Context Word Embedding)
-	- CoVe(Context Vectors)和[ELMo](https://allennlp.org/elmo)
+	- [CoVe](#/2/120)(Context Vectors)和[ELMo](#/2/121)
 3. 预训练模型
-	- GPT和BERT(Bidirectional Encoder Representation from Transformers)
+	- [GPT](#/2/123)和BERT(Bidirectional Encoder Representation from Transformers)
 4. 改进型和领域定制型预训练模型
 	- 改进型的代表为ALBERT和XLNet
 	- 领域定制化代表为SciBert (Scientific Bert) 和BioBert(Biomedical Bert)
@@ -748,34 +748,34 @@ BahdanauAttention与LuongAttention的区别
 
 <font color=yellow>缓解特征工程问题</font>。非神经NLP方法通常严重依赖于离散的手工特征，而神经方法通常使用低维和稠密的向量(又称分布式表示)隐式地表示语言的语法或语义特征。这些表示是在特定的NLP任务中学习的。因此，神经方法使人们可以很容易地开发各种NLP系统。
 ----
-<font color=yellow>预训练模型--GloVe</font>
+<font color=yellow>[预训练模型](#/2/116)--GloVe</font>
 
 GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space. 
 ----
-<font color=yellow>预训练模型--GloVe</font>
+<font color=yellow>[预训练模型](#/2/116)--GloVe</font>
 
 GloVe与skip-gram和CBOW相比，skip-gram与CBOW每次用一个窗口中的信息更新出词向量，GloVe则是用了全局的信息（共现矩阵），即同时使用多个窗口进行更新词向量。
 ----
-<font color=yellow>预训练模型--CoVe</font>
+<font color=yellow>[预训练模型](#/2/116)--CoVe</font>
 
 [Bryan McCann et al.2017](https://arxiv.org/pdf/1708.00107.pdf)提出CoVe。与GloVe作为模型的输入时候的效果进行比较。实验结果表明他们提出的 Context Vectors 在不同任务中都带来了不同程度效果的提升。
 
 CoVe更侧重于如何将现有数据上预训练得到的表征迁移到新任务场景中，而之前的句子级任务中大多数都只把迁移过程当做一个评估他们表征效果的手段，因此观念上有所不同。
 ----
-<font color=yellow>预训练模型--ELMo(Embeddings from Language Models)</font>
+<font color=yellow>[预训练模型](#/2/116)--[ELMo(Embeddings from Language Models)](https://allennlp.org/elmo)</font>
 
 [ELMo](https://www.aclweb.org/anthology/N18-1202/) is a deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy). 
 ----
-<font color=yellow>预训练模型--ELMo(Embeddings from Language Models)</font>
+<font color=yellow>[预训练模型](#/2/116)--ELMo(Embeddings from Language Models)</font>
 
 双向语言模型（Bidirectionbbal language models, biLM）
 ![elmo](pic\elmo.png)
 ----
-<font color=yellow>预训练模型--GPT</font>
+<font color=yellow>[预训练模型](#/2/116)-GPT</font>
 
 [GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)的核心思想是先通过无标签的文本去训练生成语言模型，再根据具体的NLP任务利用有标签的数据对模型进行fine-tuning。
 ----
-<font color=yellow>预训练模型--BERT</font>
+<font color=yellow>[预训练模型](#/2/116)--BERT</font>
 
 GloVe与skip-gram和CBOW相比，skip-gram与CBOW每次用一个窗口中的信息更新出词向量，GloVe则是用了全局的信息（共现矩阵），即同时使用多个窗口进行更新词向量。
 ---
