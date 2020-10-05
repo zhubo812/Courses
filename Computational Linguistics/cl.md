@@ -84,6 +84,8 @@ zhubo812@gmail.com
 1. [计算语言学的性质及特点](#/2/1)
 2. [计算语言学的发展及学科位置](#/2/59)
 
+[>](#/2/84)
+
 ----
 ### 计算语言学的性质及特点
 1. 计算语言学的<font color = yellow>定义</font>
@@ -571,14 +573,14 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 ----
 **Milestone**
-- 2003年 神经概率语言模型
-- 2008年 多任务学习
-- 2013年 Word嵌入
-- 2013年 NLP的神经网络
-- 2014年 序列到序列模型
-- 2015年 注意力机制
-- 2015年 基于记忆的神经网络
-- 2018年 预训练语言模型
+- 2003年 [神经概率语言模型](#/2/85)
+- 2008年 [多任务学习](#/2/88)
+- 2013年 [词嵌入](#/2/92)
+- 2013年 [NLP中的神经网络](#/2/94)
+- 2014年 [序列到序列模型](#/2/107)
+- 2015年 [注意力机制](#/2/110)
+- 2015年 [基于记忆的神经网络](#/2/114)
+- 2018年 [预训练语言模型](#/2/116)
 ----
 
 <font color = yellow>神经概率语言模型（Neural Probabilistic language models）</font>
@@ -586,10 +588,14 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 神经网络（Neural Network, NN）被应用于语言建模之前,主流语言模型是N-Gram模型，利用前面n个词语预测下一个单词。
 神经网络语言模型引起广泛关注是在[Bengio et al. (2003)](https://jmlr.csail.mit.edu/papers/volume3/bengio03a/bengio03a.pdf)提出前向神经网络（Feed-forward Neural Network, FNN）语言模型之后.
 
+[<](#/2/84)
 ----
 神经概率语言模型以某个词语前面的n个词语作为输入向量。这样的向量现在被称为词嵌入（word embeddings）。这些词向量入被连接并输入隐含层，然后再将隐含层结果输入softmax层。
+
+
+[<](#/2/84)
 ----
-![nlm](pic\nlm.jpg)
+![nlm](pic/nlm.jpg)
 ----
 
 <font color = yellow>多任务学习（Multi-task learning）</font>
@@ -598,7 +604,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 [Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)首次将多任务学习应用于NLP。在多任务学习框架下，词嵌入矩阵被两个在不同任务下训练的模型共享。
 
 ----
-![mtl](pic\mtl.png)
+![mtl](pic/mtl.png)
 
 ----
 共享词嵌入使模型能够在词嵌入矩阵中协作并共享一般的低级信息，这类信息常构成模型中大部分的参数。
@@ -607,6 +613,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 ----
 多任务学习应用于多项NLP任务，实际应用中通常预先定义共享参数，然后通过参数优化学习到不同的共享模式。随着NLP各项任务对模型的泛化能力有更高的要求，使得多任务学习越来越重要。
 
+[<](#/2/84)
 ----
 <font color = yellow>词嵌入（Word embeddings）</font>
 
@@ -623,7 +630,7 @@ word2vec包含两种模式：
 
 两种模式的目标不同：一个基于周围的单词预测中心词，而另一个则相反。
 
-
+[<](#/2/84)
 ----
 <font color=yellow>Neural networks for NLP</font>
 
@@ -641,7 +648,7 @@ word2vec包含两种模式：
 卷积神经网络（CNN）被广泛用于计算机视觉，[Kalchbrenner,2014](https://arxiv.org/pdf/1404.2188.pdf)[Kim,2014](https://arxiv.org/pdf/1408.5882.pdf)将CNN应用于语言研究。下图显示了NLP中使用的典型CNN。
 
 ----
-![cnn](pic\cnn.png)
+![cnn](pic/cnn.png)
 ----
 <font color=yellow>循环神经网络（Recurrent Neural Networks）</font>
 
@@ -661,9 +668,9 @@ word2vec包含两种模式：
 
 `$W$`就是隐含层上一次的值作为这一次的输入的权重。
 ----
-![recurrentNN](pic\RecurrentNN.jpg)
+![recurrentNN](pic/RecurrentNN.jpg)
 ----
-![recurrentNN1](pic\RecurrentNN1.png)
+![recurrentNN1](pic/RecurrentNN1.png)
 ----
 <font color=yellow>长短期记忆模型(Long-short Term Memory,LSTM)</font>
 LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原始RNN算法中的梯度消失弥散（Vanishing Gradient）问题。
@@ -672,19 +679,19 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 
 同时，一个LSTM神经元也会产生两个信息，一个是当前轮的输出，另一个是当前轮的隐藏状态。
 ----
-![LSTM](pic\lstm2.jpg)
+![LSTM](pic/lstm2.jpg)
 
 相比RNN只有一个传递状态`$h^t$`，LSTM有两个传输状态，一个`$c^t$`（cell state），和一个`$h^t$`（hidden state）。（Tips：RNN中的`$h^t$`对于LSTM中的`$c^t$`）
 ----
 <font color=yellow>递归神经网络（Recursive Neural Networks）</font>
 
 递归神经网络从<font color=yellow>空间维度</font>的展开，是一个树结构。
-![RecursiveNN](pic\RecursiveNN.png)
+![RecursiveNN](pic/RecursiveNN.png)
 ----
 
 递归神经网络把一个<font color=yellow>树型结构</font>信息编码为一个<font color=yellow>向量</font>,也就是把信息映射到一个语义向量空间中,语义相似的向量距离更近。两句话内容不同，但意思是相近，那么这两句话的向量的距离也相近；反之，语义差异越大，向量的距离则很远。
 ----
-![RecursiveNN1](pic\RecursiveNN1.png)
+![RecursiveNN1](pic/RecursiveNN1.png)
 ----
 
 <font color=yellow>序列到序列模型（Sequence-to-sequence models）</font>
@@ -693,11 +700,12 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 这种算法也是现在谷歌已经应用于线上机器翻译的算法，翻译质量基本达到、甚至超越人类水平。
 
 ----
-![stsm](pic\stsm.jpg)
+![stsm](pic/stsm.jpg)
 ----
 以机器翻译为例，"How are you"翻译为"你好吗"，模型示例如下：
 
-![stsm](pic\stsm1.png)
+![stsm](pic/stsm1.png)
+[<](#/2/84)
 ----
 
 
@@ -707,24 +715,27 @@ RNN应用于翻译时依赖将整个句子压缩成固定输入的向量，当�
 
 注意力机制使得机器翻译中利用原始的句子信息，减少信息损失。在解码层，生成每个时刻的`$y$`，都会利用到`$x_1,x_2,x_3....$`，而不再仅仅利用最后时刻的隐藏状态向量。
 ----
-![stsm](pic\attention1.png)
+![stsm](pic/attention1.png)
 ----
 [Bahdanau et al.2015](https://arxiv.org/pdf/1409.0473.pdf)提出了BahdanauAttention
 
 [Luong et al.2015](https://arxiv.org/pdf/1508.04025.pdf)提出了LuongAttention
-
-----
 BahdanauAttention与LuongAttention的区别
 1. BahdanauAttention对Encoder和Decoder的双向的RNN的state拼接起来作为输出，LuongAttention仅使用最上层的RNN输出
-1. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t → c_t → h_t$`，它使用前一个位置`$t-1$`的state计算t时刻的ht$`。LuongAttention计算流程为`$h_t → a_t → c_t → h^t 使用t位置的state当前位置的`$h_t$`
-1. BahdanauAttention只在concat对齐函数上进行了实验，LuongAttention在多种对齐函数进行了实验。
+----
+
+2. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t → c_t → h_t$`，它使用前一个位置`$t-1$`的state计算t时刻的ht$`。LuongAttention计算流程为`$h_t → a_t → c_t → h^t 使用t位置的state当前位置的`$h_t$`
+3. BahdanauAttention只在concat对齐函数上进行了实验，LuongAttention在多种对齐函数进行了实验。
+
+
+[<](#/2/84)
 ----
 <font color=yellow>基于记忆的神经网络</font>
 
 记忆网络可以看做一个框架，用于QA或者分类等任务。
 传统的记忆架构做关系推理时有困难，DeepMind和伦敦大学学院提出关系推理模块[RMC](https://arxiv.org/pdf/1806.01822.pdf)，能够在序列信息中执行关系推理，在WikiText-103, Project Gutenberg和GigaWord 数据集上达到了当前最佳性能。
 
-
+[<](#/2/84)
 ----
 <font color=yellow>预训练的语言模型(Pre-trained Models)</font>
 
@@ -747,6 +758,8 @@ BahdanauAttention与LuongAttention的区别
 为什么各类神经网络被广泛应用于NLP任务?
 
 <font color=yellow>缓解特征工程问题</font>。非神经NLP方法通常严重依赖于离散的手工特征，而神经方法通常使用低维和稠密的向量(又称分布式表示)隐式地表示语言的语法或语义特征。这些表示是在特定的NLP任务中学习的。因此，神经方法使人们可以很容易地开发各种NLP系统。
+
+[<](#/2/84)
 ----
 <font color=yellow>[预训练模型](#/2/116)--GloVe</font>
 
