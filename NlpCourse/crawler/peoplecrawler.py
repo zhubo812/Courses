@@ -1,5 +1,4 @@
 # Copy input to output
-output_table = input_table.copy()
 import requests
 import bs4
 import os

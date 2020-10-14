@@ -729,12 +729,12 @@ Python
 ```python
 #!/usr/bin/python3
  
-sites = ["Baidu", "Google","Runoob","Taobao"]
+sites = ["Baidu", "Google","Tencent","Ali"]
 for site in sites:
-    if site == "Runoob":
-        print("菜鸟教程!")
+    if site == "Google":
+        print("This is Google")
         break
-    print("循环数据 " + site)
+    print("循环数据:" + site)
 else:
     print("没有循环数据!")
 print("完成循环!")
