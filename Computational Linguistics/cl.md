@@ -1575,39 +1575,38 @@ B2-->S
 1. 词。例如：“学生”“学习”“语言学等”。它们是句子切分的最终结果；
 1. 句法成分之间的关系。如句子由名词短语和动词短语组成，动词短语由动词和名词短语组成等；
 1. 句子(S)。在语法分析中，“句子”这个语法范畴具有特殊性，它是句子切分和分析的出发点。
-
-```
-graph LR
-A(句法范畴)---B(非终极词汇集)
-C(词)---D(终极词汇集)
-E(句法成分之间的关系)---F(重写规)
-G(句)---H(起始符)
-
-```
-
-
+----
+|  语言分析   | 自动机  |
+|  ----  | ----  |
+| 句法范  | 非终极词汇集 |
+| 词  | 终极词汇集 |
+| 句法成分之间的关系  | 重写规 |
+| 句子  | 起始符 |
 
 ----
-#### 3.3.2 推导的定义
+#### 推导的定义
 设：`$G={N,\Sigma,P,S}$`是一个文法在`$(N\bigcup \Sigma)^*$`上定义关系`$\Rightarrow_G$`(直接派生或推导)如下：
 > 如果`$\alpha \beta \gamma$`是`$(N\bigcup \Sigma)^*$`中的符号串，且`$\beta \rightarrow \delta$`是`$P$`的生产式，那么`$\alpha \beta \gamma \Rightarrow_G \alpha \beta \gamma$`
+----
 
 - 用`$\Rightarrow_G^+$`(按非一般方式派生)表示`$\Rightarrow_G$`的传递闭包(非空集合上的关系)，也就是`$(N\bigcup \Sigma)^*$`上的符号串`$\xi_i$`到`$\xi_{i+1}$`的`$n\{n \geq 1\}$`步推导或派生。
 - 用`$\Rightarrow_G^*$`(派生)表示`$\Rightarrow_G$`的自反和传递闭包，也就是`$(N\bigcup \Sigma)^*$`上的符号串`$\xi_i$`到`$\xi_{i+1}$`经过`$n\{n \geq 1\}$`步推导或派生。
 - 如果清楚文法`$G$`所产生的推导步骤,符号`$\Rightarrow_G^+$`或`$\Rightarrow_G^*$`可以省略不写。
 ----
-> **例**
-> `$G=(V_n,V_t,P,S)$`<br>
-> `$V_n=(S,A,B,C)$`<br>
-> `$V_t=(a,v,c)$`<br>
-> P：<br>
-> `$1.S\rightarrow ABC$`<br>
-> `$2.A\rightarrow aA$`<br>
-> `$3.A\rightarrow a$`<br>
-> `$4.B\rightarrow Bb$`<br>
-> `$5.B\rightarrow b$`<br>
-> `$6.BC\rightarrow Bcc$`<br>
-> `$7.ab\rightarrow ba$`<br>
+
+
+$$G=(V_n,V_t,P,S)$$
+$$V_n=(S,A,B,C)$$
+$$V_t=(a,v,c)$$
+---
+#### P：
+$$1.S\rightarrow ABC$$
+$$2.A\rightarrow aA$$
+$$3.A\rightarrow a$$
+`$4.B\rightarrow Bb$`
+`$5.B\rightarrow b$`
+`$6.BC\rightarrow Bcc$`
+`$7.ab\rightarrow ba$`
 ----
 ```
 graph TD
@@ -1910,8 +1909,8 @@ A((q))--a-->B((q'))
 ----
 #### 3.3.1 DFA定义的语言
 如果一个句子`$x$`使得有限自动机`$M$`有`$\delta(q_0,x)=p$`,`$p\in F$`,那么,称句子`$x$`被`$M$`接受。由`$M$`定义的语言`$T(M)$`就是被`$M$接受的句子的全集。即：
-
 `$T(M)=\{x|\delta(q_0,x)\in F\}$`
+
 ----
 
 #### 3.3.2 不确定的有限自动机(Non-definite Automata, NFA)
