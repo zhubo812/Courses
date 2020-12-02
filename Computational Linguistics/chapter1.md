@@ -654,7 +654,7 @@ BahdanauAttention与LuongAttention的区别
 1. BahdanauAttention对Encoder和Decoder的双向的RNN的state拼接起来作为输出，LuongAttention仅使用最上层的RNN输出
 ~~~~
 
-2. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t → c_t → h_t$`，它使用前一个位置`$t-1$`的state计算t时刻的ht$`。LuongAttention计算流程为`$h_t → a_t → c_t → h^t 使用t位置的state当前位置的`$h_t$`
+2. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t → c_t → h_t$`，它使用前一个位置`$t-1$`的state计算`$t$`时刻的`$h_t$`。LuongAttention计算流程为`$h_t → a_t → c_t → h^t$` 使用t位置的state当前位置的`$h_t$`
 3. BahdanauAttention只在concat对齐函数上进行了实验，LuongAttention在多种对齐函数进行了实验。
 
 
