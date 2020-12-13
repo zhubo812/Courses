@@ -1,1 +1,0 @@
-reveal-md cl.md -w
