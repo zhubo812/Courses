@@ -666,7 +666,7 @@ $$
   
 - 如果“教授”是词表里的词，那么  
 - `$P(s_i=$`教授`$|c_i=LW)=1$`  
-- 每个词表词`$LW`$单独作为一类
+- 每个词表词`$LW$`单独作为一类
 ~~~~
 ##### 表1 生成模型`$P(S|C)$`
 
@@ -789,18 +789,18 @@ $$
 2. 召回率(找回率,Recall) 
 测试结果中正确结果的个数占标准答案总数的比例。假设系统输出`$N$`个结果,其中，正确的结果为`$n$`个，而标准答案的个数为`$M$`个
 $$
-C=\frac{n}{M}
+R=\frac{n}{M}
 $$
 ~~~~
 3. F-测度值(F-Measure): 
 正确率与召回率的综合值。计算公式为:
 $$
-F-measure=\frac{(\beta^2+1)\times C\times R}{\beta^2\times C\times R}
+F-measure=\frac{(\beta^2+1)\times C\times R}{\beta^2\times (C\ + R) }
 $$
 
 一般情况下，取`$\beta=1$`，即
 $$
-F=\frac{1\times C\times R}{C+R}
+F=\frac{2\times C\times R}{C+R}
 $$
 ~~~~
 ### 5.9 词性标注（POS tagging）

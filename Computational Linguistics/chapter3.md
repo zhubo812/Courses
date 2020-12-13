@@ -435,8 +435,7 @@ E --规则7--> F(bacc)
 
 如有`$A \rightarrow Ba$`则`$|\alpha|=1$`,`$|\beta|=2$`符合1型文法要求。反之,如`$aA \rightarrow a$`则不符合1型文法。 
 ~~~~
-- 例
-文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B,C\}$`,终极符号 `$\Sigma=\{a,b,c\}$`,规则`$P$`如下：
+例如，文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B,C\}$`,终极符号 `$\Sigma=\{a,b,c\}$`,规则`$P$`如下：
 1. `$S\rightarrow ABC$`
 2. `$A\rightarrow aA|a$`
 3. `$B\rightarrow bB|b$`
@@ -451,8 +450,7 @@ E --规则7--> F(bacc)
 
 如`$Ab \rightarrow Bab$`虽然符合1型文法要求,但不符合2型文法要求，因为其`$\alpha=Ab$`，而`$Ab$`不是一个非终结符。
 ~~~~
-- 例
-文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
+例如，文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
 1. `$S\rightarrow ABC$`
 2. `$A\rightarrow aA|a$`
 3. `$B\rightarrow bB|b$`
@@ -475,8 +473,7 @@ E --规则7--> F(bacc)
 
 ~~~~
 
-例
-文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
+例如，文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
 1. `$S\rightarrow aA$`
 2. `$A\rightarrow aA$`
 3. `$A\rightarrow bbB$`
@@ -507,8 +504,7 @@ E --规则7--> F(bacc)
 3. 如果一个节点的标记为`$A$`,他的`$k(k>0)$`个直接后裔节点按从左到右的次序依次标记为`$A_1,A_2,...,A_k$`则`$A\rightarrow A_1,A_2,...,A_k$`一定是`$P$`中的一个产生式。
 ~~~~
 
-例 
-文法`$G=\{\{S,A\}\},\{a,b\},P,S\}$`,规则`$P$`如下：
+例如，文法`$G=\{\{S,A\}\},\{a,b\},P,S\}$`,规则`$P$`如下：
 1. `$S\rightarrow bA$`
 2. `$A\rightarrow bAA$`
 3. `$A\rightarrow a$`
@@ -516,7 +512,7 @@ E --规则7--> F(bacc)
 ~~~~
 ![34](../cl/img/34.png)
 ~~~~
-例 
+例如，
 `$G=\{V_n,V_t,P,S\}$` 
 `$V_n=\{S,NP,VP\}$` 
 `$V_t=\{n,r,v,a\}$` 
@@ -540,13 +536,12 @@ E --规则7--> F(bacc)
 #### 3.3.7 上下文无关文法的二义性
 一个文法`$G$`,如果存在某个句子有不只一棵分析树与之对应,那么称这个文法是二义的。
 ~~~~
-例
-文法`$G(E)$`的规则如下： 
+例如，文法`$G(E)$`的规则如下:  
 1. `$E\rightarrow E+E$`
 2. `$E\rightarrow E\times E$`
 3. `$E\rightarrow E$`
 4. `$E\rightarrow E-E$`
-5. `$E\rightarrow i$` 
+5. `$E\rightarrow i$`  
 
 生成句子`$i+i\times i$`有两棵对应的分析树。
 
