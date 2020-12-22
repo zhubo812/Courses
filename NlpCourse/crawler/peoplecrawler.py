@@ -33,8 +33,7 @@ def getPageList(year, month, day):
     '''
     功能：获取当天报纸的各版面的链接列表
     参数：年，月，日
-    '''
-    
+    '''  
     url = 'http://paper.people.com.cn/rmrb/html/' + year + '-' + month + '/' + day + '/nbs.D110000renmrb_01.htm'
     html = fetchUrl(url)
     bsobj = bs4.BeautifulSoup(html,'html.parser')
