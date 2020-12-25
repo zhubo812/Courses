@@ -1,6 +1,6 @@
 ## 第一章 Python入门
 
-1. Python安装配置
+1. Python开发环境的安装级配置
 2. Python基础语法
 
 ~~~~
@@ -105,7 +105,7 @@ print("Hello, World!")
 
 ~~~~
 
- Python保留字
+#### Python保留字
 ```python
 >>> import keyword
 >>> keyword.kwlist
@@ -118,7 +118,7 @@ print("Hello, World!")
 ```
 
 ~~~~
-字符串(String)
+#### 字符串(String)
 
 字符串是 Python 中最常用的数据类型。我们可以使用引号( ' 或 " )来创建字符串。  
 创建字符串很简单，只要为变量分配一个值即可。
@@ -156,7 +156,7 @@ print ("Hello, Python!")
 ```
 
 ~~~~
-字符串运算符
+#### 字符串运算符
 
 字符串可以用运算符"<font color=yellow>+</font>"连接在一起，用运算符"<font color=yellow>*</font>"重复。
 ~~~~
@@ -226,8 +226,9 @@ str[2:5]: noo
 str[2:]: noob
 str * 2: RunoobRunoob
 str + '你好': Runoob你好
-```
-~~~~
+```  
+~~~~ 
+
 Python字符串运算符总结
 
 下表实例变量a值为字符串 "Hello"，b变量值为字符串 "Python"：
@@ -335,7 +336,7 @@ Python函数与方法的区别
 
 
 ~~~~
-Python列表
+#### Python列表
 
 - 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字，即元素的位置，或索引，第一个索引是0，第二个索引是1，依此类推。
 
