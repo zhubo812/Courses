@@ -27,7 +27,7 @@ class FileUtil(object):
         file.close()
         return lines
     
-    def getFiles(self,dir):
+    def getFiles2(dir):
         pathList =[]
         path = os.path.abspath('..')+"/"+dir+"/"
 #         print(path)
@@ -39,6 +39,17 @@ class FileUtil(object):
                 pathList.append(path+filename)
         return pathList
     
-    
-    
+    def getFiles(self,dir):
+        filelist=[]
+        filenames = os.listdir(dir)
+        for filename in filenames:
+            filepath = path + filename
+            filelist.append(filepath)
+        retrun filelist
+
+
+ 
+     
+
+
     
