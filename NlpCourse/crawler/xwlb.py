@@ -1,57 +1,59 @@
-# Copy input to output
 import requests
-import bs4
+from bs4 import BeautifulSoup
+from datetime import datetime
 import os
-import datetime
-import time
-import json
 import pandas as pd
+import time
+
+headers = {
+    'Accept': 'text/html, */*; q=0.01',
+    'Referer': 'http://tv.cctv.com/lm/xwlb/',
+    'X-Requested-With': 'XMLHttpRequest',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+}
 
 
-newsidList=[]
-datesList=[]
-contentList=[]  
+def href(date):
+    """
+    用于获取某天新闻联播各条新闻的链接
+    :param date: 日期，形如20190101
+    :return: href_list: 返回新闻链接的列表
+    """
+    href_list = []
 
-def fetchUrl(url):
-	'''
-	功能：访问 url 的网页，获取网页内容并返回
-	参数：目标网页的 url
-	返回：目标网页的 html 内容
-	'''
-	
-	headers = {
-		'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
-	}
-	
-	r = requests.get(url,headers=headers)
-	r.raise_for_status()
-	r.encoding = r.apparent_encoding
-	return r.text
+    response = requests.get('http://tv.cctv.com/lm/xwlb/day/' + str(date) + '.shtml', headers=headers)
+    bs_obj = BeautifulSoup(response.text, 'lxml')
+    lis = bs_obj.find_all('li')
+    for each in lis:
+        href_list.append(each.find('a')['href'])
+    return href_list
 
 
-def getPageLink(num):
-	iniUrl = "http://xwlbo.com/"
-	pageend= "txt.html"
-	#http://xwlbo.com/txt_12.html
-	links = []
-	inilink = iniUrl+pageend
-	links.append(inilink)
-
-	for i in range(2,num):
-		link = iniUrl+"txt_"+str(i)+".html"
-		links.append(link)
-	return links
-
-def getLinks(pageUrl):
-	html = fetchUrl(pageUrl)
-	print(html)
-	bsobj = bs4.BeautifulSoup(html,'html.parser')
-	links = bsobj.find('ol', attrs = {'class': 'xwlist'}).ul.find_all('a')
-	linkList = []
-	print(links)
-
-getLinks("http://xwlbo.com/txt_6.html")
+def news(url):
+    print(url)
+    response = requests.get(url, headers=headers, )
+    bs_obj = BeautifulSoup(response.content.decode('utf-8'), 'lxml')
+    if 'news.cctv.com' in url:
+        text = bs_obj.find('div', {'id': 'content_body'}).text
+    else:
+        text = bs_obj.find('div', {'class': 'cnt_bd'}).text
+    return text
 
 
+def datelist(beginDate, endDate):
+    # beginDate, endDate是形如‘20160601’的字符串或datetime格式
+    date_l = [datetime.strftime(x, '%Y%m%d') for x in list(pd.date_range(start=beginDate, end=endDate))]
+    return date_l
 
+
+def save_text(date):
+    f = open(str(date) + '.txt', 'a', encoding='utf-8')
+    for each in href(date)[1:]:
+        f.write(news(each))
+        f.write('\n')
+    f.close()
+
+
+for date in datelist('20200101', '20200102'):
+    save_text(date)
+    time.sleep(3)
