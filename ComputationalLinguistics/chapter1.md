@@ -161,7 +161,7 @@ NLG一般通过多个子任务来解决问题。 一般可以分为以下六类�
 ~~~~
 <font color = yellow>可操作性</font>是计算语言学最根本、最关键的方法论原则就是要指出各种语言形式出现和变换的条件。
 ~~~~
-所谓的<font color = yellow>条件</font>和与之想关联的<font color = yellow>动作</font>是一切计算机工作的最基本的方式，也是建立计算语言学语法的最基本、最关键的公式。
+所谓的<font color = yellow>条件</font>和与之相关联的<font color = yellow>动作</font>是一切计算机工作的最基本的方式，也是建立计算语言学语法的最基本、最关键的公式。
 ~~~~
 计算语言学的研究手段是计算，计算的<font color = yellow>表现形式</font>是算法。
 ~~~~
@@ -297,7 +297,7 @@ All grammar leak(Sapir1921)
 - 规则方法：用内省方法，建立形式化的知识系统描述语言知识；
 - 统计方法：用语料库方法，根据对语言数据的统计得到语言知识。
 ~~~~
-3. 使用语言知识K构建语言处理系统时使用的算法不同。
+3. 使用语言知识构建语言处理系统时使用的算法不同。
 
 - 规则方法：发展出许多比较成熟的算法技术；
 - 统计方法：主要使用概率统计模型的自然语言处理算法。
@@ -397,7 +397,7 @@ All grammar leak(Sapir1921)
 ~~~~
 商克(Schannk)及其学生于1973年在斯坦福大学 建成MARGIE系统。 
 
-MARGIE系统能以推理或释义两种方式运行。在推理方式下，它接受一个输入句，然后利用 推理器生成这个句子所蕴涵的事实。
+MARGIE系统能以推理或释义两种方式运行。在推理方式下，它接受一个输入句，然后利用推理器生成这个句子所蕴涵的事实。
 ~~~~
 
 输入 <font color = yellow>John gave Mary some aspirin. </font>（约翰给玛丽一些阿司匹林。）
@@ -408,7 +408,7 @@ MARGIE系统能以推理或释义两种方式运行。在推理方式下，它�
 ~~~~
 **在释义方式下，它将以尽可能多的等价方式来复 述输入的句子。**
 
-- 如输入<font color = yellow>John killed Mary by chokingher.</font>(约翰扼杀了玛丽。)
+- 如输入<font color = yellow>John killed Mary by choking her.</font>(约翰扼杀了玛丽。)
 
 - 系统就会复述出如下的句子：
 	- <font color = yellow>John strangled Mary.</font>(约翰勒死了玛丽。) 
@@ -426,7 +426,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 	- <font color = red>答</font>：‘度’是名词，是尺寸的意思。
 
 ~~~~
-范继淹、徐志敏等人建成的“TK——84汉语人机 对话实验系统”。这是一个铁路客运咨询系统。
+范继淹、徐志敏等人建成的“TK——84汉语人机对话实验系统”。这是一个铁路客运咨询系统。
 
 - <font color = yellow>问</font>：从北京到大连有高铁吗？
 	- <font color = red>答</font>：有。 
@@ -445,7 +445,8 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 - 乔姆斯基的<font color = yellow>短语结构语法</font>（phrase structure grammar，简称PSG）
 - 伍兹的<font color = yellow>扩充转移网络</font>(augemented transition network,简称ATN)； 
-- 卡普兰等的<font color = yellow>词汇功能语法</font>（Lexical-functional grammar，简称 LFG）； 马丁·凯依的<font color = yellow>功能合一语法</font>(functional unificational grammar，简称 FUG)；
+- 卡普兰等的<font color = yellow>词汇功能语法</font>（Lexical-functional grammar，简称 LFG）；
+- 马丁·凯依的<font color = yellow>功能合一语法</font>(functional unificational grammar，简称 FUG)；
 - 盖兹达等的<font color = yellow>广义短语结构语法</font>(generalized phrase structure grammar,简称GPSG)等等。
 
 ~~~~
@@ -537,7 +538,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 [Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)证明了共享词嵌入在多任务学习中的应用，引领了诸如预训练词嵌入和使用卷积神经网络（CNN）相关的方法，他们因此获得了2018年机器学习国际会议（ICML）的“时间测试”奖。
 ~~~~
-多任务学习应用于多项NLP任务，实际应用中通常预先定义共享参数，然后通过参数优化学习到不同的共享模式。随着NLP各项任务对模型的泛化能力有更高的要求，使得多任务学习越来越重要。
+多任务学习应用于多项NLP任务，实际应用中通常预先定义共享参数，然后通过参数优化，学习到不同的共享模式。随着NLP各项任务对模型的泛化能力有更高的要求，使得多任务学习越来越重要。
 
 [<](#/2/84)
 ~~~~
@@ -571,7 +572,7 @@ word2vec包含两种模式：
 ~~~~
 <font color=yellow>卷积神经网络</font>
 
-卷积神经网络（CNN）被广泛用于计算机视觉，[Kalchbrenner,2014](https://arxiv.org/pdf/1404.2188.pdf)[Kim,2014](https://arxiv.org/pdf/1408.5882.pdf)将CNN应用于语言研究。下图显示了NLP中使用的典型CNN。
+卷积神经网络（CNN）被广泛应用于计算机视觉，[Kalchbrenner,2014](https://arxiv.org/pdf/1404.2188.pdf)[Kim,2014](https://arxiv.org/pdf/1408.5882.pdf)将CNN应用于语言研究。下图显示了NLP中使用的典型CNN。
 
 ~~~~
 ![cnn](../cl/img/cnn.png)
@@ -654,7 +655,7 @@ BahdanauAttention与LuongAttention的区别
 1. BahdanauAttention对Encoder和Decoder的双向的RNN的state拼接起来作为输出，LuongAttention仅使用最上层的RNN输出
 ~~~~
 
-2. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t → c_t → h_t$`，它使用前一个位置`$t-1$`的state计算t时刻的ht$`。LuongAttention计算流程为`$h_t → a_t → c_t → h^t 使用t位置的state当前位置的`$h_t$`
+2. 计算流程不同。BahdanauAttention的计算流程为`$h_{t-1} \rightarrow a_t \rightarrow  c_t \rightarrow  h_t$`，它使用前一个位置`$t-1$`的state计算t时刻的`$h_t$`。LuongAttention计算流程为`$h_t \rightarrow  a_t \rightarrow  c_t \rightarrow  h^t$`使用t位置的state当前位置的`$h_t$`
 3. BahdanauAttention只在concat对齐函数上进行了实验，LuongAttention在多种对齐函数进行了实验。
 
 
