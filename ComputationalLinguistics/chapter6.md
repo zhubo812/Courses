@@ -35,7 +35,7 @@
 
 ~~~~
 #### 6.1.4 语法形式化
-法形式化（grammar formalism）属于句法理论研究的范畴。目前在自然语言处理中广泛使用的是上下文无关文法（CFG）和基于约束的文法（constraint-based grammar）的简单形式，后者又称为合一语法（unification grammar）。
+语法形式化（grammar formalism）属于句法理论研究的范畴。目前在自然语言处理中广泛使用的是上下文无关文法（CFG）和基于约束的文法（constraint-based grammar）的简单形式，后者又称为合一语法（unification grammar）。
 
 ~~~~
 常用的基于约束的语法有： 
@@ -177,7 +177,7 @@ $$C \rightarrow w_{k+1} ... w_j$$
 - Viterbi搜索算法描述
 	- 输入:文法`$G(S)$`,语句`$W=w_1w_2 ... w_n$`
 	- 输出:`$\gamma_{1n}(S)$`
-1. 初始化:$\gmma_{ij}(A)=P(A\rightarrow w_i),A\in V_n,1\leq i \leq j \leq n$
+1. 初始化:`$\gmma_{ij}(A)=P(A\rightarrow w_i),A\in V_n,1\leq i \leq j \leq n$`
 2. 归纳计算:`$j=1...n, i=1...n-j$`,重复下列计算:
 $
 \gamma_{i(i+j)}(A)= \max\limits_{B,C\in V_N; i\leq k\leq i+j}P(A\rightarrow BC)\gamma_{ik}(B)\gamma_{(k+1)(i+j)}(C)

@@ -105,7 +105,7 @@ $$
 ……
 ~~~~
 #### N元语法模型生成字符串的规模
-当语料汉字的总数为`$N$`时
+当语料的词总数为`$N$`时
 - 一元语法：
 	1. 样本空间为`$N$`
 	2. 只选择使用频率最高的汉字
@@ -305,7 +305,7 @@ Add-one平滑方法是出现n次的词，假设出现n+1次，这种方法最简
 
 各种平滑方法的详细介绍和比较请参阅
 
-[Stanley Chen的研究相关研究](http://www.cs.cmu.edu/~sfc/html/publications.html)
+[Stanley Chen的相关研究](http://www.cs.cmu.edu/~sfc/html/publications.html)
 
 ~~~~
 
