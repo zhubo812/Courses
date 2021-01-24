@@ -441,7 +441,7 @@ E --规则7--> F(bacc)
 3. `$B\rightarrow bB|b$`
 4. `$BC\rightarrow Bcc$`
 
-求文法`$G$`生成的句子的集合。
+求文法`$G$`生成的句子集合。
 ~~~~
 `$L(G)=\{a^nb^mc^2\},(n\geq 1,m\geq 3),(n\geq 1,m\geq 1)$`
 ~~~~
@@ -450,13 +450,13 @@ E --规则7--> F(bacc)
 
 如`$Ab \rightarrow Bab$`虽然符合1型文法要求,但不符合2型文法要求，因为其`$\alpha=Ab$`，而`$Ab$`不是一个非终结符。
 ~~~~
-例如，文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
+例如，2型文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
 1. `$S\rightarrow ABC$`
 2. `$A\rightarrow aA|a$`
 3. `$B\rightarrow bB|b$`
 4. `$C\rightarrow BA|c$`
 
-求文法`$G$`生成的句子的集合。
+求文法`$G$`生成的句子集合。
 ~~~~
 
 `$L(G)=\{a^nb^ma^kc^a\}$`,
