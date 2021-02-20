@@ -1,7 +1,8 @@
 ## 语言模型
 
 ### 主要内容
-1. N-Gram
+1. 构建语言模型的流程
+2. N-Gram
 2. word2vec
 3. GPT2-Chinese
 
