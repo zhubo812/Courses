@@ -50,6 +50,14 @@ JupyterLab is a web-based interactive development environment for Jupyter notebo
 学校局域网登陆http://corpus.bhu.edu.cn:9100/lab
 ~~~~
 ![001](../../NLP/img/001.png)
+~~~~
+![002](../../NLP/img/002.png)
+~~~~
+![003](../../NLP/img/003.png)
+~~~~
+![004](../../NLP/img/004.png)
+~~~~
+![005](../../NLP/img/005.png)
 @@@@
 1.6 Sublime介绍
 
