@@ -1,11 +1,11 @@
-# 第一章 Python入门
+## 第一章 Python入门
 ~~~~
 1. Python开发环境的安装级配置
 2. Python基础语法
 
 ~~~~
-## 1 Python开发环境的安装级配置
-
+### 1 Python开发环境的安装级配置
+~~~~
 * Anaconda介绍
 * Anaconda安装配置
 * Anaconda常用操作命令
@@ -14,23 +14,24 @@
 
 ~~~~
 
-### 1.1 Anaconda介绍
+1.1 Anaconda介绍
+
 Anaconda指的是一个开源的Python发行版本，其包含了conda、Python等180多个科学包及其依赖项。 
 
 ~~~~
-### 1.2 Anaconda安装
+1.2 Anaconda安装
 
 1. Anaconda下载链接：https://www.anaconda.com/download/
 2. 添加环境变量,勾选 <font color=black>Add Anaconda to the system PATH environment variable</font>
 3. 测试是否安装成功, 在控制台输入命令<font color=black> conda --version</font>
 
 ~~~~
-### 1.3 Anaconda配置
+1.3 Anaconda配置
 1. 创建虚拟环境，<font color=black> conda  create -n py36  python=3.6</font>
 2. 切换虚拟环境，<font color=black> activate py36 </font>
 
 ~~~~
-### 1.4 Anaconda常用操作命令
+1.4 Anaconda常用操作命令
 ~~~~
 命令     | 功能
  --- | ---
@@ -42,14 +43,16 @@ Anaconda指的是一个开源的Python发行版本，其包含了conda、Python�
 <font color=black>conda remove -n name --all</font>    | 删除指定虚拟环境下所有包
 <font color=black>conda remove --name --all</font>    | 删除已创建虚拟环境
 ~~~~
-### 1.5 Jupyter简介
+1.5 Jupyter简介
+
 JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. JupyterLab is extensible and modular: write plugins that add new components and integrate with existing ones.
 ~~~~
-学校局域网内登陆http://corpus.bhu.edu.cn:9100/lab
+学校局域网登陆http://corpus.bhu.edu.cn:9100/lab
 ~~~~
-![001](../NLP/img/001.png)
+![001](../../NLP/img/001.png)
 @@@@
-### 1.6 Sublime介绍
+1.6 Sublime介绍
+
 A sophisticated text editor for
 code, markup and prose
 
