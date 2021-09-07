@@ -24,8 +24,8 @@ filelist = {'ke_bi_sample.xml':'Kobe',
 			'xiao_ao_jiang_hu.xml':'笑傲江湖',
 			'zhong_guo_fang_yan_shi_ying_yu.xml':'中国方言式英语'}
 
-# myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-myclient = pymongo.MongoClient("mongodb://corpus.bhu.edu.cn:9100/")
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+# myclient = pymongo.MongoClient("mongodb://corpus.bhu.edu.cn:9100/")
 mydb = myclient["weibo"]
 mycol = mydb["OpinionElementExtraction"]
 
@@ -37,11 +37,16 @@ for filename in filelist.keys():
 
 	weibo = jsonobj["Result"]['weibo']
 	for item in weibo:
+		# print(item)
 		item['topic']=filelist[filename]
+		sentence = item['sentence']
+		print(len(sentence))
+		# print()
 		data= json.dumps(item)
-		data = data.replace("@","")
-		data = data.replace("#","")
-		jsd = json.loads(data)
-		mycol.insert_one(jsd)
-		# print(data)
-
+		# data = data.replace("@","")
+		# data = data.replace("#text","text")
+		# jsd = json.loads(data)
+		# mycol.insert_one(jsd)
+		print(data)
+		print()
+	break

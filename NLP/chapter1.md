@@ -9,6 +9,7 @@
 * Anaconda介绍
 * Anaconda安装配置
 * Anaconda常用操作命令
+* Jupyter介绍
 * Sublime安装配置
 
 ~~~~
@@ -39,8 +40,14 @@ Anaconda指的是一个开源的Python发行版本，其包含了conda、Python�
 <font color=yellow>conda list</font> | 查看环境包信息
 <font color=yellow>conda remove -n name --all</font>    | 删除指定虚拟环境下所有包
 <font color=yellow>conda remove --name --all</font>    | 删除已创建虚拟环境
-
+@@@@
+### Jupyter简介
+JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. JupyterLab is extensible and modular: write plugins that add new components and integrate with existing ones.
 ~~~~
+学校局域网内登陆http://corpus.bhu.edu.cn:9100/lab
+~~~~
+![001](../NLP/img/001.png)
+@@@@
 ### Sublime介绍
 A sophisticated text editor for
 code, markup and prose
