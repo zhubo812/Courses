@@ -58,20 +58,23 @@ JupyterLab is a web-based interactive development environment for Jupyter notebo
 ![004](../NLP/img/004.png)
 ~~~~
 ![005](../NLP/img/005.png)
-@@@@
+~~~~
+![006](../NLP/img/006.png)
+~~~~
 1.6 Sublime介绍
 
 A sophisticated text editor for
 code, markup and prose
 
 ~~~~
-### Sublime安装
+1.7 Sublime安装
+
 1. Sublime下载链接：https://www.sublimetext.com/3
 2. 安装Package Control,安装方法链接：https://packagecontrol.io/installation
 3. 按ctrl+shift+p，在打开的文本框中输入Anaconda,并点击安装
 
 ~~~~
-### Sublime配置
+1.8 Sublime配置
 选择<font color=black>Preferences-package Setting-Anaconda-Settings-Users</font>选项，键入以下json数据。
 
 ```json
@@ -85,35 +88,35 @@ code, markup and prose
 }
 ```
 
-### sublime代理设置
+1.9 sublime代理设置
 
 
-1、软件设置位置
+1. 软件设置位置
 
 Preferences > Package Settings > Package Control > Settings - User
 
-2、设置代理
+2. 设置代理
 
  添加
 
 "http_proxy": "http://127.0.0.1:8123",
 "https_proxy": "http://127.0.0.1:8123"
 
-3、设置仓库位置，一下位置可用
+3. 设置仓库位置，一下位置可用
 
 "channels": [
         "http://cst.stu.126.net/u/json/cms/channel_v3.json"
     ]
 
+@@@@
+
+### 2 Python基础语法
 ~~~~
-### Python介绍
+2.1  Python介绍
+
 Python is a <font color=black>programming language</font> that lets you work quickly and integrate systems more effectively.
 ~~~~
-### Python基础语法
-
-
-~~~~
-第一个Python程序
+2.2 第一个Python程序
 
 第一个编程代码"Hello World！"，以下代码为使用Python输出"Hello World！"：
 ```python
@@ -124,7 +127,8 @@ print("Hello, World!")
 
 ~~~~
 
-#### Python保留字
+2.3 Python保留字
+
 ```python
 >>> import keyword
 >>> keyword.kwlist
@@ -137,13 +141,15 @@ print("Hello, World!")
 ```
 
 ~~~~
-#### 字符串(String)
+2.4 字符串(String)
 
 字符串是 Python 中最常用的数据类型。我们可以使用引号( ' 或 " )来创建字符串。  
 创建字符串很简单，只要为变量分配一个值即可。
 
 
 ~~~~
+2.5 注释
+
 单行注释
 ```python
 #!/usr/bin/python3
@@ -152,8 +158,6 @@ print("Hello, World!")
 print ("Hello, Python!") # 第二个注释
 ```
 ~~~~
-
-
 
 多行注释
 
@@ -175,30 +179,31 @@ print ("Hello, Python!")
 ```
 
 ~~~~
-#### 字符串运算符
+2.6 字符串运算符
 
-字符串可以用运算符"<font color=black>+</font>"连接在一起，用运算符"<font color=black>*</font>"重复。
+字符串可以用运算符"<font color=black>+</font>"连接在一起，用运算符"<font color=black>\*</font>"重复。
 ~~~~
 ```python
 #!/usr/bin/python3
  
-str='Trump'
-print(str + '你好')        # 连接字符串
-
-print(str*3)
-
+s='Trump'
+print(s + '你好')        # 连接字符串
+print(s*3)
 ```
+
 ~~~~
+
 字符串连接结果
-```python
+
 Trump你好
-```
+
 字符串重复结果
 ```python
 TrumpTrumpTrump
 ```
 ~~~~
-字符串索引
+2.7 字符串索引
+
 - Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。
 - Python中的字符串不能改变。
 - Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。
@@ -209,7 +214,7 @@ Python访问字符串中的值
 #!/usr/bin/python3
  
 var1 = 'Hello World!'
-var2 = "Runoob"
+var2 = "lingusitcs"
  
 print ("var1[0]: ", var1[0])
 print ("var2[1:5]: ", var2[1:5])
@@ -218,7 +223,7 @@ print ("var2[1:5]: ", var2[1:5])
 访问结果
 ```python
 var1[0]:  H
-var2[1:5]:  unoo
+var2[1:5]:  ingu
 ```
 ~~~~
 练习
@@ -236,6 +241,7 @@ print(str * 2)             # 输出字符串两次
 print(str + '你好')        # 连接字符串
 ```
 ~~~~
+
 输出结果
 
 ```python
