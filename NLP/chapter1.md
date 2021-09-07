@@ -1,10 +1,10 @@
-## 第一章 Python入门
-
+# 第一章 Python入门
+~~~~
 1. Python开发环境的安装级配置
 2. Python基础语法
 
 ~~~~
-### Python安装配置
+## 1 Python开发环境的安装级配置
 
 * Anaconda介绍
 * Anaconda安装配置
@@ -14,41 +14,42 @@
 
 ~~~~
 
-#### Anaconda介绍
+### 1.1 Anaconda介绍
 Anaconda指的是一个开源的Python发行版本，其包含了conda、Python等180多个科学包及其依赖项。 
 
 ~~~~
-### Anaconda安装
+### 1.2 Anaconda安装
 
 1. Anaconda下载链接：https://www.anaconda.com/download/
-2. 添加环境变量,勾选 <font color=yellow>Add Anaconda to the system PATH environment variable</font>
-3. 测试是否安装成功, 在控制台输入命令<font color=yellow> conda --version</font>
+2. 添加环境变量,勾选 <font color=black>Add Anaconda to the system PATH environment variable</font>
+3. 测试是否安装成功, 在控制台输入命令<font color=black> conda --version</font>
 
 ~~~~
-### Anaconda配置
-1. 创建虚拟环境，<font color=yellow> conda  create -n py36  python=3.6</font>
-2. 切换虚拟环境，<font color=yellow> activate py36 </font>
+### 1.3 Anaconda配置
+1. 创建虚拟环境，<font color=black> conda  create -n py36  python=3.6</font>
+2. 切换虚拟环境，<font color=black> activate py36 </font>
 
 ~~~~
-### Anaconda常用操作命令
+### 1.4 Anaconda常用操作命令
+~~~~
 命令     | 功能
-~~~~~~~~ | ---
-<font color=yellow>conda env list</font> | 查询已创建虚拟环境
-<font color=yellow>conda install name</font> | 安装第三方包
-<font color=yellow>pip install name</font> | 安装第三方包
-<font color=yellow>pip uninstall  name</font> | 卸载第三方包
-<font color=yellow>conda list</font> | 查看环境包信息
-<font color=yellow>conda remove -n name --all</font>    | 删除指定虚拟环境下所有包
-<font color=yellow>conda remove --name --all</font>    | 删除已创建虚拟环境
-@@@@
-### Jupyter简介
+ --- | ---
+<font color=black>conda env list</font> | 查询已创建虚拟环境
+<font color=black>conda install name</font> | 安装第三方包
+<font color=black>pip install name</font> | 安装第三方包
+<font color=black>pip uninstall  name</font> | 卸载第三方包
+<font color=black>conda list</font> | 查看环境包信息
+<font color=black>conda remove -n name --all</font>    | 删除指定虚拟环境下所有包
+<font color=black>conda remove --name --all</font>    | 删除已创建虚拟环境
+~~~~
+### 1.5 Jupyter简介
 JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. JupyterLab is extensible and modular: write plugins that add new components and integrate with existing ones.
 ~~~~
 学校局域网内登陆http://corpus.bhu.edu.cn:9100/lab
 ~~~~
 ![001](../NLP/img/001.png)
 @@@@
-### Sublime介绍
+### 1.6 Sublime介绍
 A sophisticated text editor for
 code, markup and prose
 
@@ -60,7 +61,7 @@ code, markup and prose
 
 ~~~~
 ### Sublime配置
-选择<font color=yellow>Preferences-package Setting-Anaconda-Settings-Users</font>选项，键入以下json数据。
+选择<font color=black>Preferences-package Setting-Anaconda-Settings-Users</font>选项，键入以下json数据。
 
 ```json
 {
@@ -95,7 +96,7 @@ Preferences > Package Settings > Package Control > Settings - User
 
 ~~~~
 ### Python介绍
-Python is a <font color=yellow>programming language</font> that lets you work quickly and integrate systems more effectively.
+Python is a <font color=black>programming language</font> that lets you work quickly and integrate systems more effectively.
 ~~~~
 ### Python基础语法
 
@@ -145,7 +146,7 @@ print ("Hello, Python!") # 第二个注释
 
 多行注释
 
-可以用多个 <font color=yellow>#</font> 号，还有 <font color=yellow>''' </font>和 <font color=yellow>"""</font>：
+可以用多个 <font color=black>#</font> 号，还有 <font color=black>''' </font>和 <font color=black>"""</font>：
 ```python
 #!/usr/bin/python3
  
@@ -165,7 +166,7 @@ print ("Hello, Python!")
 ~~~~
 #### 字符串运算符
 
-字符串可以用运算符"<font color=yellow>+</font>"连接在一起，用运算符"<font color=yellow>*</font>"重复。
+字符串可以用运算符"<font color=black>+</font>"连接在一起，用运算符"<font color=black>*</font>"重复。
 ~~~~
 ```python
 #!/usr/bin/python3
@@ -347,7 +348,7 @@ Python函数与方法的区别
 
 - 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字，即元素的位置，或索引，第一个索引是0，第二个索引是1，依此类推。
 
-- 列表是最常用的Python数据类型，它可以作为一个<font color=yellow>方括号</font>内的<font color=yellow>逗号</font>分隔值出现。
+- 列表是最常用的Python数据类型，它可以作为一个<font color=black>方括号</font>内的<font color=black>逗号</font>分隔值出现。
 
 - 列表的数据项不需要具有相同的类型
 
@@ -361,7 +362,7 @@ list3 = ["a", "b", "c", "d"];
 ~~~~
 访问列表中的值
 
-使用<font color=yellow>下标索引</font>来访问列表中的值，同样你也可以使用方括号的形式截取字符，如下所示
+使用<font color=black>下标索引</font>来访问列表中的值，同样你也可以使用方括号的形式截取字符，如下所示
 ```python
 #!/usr/bin/python3
  
@@ -448,7 +449,7 @@ Python 字典
 
 - 字典是另一种可变容器模型，且可存储任意类型对象。
 
-- 字典的每个键值(key,value)对用<font color=yellow>冒号(:)</font>分割，每个对之间用<font color=yellow>逗号(,)</font>分割，整个字典包括在<font color=yellow>花括号({})</font>中 ,格式如下所示：
+- 字典的每个键值(key,value)对用<font color=black>冒号(:)</font>分割，每个对之间用<font color=black>逗号(,)</font>分割，整个字典包括在<font color=black>花括号({})</font>中 ,格式如下所示：
 
 ```python
 d = {key1 : value1, key2 : value2 }
@@ -591,9 +592,9 @@ else:
     statement_block_3
 ```
 ~~~~
-<font color=yellow>注意：</font>
+<font color=black>注意：</font>
 
-1. 每个条件后面要使用冒号<font color=yellow>:</font>，表示接下来是满足条件后要执行的语句块。
+1. 每个条件后面要使用冒号<font color=black>:</font>，表示接下来是满足条件后要执行的语句块。
 2. 使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。
 3. 在Python中没有switch – case语句。
 ~~~~
@@ -790,7 +791,7 @@ open() 方法
 
 open() 方法用于打开一个文件，并返回文件对象，在对文件进行处理过程都需要使用到这个函数，如果该文件无法被打开，会抛出 OSError。
 
-<font color=yellow>使用 open() 方法一定要保证关闭文件对象，即调用 close() 方法。</font>
+<font color=black>使用 open() 方法一定要保证关闭文件对象，即调用 close() 方法。</font>
 ~~~~
 open() 函数常用形式是接收两个参数：文件名(file)和模式(mode)。
 ```python
