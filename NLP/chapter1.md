@@ -87,7 +87,7 @@ code, markup and prose
 	"anaconda_linting": false,
 }
 ```
-
+~~~~
 1.9 sublime代理设置
 
 
@@ -108,7 +108,7 @@ Preferences > Package Settings > Package Control > Settings - User
         "http://cst.stu.126.net/u/json/cms/channel_v3.json"
     ]
 
-@@@@
+@@@
 
 ### 2 Python基础语法
 ~~~~
@@ -223,7 +223,7 @@ print ("var2[1:5]: ", var2[1:5])
 访问结果
 ```python
 var1[0]:  H
-var2[1:5]:  ingu
+var2[1:5]:  ingu#“左闭右开”原则，也叫“包左不包右”
 ```
 ~~~~
 练习
