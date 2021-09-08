@@ -100,9 +100,9 @@
 
 这样，主语和宾语等功能是由关系来定义，而不是具体说明句子的必要概念。这种规定的方式，菲尔摩称之为“纯粹关系”。
 ~~~~
-1. <font color = yellow>The door</font> opened.
-2. <font color = yellow>John</font> opened the door.
-3. <font color = yellow>The key</font> opened the door.
+1. <font color = black>The door</font> opened.
+2. <font color = black>John</font> opened the door.
+3. <font color = black>The key</font> opened the door.
 
 这种“主语——宾语”语法不能体现动词和名词在句子底层所具有的句法语义关系。
 ~~~~
@@ -122,10 +122,10 @@ S代表句子(Sentence)，M代表情态（Modality），P代表命题（proposit
 ~~~~
 菲尔摩的“格”不同于传统语言学中的句法格，它不是“表层格”而是“深层格”。它是指句子中体词与谓词之间的及物性关系，如动作与施事者的关系，动作与受事者的关系，动作与当事者的关系等等。这些关系是语义关系，这是一切语言中普遍存在的现象。
 ~~~~
-1. 施事格（A = Agent）：<font color = yellow>He</font> cried.
-2. 工具格（I = Instrumental）：He cut the rope with <font color = yellow>a knife</font>.
-3. 与格(名词、代词或形容词用作间接宾语时的一种形式)（D = Dative）：I give <font color = yellow>her</font> a gift.
-4. 使役格（F = Factitive）：He sang <font color = yellow>a song</font>.
+1. 施事格（A = Agent）：<font color = black>He</font> cried.
+2. 工具格（I = Instrumental）：He cut the rope with <font color = black>a knife</font>.
+3. 与格(名词、代词或形容词用作间接宾语时的一种形式)（D = Dative）：I give <font color = black>her</font> a gift.
+4. 使役格（F = Factitive）：He sang <font color = black>a song</font>.
 5. 处所格（P = place）：He is in the house.
 6. 客体格（受事格）（O = Object）：He bought a book.
 7. 时间格（T = Time）：He was at home yesterday.

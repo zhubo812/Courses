@@ -8,10 +8,10 @@
 ### 计算语言学的性质及特点
 
 ~~~~
-1. 计算语言学的<font color = yellow>定义</font>
-2. 计算语言学的<font color = yellow>特点</font>
-3. 计算语言学的<font color = yellow>研究方法</font>
-4. 计算语言学对人们<font color = yellow>语言观的影响</font>
+1. 计算语言学的<font color = black>定义</font>
+2. 计算语言学的<font color = black>特点</font>
+3. 计算语言学的<font color = black>研究方法</font>
+4. 计算语言学对人们<font color = black>语言观的影响</font>
 
 ~~~~
 #### 定义
@@ -25,7 +25,7 @@ Question
 
 计算机能理解、会思维吗？
 ~~~~
-英国天才的数学家、计算机科学家图灵（Turing）提出了“图灵测试”————如果有<font color = yellow>超过30%的测试者不能确定出被测试者是人还是机器</font>，那么这台机器就通过了测试，并被认为具有人类智能。
+英国天才的数学家、计算机科学家图灵（Turing）提出了“图灵测试”————如果有<font color = black>超过30%的测试者不能确定出被测试者是人还是机器</font>，那么这台机器就通过了测试，并被认为具有人类智能。
 
 ![timg](../cl/img/timg.jpg)
 
@@ -104,7 +104,7 @@ NLG一般通过多个子任务来解决问题。 一般可以分为以下六类�
 - 词次（token）
 
 ~~~~
-句子“我明天要去上海看世博会，你去不去？” 的<font color = yellow>词种数</font>和<font color = yellow>词次数</font>分别是多少？
+句子“我明天要去上海看世博会，你去不去？” 的<font color = black>词种数</font>和<font color = black>词次数</font>分别是多少？
 ~~~~
 - 词种：9
 - 词次：11
@@ -159,11 +159,11 @@ NLG一般通过多个子任务来解决问题。 一般可以分为以下六类�
 **可操作性**
 
 ~~~~
-<font color = yellow>可操作性</font>是计算语言学最根本、最关键的方法论原则就是要指出各种语言形式出现和变换的条件。
+<font color = black>可操作性</font>是计算语言学最根本、最关键的方法论原则就是要指出各种语言形式出现和变换的条件。
 ~~~~
-所谓的<font color = yellow>条件</font>和与之相关联的<font color = yellow>动作</font>是一切计算机工作的最基本的方式，也是建立计算语言学语法的最基本、最关键的公式。
+所谓的<font color = black>条件</font>和与之相关联的<font color = black>动作</font>是一切计算机工作的最基本的方式，也是建立计算语言学语法的最基本、最关键的公式。
 ~~~~
-计算语言学的研究手段是计算，计算的<font color = yellow>表现形式</font>是算法。
+计算语言学的研究手段是计算，计算的<font color = black>表现形式</font>是算法。
 ~~~~
 算法是对解题方法的精确描述,可表示为一组有穷的操作规则。其特点如下：
 1. 通用性：算法是针对一类问题的
@@ -243,7 +243,7 @@ VP + NP1 + 的 + NP2（格式歧义、潜在歧义）
 6. `$PP\rightarrow P+NP$`
 
 ~~~~
-<font color = yellow>规则驱动的方法的问题</font>
+<font color = black>规则驱动的方法的问题</font>
 
 All grammar leak(Sapir1921)认为：
 
@@ -273,7 +273,7 @@ All grammar leak(Sapir1921)
 𝑃(周末│今天是)>𝑃(课堂│今天是)
 
 ~~~~
-<font color = yellow>数据驱动的方法（统计方法）的问题</font>
+<font color = black>数据驱动的方法（统计方法）的问题</font>
 
 数据驱动的方法忽视了语言的深层结构。
 
@@ -289,8 +289,8 @@ All grammar leak(Sapir1921)
 ~~~~
 1. 对研究对象语言知识的认识不同。
 
-- 规则方法：语言知识在人的大脑里，即人的语言能力；(<font color = yellow>语言</font>)
-- 统计方法：语言知识在语言数据之中。(<font color = yellow>言语</font>)
+- 规则方法：语言知识在人的大脑里，即人的语言能力；(<font color = black>语言</font>)
+- 统计方法：语言知识在语言数据之中。(<font color = black>言语</font>)
 
 ~~~~
 2. 获取语言知识的方法和途径不同。
@@ -304,8 +304,8 @@ All grammar leak(Sapir1921)
 ~~~~
 4. 对语言事实的评价不同。
 
-- 规则方法：基于乔姆斯基的语言原则，语句是<font color = yellow>正确的/错误的</font>；
-- 统计方法：基于先农(Shannon)的信息论,语句是<font color = yellow>常见的/罕见的</font>。
+- 规则方法：基于乔姆斯基的语言原则，语句是<font color = black>正确的/错误的</font>；
+- 统计方法：基于先农(Shannon)的信息论,语句是<font color = black>常见的/罕见的</font>。
 
 
 ~~~~
@@ -375,11 +375,11 @@ All grammar leak(Sapir1921)
 **2. 发展期(1957-20世纪70年代初)**
 
 
-早期：<font color = yellow>关键词</font>匹配为主流
+早期：<font color = black>关键词</font>匹配为主流
 
 - [1968年维金鲍姆（J·Weizenbaum）的ELIZA系统 （模拟心理医生、能与患者谈话的系统）](http://www.manifestation.com/neurotoys/eliza.php3)
 ~~~~
-中后期：以<font color = yellow>句法-语义分析</font>技术为主流
+中后期：以<font color = black>句法-语义分析</font>技术为主流
 
 - 维诺格拉德于1972年在美国麻省理工学院建成著名的SHRDLU系统（积木世界）。 
 ~~~~
@@ -387,12 +387,12 @@ All grammar leak(Sapir1921)
 ../cl/img/SHRDLU.jpg)
 
 下面是 SHRDLU系统中人和计算机之间的一段对话：
-- <font color = yellow>Person</font>: Pick up a big red block.
+- <font color = black>Person</font>: Pick up a big red block.
 	- <font color = red>Computer</font>: Ok. (does it)
-- <font color = yellow>Person</font>: Grasp the pyramid.
+- <font color = black>Person</font>: Grasp the pyramid.
 	- <font color = red>Computer</font>: I don't understand which pyramid you mean.
 ~~~~
-- <font color = yellow>Person</font>: Find a block which is taller than the one you are holding and put it into the box.
+- <font color = black>Person</font>: Find a block which is taller than the one you are holding and put it into the box.
 	- <font color = red>Computer</font>: By "it", I assume you mean the block which is taller than the one I am holding.
 ~~~~
 商克(Schannk)及其学生于1973年在斯坦福大学 建成MARGIE系统。 
@@ -400,19 +400,19 @@ All grammar leak(Sapir1921)
 MARGIE系统能以推理或释义两种方式运行。在推理方式下，它接受一个输入句，然后利用推理器生成这个句子所蕴涵的事实。
 ~~~~
 
-输入 <font color = yellow>John gave Mary some aspirin. </font>（约翰给玛丽一些阿司匹林。）
+输入 <font color = black>John gave Mary some aspirin. </font>（约翰给玛丽一些阿司匹林。）
 
 
-系统就可以作出推理： <font color = yellow>John believes Mary wants an aspirin. Mary is sick.</font> （约翰相信玛丽需要阿司匹林。玛丽病了。）
+系统就可以作出推理： <font color = black>John believes Mary wants an aspirin. Mary is sick.</font> （约翰相信玛丽需要阿司匹林。玛丽病了。）
 
 ~~~~
 **在释义方式下，它将以尽可能多的等价方式来复 述输入的句子。**
 
-- 如输入<font color = yellow>John killed Mary by choking her.</font>(约翰扼杀了玛丽。)
+- 如输入<font color = black>John killed Mary by choking her.</font>(约翰扼杀了玛丽。)
 
 - 系统就会复述出如下的句子：
-	- <font color = yellow>John strangled Mary.</font>(约翰勒死了玛丽。) 
-	- <font color = yellow>John choked Mary and she died because she was unable to breathe. </font>(约翰扼住玛丽的脖子，她因为不能呼吸就死了。）
+	- <font color = black>John strangled Mary.</font>(约翰勒死了玛丽。) 
+	- <font color = black>John choked Mary and she died because she was unable to breathe. </font>(约翰扼住玛丽的脖子，她因为不能呼吸就死了。）
 
 ~~~~
 李家治、陈永明等人建成的“古汉语机器理解系统——ACLUS”。
@@ -420,19 +420,19 @@ MARGIE系统能以推理或释义两种方式运行。在推理方式下，它�
 ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成现代汉语，并回答故事中的语法和词义问题。
 ~~~~
 
-- <font color = yellow>问</font>：‘先度其足’中的‘度’是什么意思？ 
+- <font color = black>问</font>：‘先度其足’中的‘度’是什么意思？ 
 	- <font color = red>答</font>：‘度’是动词，是测量某种东西尺寸的意思。 
-- <font color = yellow>问</font>：‘吾忘持度’中的‘度’是什么意思？ 
+- <font color = black>问</font>：‘吾忘持度’中的‘度’是什么意思？ 
 	- <font color = red>答</font>：‘度’是名词，是尺寸的意思。
 
 ~~~~
 范继淹、徐志敏等人建成的“TK——84汉语人机对话实验系统”。这是一个铁路客运咨询系统。
 
-- <font color = yellow>问</font>：从北京到大连有高铁吗？
+- <font color = black>问</font>：从北京到大连有高铁吗？
 	- <font color = red>答</font>：有。 
-- <font color = yellow>问</font>：开往沈阳的快车都有卧铺吗？ 
+- <font color = black>问</font>：开往沈阳的快车都有卧铺吗？ 
 	- <font color = red>答</font>：11次没有卧铺，其他都有。 
-- <font color = yellow>问</font>：11次为什么没有卧铺？ 
+- <font color = black>问</font>：11次为什么没有卧铺？ 
 	- <font color = red>答</font>：11次8点从北京开，18点49分到沈阳，卧铺没有必要。
 
 ~~~~
@@ -443,24 +443,24 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 ~~~~
 **发展期句法分析方面的成果**
 
-- 乔姆斯基的<font color = yellow>短语结构语法</font>（phrase structure grammar，简称PSG）
-- 伍兹的<font color = yellow>扩充转移网络</font>(augemented transition network,简称ATN)； 
-- 卡普兰等的<font color = yellow>词汇功能语法</font>（Lexical-functional grammar，简称 LFG）；
-- 马丁·凯依的<font color = yellow>功能合一语法</font>(functional unificational grammar，简称 FUG)；
-- 盖兹达等的<font color = yellow>广义短语结构语法</font>(generalized phrase structure grammar,简称GPSG)等等。
+- 乔姆斯基的<font color = black>短语结构语法</font>（phrase structure grammar，简称PSG）
+- 伍兹的<font color = black>扩充转移网络</font>(augemented transition network,简称ATN)； 
+- 卡普兰等的<font color = black>词汇功能语法</font>（Lexical-functional grammar，简称 LFG）；
+- 马丁·凯依的<font color = black>功能合一语法</font>(functional unificational grammar，简称 FUG)；
+- 盖兹达等的<font color = black>广义短语结构语法</font>(generalized phrase structure grammar,简称GPSG)等等。
 
 ~~~~
 **发展期语义分析方面的成果**
 
-- 菲尔摩的<font color = yellow>格语法</font>（case grammar); 
-- 威尔克斯的<font color = yellow>优选语义学</font>(preference semantics)
-- 商克的<font color = yellow>概念依存理论</font>(Conception Dependency Theory, 简称CD理论)  
+- 菲尔摩的<font color = black>格语法</font>（case grammar); 
+- 威尔克斯的<font color = black>优选语义学</font>(preference semantics)
+- 商克的<font color = black>概念依存理论</font>(Conception Dependency Theory, 简称CD理论)  
 ~~~~
 
-发展期的计算语言学逐渐融入了<font color = yellow>人工智能</font>的研究领域。研究方法上出现了<font color = yellow>基于规则</font>和<font color = yellow>基于统计(概率)</font>两种思想，并形成了两大阵营。
+发展期的计算语言学逐渐融入了<font color = black>人工智能</font>的研究领域。研究方法上出现了<font color = black>基于规则</font>和<font color = black>基于统计(概率)</font>两种思想，并形成了两大阵营。
 
-- 基于规则方法的<font color = yellow>符号派</font>(symbolic)
-- 基于统计方法的<font color = yellow>随机派</font>(stochastic)。
+- 基于规则方法的<font color = black>符号派</font>(symbolic)
+- 基于统计方法的<font color = black>随机派</font>(stochastic)。
 ~~~~
 - 以Chomsky为代表的符号派学者开始了形式语言理论和生成句法的研究，20世纪60年代末又进行了形式逻辑系统的研究。
 
@@ -469,15 +469,15 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 随着研究的深入，人们发现计算语言学的很多应用在短时间内无法解决，而的新问题新需求又不断地涌现。因此，计算语言学研究受到较大影响。从70年代开始，计算语言学的很多研究领域进入了低谷时期。
 ~~~~
 但尽管如此，计算语言学仍然在这期间取得了一些成果。例如，
-- <font color = yellow>基于隐马尔可夫模型</font>(Hidden Markov Model, HMM);
-- <font color = yellow>话语分析</font>(Discourse Analysis)。
+- <font color = black>基于隐马尔可夫模型</font>(Hidden Markov Model, HMM);
+- <font color = black>话语分析</font>(Discourse Analysis)。
 
 之后，由于计算语言学研究者对于过去的研究进行了总结，有限状态模型和经验主义研究方法也开始复苏。
 
 ~~~~
 **3. 繁荣期**(20世纪70年代中后期-20世纪80年代末)
 
- 繁荣期主要以<font color = yellow>机器翻译</font>的出现及发展为标志
+ 繁荣期主要以<font color = black>机器翻译</font>的出现及发展为标志
 ~~~~
 
 - 1976年，加拿大蒙特利尔大学与加拿大联邦政府翻译局联合开发的实用性英法机器翻译系统TAUM-METEO正式投入使用，提供天气预报的翻译服务。
@@ -494,9 +494,9 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 **4. 融合期发展期**(20世纪90年代至今）
 
-20世纪90年代中期以后，计算机的处理速度和存储量等<font color = yellow>硬件</font>性能大幅提升，为计算语言学改善了物质基础，使得语言处理的商品化开发成为可能；
+20世纪90年代中期以后，计算机的处理速度和存储量等<font color = black>硬件</font>性能大幅提升，为计算语言学改善了物质基础，使得语言处理的商品化开发成为可能；
 
-此外，1994年Internet商业化和同期<font color = yellow>网络技术</font>的发展使得基于自然语言的信息检索和信息抽取的需求变得尤为重要。
+此外，1994年Internet商业化和同期<font color = black>网络技术</font>的发展使得基于自然语言的信息检索和信息抽取的需求变得尤为重要。
 
 ~~~~
 **Milestone**
@@ -510,7 +510,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 - 2018年 [预训练语言模型](#/2/116)
 ~~~~
 
-<font color = yellow>神经概率语言模型（Neural Probabilistic language models）</font>
+<font color = black>神经概率语言模型（Neural Probabilistic language models）</font>
 
 神经网络（Neural Network, NN）被应用于语言建模之前,主流语言模型是N-Gram模型，利用前面n个词语预测下一个单词。
 神经网络语言模型引起广泛关注是在[Bengio et al. (2003)](https://jmlr.csail.mit.edu/papers/volume3/bengio03a/bengio03a.pdf)提出前向神经网络（Feed-forward Neural Network, FNN）语言模型之后.
@@ -525,7 +525,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 ![nlm](../cl/img/nlm.jpg)
 ~~~~
 
-<font color = yellow>多任务学习（Multi-task learning）</font>
+<font color = black>多任务学习（Multi-task learning）</font>
 
 多任务学习是在多个任务下训练的模型之间共享参数的方法。在神经网络中，这可以通过绑定不同层的权重来轻松完成。多任务学习的想法于年由Rich Caruana(1993)首次提出，
 [Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)首次将多任务学习应用于NLP。在多任务学习框架下，词嵌入矩阵被两个在不同任务下训练的模型共享。
@@ -542,13 +542,13 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 [<](#/2/84)
 ~~~~
-<font color = yellow>词嵌入（Word embeddings）</font>
+<font color = black>词嵌入（Word embeddings）</font>
 
 [Bengio et al. (2003)](https://jmlr.csail.mit.edu/papers/volume3/bengio03a/bengio03a.pdf)证明使用神经网络训练的语言模型可以生成更好的词向量,并且提出了很多优化训练的方法。
 
 [Mikolov et al. (2003)](https://arxiv.org/pdf/1310.4546.pdf)通过删除隐含层和近似目标来使这些词嵌入的训练更有效。
 ~~~~
-<font color = yellow>word2vec--高效的词嵌入工具</font>
+<font color = black>word2vec--高效的词嵌入工具</font>
 
 word2vec包含两种模式：
 
@@ -559,7 +559,7 @@ word2vec包含两种模式：
 
 [<](#/2/84)
 ~~~~
-<font color=yellow>Neural networks for NLP</font>
+<font color=black>Neural networks for NLP</font>
 
 2013、2014期间神经网络模型逐渐在NLP任务中广泛采用。主要有以下三种类型：
 
@@ -570,16 +570,16 @@ word2vec包含两种模式：
 
 
 ~~~~
-<font color=yellow>卷积神经网络</font>
+<font color=black>卷积神经网络</font>
 
 卷积神经网络（CNN）被广泛应用于计算机视觉，[Kalchbrenner,2014](https://arxiv.org/pdf/1404.2188.pdf)[Kim,2014](https://arxiv.org/pdf/1408.5882.pdf)将CNN应用于语言研究。下图显示了NLP中使用的典型CNN。
 
 ~~~~
 ![cnn](../cl/img/cnn.png)
 ~~~~
-<font color=yellow>循环神经网络（Recurrent Neural Networks）</font>
+<font color=black>循环神经网络（Recurrent Neural Networks）</font>
 
-循环神经网络从<font color=yellow>时间维度</font>展开，表示信息在时间维度上的传递和积累，后一个信息的概率建立在前面信息的基础上，在神经网络结构上表现为后面隐含层的输入是前面的隐含层的输出。
+循环神经网络从<font color=black>时间维度</font>展开，表示信息在时间维度上的传递和积累，后一个信息的概率建立在前面信息的基础上，在神经网络结构上表现为后面隐含层的输入是前面的隐含层的输出。
 ~~~~
 <img align="left" src="../cl/img/RecurrentNN0.jpg"/>
 
@@ -599,7 +599,7 @@ word2vec包含两种模式：
 ~~~~
 ![recurrentNN1](../cl/img/RecurrentNN1.png)
 ~~~~
-<font color=yellow>长短期记忆模型(Long-short Term Memory,LSTM)</font>
+<font color=black>长短期记忆模型(Long-short Term Memory,LSTM)</font>
 LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原始RNN算法中的梯度消失弥散（Vanishing Gradient）问题。
 ~~~~
 一个LSTM神经元（Cell）可以接收两个信息，其中一个是序列的某一位输入，另一个是上一轮的隐藏状态。
@@ -611,18 +611,18 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 
 相比RNN只有一个传递状态`$h^t$`，LSTM有两个传输状态，一个`$c^t$`（cell state），和一个`$h^t$`（hidden state）。（Tips：RNN中的`$h^t$`对于LSTM中的`$c^t$`）
 ~~~~
-<font color=yellow>递归神经网络（Recursive Neural Networks）</font>
+<font color=black>递归神经网络（Recursive Neural Networks）</font>
 
-递归神经网络从<font color=yellow>空间维度</font>的展开，是一个树结构。
+递归神经网络从<font color=black>空间维度</font>的展开，是一个树结构。
 ![RecursiveNN](../cl/img/RecursiveNN.png)
 ~~~~
 
-递归神经网络把一个<font color=yellow>树型结构</font>信息编码为一个<font color=yellow>向量</font>,也就是把信息映射到一个语义向量空间中,语义相似的向量距离更近。两句话内容不同，但意思是相近，那么这两句话的向量的距离也相近；反之，语义差异越大，向量的距离则很远。
+递归神经网络把一个<font color=black>树型结构</font>信息编码为一个<font color=black>向量</font>,也就是把信息映射到一个语义向量空间中,语义相似的向量距离更近。两句话内容不同，但意思是相近，那么这两句话的向量的距离也相近；反之，语义差异越大，向量的距离则很远。
 ~~~~
 ![RecursiveNN1](../cl/img/RecursiveNN1.png)
 ~~~~
 
-<font color=yellow>序列到序列模型（Sequence-to-sequence models）</font>
+<font color=black>序列到序列模型（Sequence-to-sequence models）</font>
 
 [Kyunghyun,Bengio et al. 2014](https://arxiv.org/pdf/1406.1078.pdf)提供了一种崭新的RNN Encoder-Decoder算法，并且将其应用于机器翻译中。
 这种算法也是现在谷歌已经应用于线上机器翻译的算法，翻译质量基本达到、甚至超越人类水平。
@@ -638,7 +638,7 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 ~~~~
 
 
-<font color=yellow>注意力机制（Attention）</font>
+<font color=black>注意力机制（Attention）</font>
 
 RNN应用于翻译时依赖将整个句子压缩成固定输入的向量，当句子包含单词过多时，不可避免地造成信息丢失，导致翻译错误。
 
@@ -661,19 +661,19 @@ BahdanauAttention与LuongAttention的区别
 
 [<](#/2/84)
 ~~~~
-<font color=yellow>基于记忆的神经网络</font>
+<font color=black>基于记忆的神经网络</font>
 
 记忆网络可以看做一个框架，用于QA或者分类等任务。
 传统的记忆架构做关系推理时有困难，DeepMind和伦敦大学学院提出关系推理模块[RMC](https://arxiv.org/pdf/1806.01822.pdf)，能够在序列信息中执行关系推理，在WikiText-103, Project Gutenberg和GigaWord 数据集上达到了当前最佳性能。
 
 [<](#/2/84)
 ~~~~
-<font color=yellow>预训练的语言模型(Pre-trained Models)</font>
+<font color=black>预训练的语言模型(Pre-trained Models)</font>
 
 预训练语言模型可以在数据量十分少的情况下有效学习。由于语言模型的训练只需要无标签的数据，因此他们对于数据稀缺的低资源语言特别有利。
 
 ~~~~
-<font color=yellow>预训练模型的发展</font>
+<font color=black>预训练模型的发展</font>
 1. 词嵌入（Word Embedding）
 	- Word2Vec和[GloVe](#/2/118)[(Global  Vectors for Word Representation)](http://nlp.stanford.edu/projects/glove/)
 2. 上下文嵌入(Context Word Embedding)
@@ -686,42 +686,42 @@ BahdanauAttention与LuongAttention的区别
 	- 改进型的代表为ALBERT和XLNet
 	- 领域定制化代表为SciBert (Scientific Bert) 和BioBert(Biomedical Bert)
 ~~~~
-<font color=yellow>小结</font>
+<font color=black>小结</font>
 
 为什么各类神经网络被广泛应用于NLP任务?
 
-<font color=yellow>缓解特征工程问题</font>。非神经NLP方法通常严重依赖于离散的手工特征，而神经方法通常使用低维和稠密的向量(又称分布式表示)隐式地表示语言的语法或语义特征。这些表示是在特定的NLP任务中学习的。因此，神经方法使人们可以很容易地开发各种NLP系统。
+<font color=black>缓解特征工程问题</font>。非神经NLP方法通常严重依赖于离散的手工特征，而神经方法通常使用低维和稠密的向量(又称分布式表示)隐式地表示语言的语法或语义特征。这些表示是在特定的NLP任务中学习的。因此，神经方法使人们可以很容易地开发各种NLP系统。
 
 [<](#/2/84)
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)--GloVe</font>
+<font color=black>[预训练模型](#/2/116)--GloVe</font>
 
 GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space. 
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)--GloVe</font>
+<font color=black>[预训练模型](#/2/116)--GloVe</font>
 
 GloVe与skip-gram和CBOW相比，skip-gram与CBOW每次用一个窗口中的信息更新出词向量，GloVe则是用了全局的信息（共现矩阵），即同时使用多个窗口进行更新词向量。
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)--CoVe</font>
+<font color=black>[预训练模型](#/2/116)--CoVe</font>
 
 [Bryan McCann et al.2017](https://arxiv.org/pdf/1708.00107.pdf)提出CoVe。与GloVe作为模型的输入时候的效果进行比较。实验结果表明他们提出的 Context Vectors 在不同任务中都带来了不同程度效果的提升。
 
 CoVe更侧重于如何将现有数据上预训练得到的表征迁移到新任务场景中，而之前的句子级任务中大多数都只把迁移过程当做一个评估他们表征效果的手段，因此观念上有所不同。
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)--[ELMo(Embeddings from Language Models)](https://allennlp.org/elmo)</font>
+<font color=black>[预训练模型](#/2/116)--[ELMo(Embeddings from Language Models)](https://allennlp.org/elmo)</font>
 
 [ELMo](https://www.aclweb.org/anthology/N18-1202/) is a deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy). 
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)--ELMo(Embeddings from Language Models)</font>
+<font color=black>[预训练模型](#/2/116)--ELMo(Embeddings from Language Models)</font>
 
 双向语言模型（Bidirectionbbal language models, biLM）
 ![elmo](../cl/img/elmo.png)
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)-GPT</font>
+<font color=black>[预训练模型](#/2/116)-GPT</font>
 
 [GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)的核心思想是先通过无标签的文本去训练生成语言模型，再根据具体的NLP任务利用有标签的数据对模型进行fine-tuning。
 ~~~~
-<font color=yellow>[预训练模型](#/2/116)--BERT</font>
+<font color=black>[预训练模型](#/2/116)--BERT</font>
 
 GloVe与skip-gram和CBOW相比，skip-gram与CBOW每次用一个窗口中的信息更新出词向量，GloVe则是用了全局的信息（共现矩阵），即同时使用多个窗口进行更新词向量。
 
