@@ -72,7 +72,7 @@ $$
 `$P(w_1,w_2,...w_n)$`  
 `$=P(w_1)\times P(w_2|w_1)\times ... P(w_n|w_1..w_{n-1})$`
 
-其中，`$w_1$`,`$w_2$`,...`$w_n$`可以看做是组成句子的<font color=yellow>词</font>，也可以看成是组成句子的<font color=yellow>字</font>。
+其中，`$w_1$`,`$w_2$`,...`$w_n$`可以看做是组成句子的<font color=black>词</font>，也可以看成是组成句子的<font color=black>字</font>。
 ~~~~
 #### 2.1.4 全概率公式
 
@@ -121,7 +121,7 @@ $$
 - `$P(B|A)$`为后验概率，是指事情已经发生，求事件发生的原因由某因素引起的可能性的大小
 - `$P(AB)$`为联合概率
 ~~~~
-从机器学习的角度，可以视`$A$`为<font color=yellow>特征</font>、`$B$`为<font color=yellow>标签或类别</font>，那么贝叶斯公式可以表示为：
+从机器学习的角度，可以视`$A$`为<font color=black>特征</font>、`$B$`为<font color=black>标签或类别</font>，那么贝叶斯公式可以表示为：
 
 $$P(类别|特征)=\frac{P(特征|类别)P(类别)}{P(特征)}$$
 
@@ -135,7 +135,7 @@ $$P(类别|特征)=\frac{P(特征|类别)P(类别)}{P(特征)}$$
 ~~~~
 贝叶斯用于文本分类问题
 
-句子<font color=yellow>“我司代开正规发票”</font>,其类别为<font color=yellow>垃圾邮件</font>
+句子<font color=black>“我司代开正规发票”</font>,其类别为<font color=black>垃圾邮件</font>
 
 $$
 P(垃圾邮件|我司代开正规发票)
@@ -151,8 +151,8 @@ $$
 $$
 \approx P(我|S)P(司|S)P(代开|S)P(正规|S)P(发票|S)
 $$
-- 这就是<font color=yellow>条件独立假设</font>
-- Bayes方法加上条件独立假设就是<font color=yellow>朴素贝叶斯方法(Naive Bayes)</font>
+- 这就是<font color=black>条件独立假设</font>
+- Bayes方法加上条件独立假设就是<font color=black>朴素贝叶斯方法(Naive Bayes)</font>
 ~~~~
 朴素贝叶斯失去了词语之间的顺序信息。这就相当于把所有的词汇扔进到一个袋子里随便搅和，贝叶斯都认为它们一样。因此这种情况也称作词袋子模型(bag of words)。
 
@@ -193,7 +193,7 @@ Shannon理论基本任务是设计有效而可靠的通信系统。
 
 除狭义信息论的研究内容外，还包括自然和社会领域有关信息的内容，如模式识别，计算机翻译，心理学，遗传学，神经生理学。
 ~~~~
-#### 2.2.1 <font color=yellow>信息量</font>
+#### 2.2.1 <font color=black>信息量</font>
 
 事件发生的不确定性与事件发生的概率有关。事件发生的概率越小，事件发生所包含的不确定性和信息量就越大。而事件发生的概率越大，人们猜测这件事发生的可能性就越大，不确定性就越小。
 
@@ -217,7 +217,7 @@ $$
 $I(x_i)$描述了事件$x_i$发生时的信息量，故称为自信息。
 
 ~~~~
-#### 2.2.2 <font color=yellow>自信息</font>
+#### 2.2.2 <font color=black>自信息</font>
 
 事件集合$X$中的事件$x=a_i$的自信息定义为：<br>
 $I_X(a_i)=-\log P_X(a_i)$<br>
@@ -270,7 +270,7 @@ $I(2,0)=-\log \frac{89}{110}=0.306bit$
 
 因$I(0,2)>I(2,0)$, 所以事件“两个球都是白球”的发生更难预测。
 ~~~~
-#### 2.2.4 <font color=yellow>条件自信息</font>
+#### 2.2.4 <font color=black>条件自信息</font>
 
 事件$x=a_i$在事件$y=b_j$给定条件下的条件自信息定义为:
 $I_{X|Y}(a_i|b_j)=-\log P_{X|Y}(a_i|b_j)$
@@ -301,7 +301,7 @@ $I(y=w|x=r)=-\log \frac{10}{99}=3.308bit$
 
 $I(y=r|x=r)=-\log \frac{89}{99}=0.154bit$
 ~~~~
-#### 2.2.5 <font color=yellow>熵(entropy)</font>
+#### 2.2.5 <font color=black>熵(entropy)</font>
 
 离散随机变量$X$的熵定义为自信息的统计平均值，记为$H(X)$
 
@@ -342,7 +342,7 @@ $$\times \log0.3=1.571bit$$
 ~~~~
 
 
-#### 2.2.6 <font color=yellow>条件熵(conditional entropy) </font>
+#### 2.2.6 <font color=black>条件熵(conditional entropy) </font>
 
 给定随机变量$X$的情况下，随机变量$Y$的条件熵定义为：
 $$
@@ -369,7 +369,7 @@ $$
 
 ~~~~
 
-#### 2.2.7 <font color=yellow>联合熵(joint entropy)</font>
+#### 2.2.7 <font color=black>联合熵(joint entropy)</font>
 
 联合自信息量定义为：$I(x_i,y_j)=-\log p(x_i,y_j)$
 
@@ -402,7 +402,7 @@ $H(Y|X)\leq H(Y)$
 3. 联合熵与信息熵的关系:
 $H(X,Y)=H(X)+H(Y)$
 ~~~~
-#### 2.2.8 <font color=yellow>相对熵(Kullback-Leibler Divergence, KL距离)</font>
+#### 2.2.8 <font color=black>相对熵(Kullback-Leibler Divergence, KL距离)</font>
 
 相对熵(relative entropy)又称Kullback-Leibler距离(Kullback-Leibler divergence)，或简称KL距离，是衡量相同事件空间里两个概率分布相对差距的一个量度。
 
@@ -426,7 +426,7 @@ $$
 2. 当两个随机分布的差别增加时，其相对熵也增大。
 ~~~~
 
-#### 2.2.9 <font color=yellow>交叉熵(cross entropy)</font>
+#### 2.2.9 <font color=black>交叉熵(cross entropy)</font>
 
 对于n-gram，其概率为，$P(w_i|w_{i-n+1}^{i-1})$
 可以计算句子的概率为：
@@ -441,7 +441,7 @@ $$
 
 ~~~~
 
-#### 2.2.10 <font color=yellow>互信息(mutual information)</font> 
+#### 2.2.10 <font color=black>互信息(mutual information)</font> 
 
 互信息$I(x,y)$表示某一事件y所给出的关于另一个事件x的信息。
 
@@ -474,7 +474,7 @@ $I(x;y)$表示当y发生后$x$不确定性的变化。
 ~~~~
 3. 互信息反映了两个随机事件$x$和$y$之间的统计关联程度。在通信系统中，互信息的物理含义是，信道输出端接收到某消息(或消息序列)$y$后，获得的关于输入端某消息(或消息序列)x的信息量。互信息的引出，使信息传输问题进入例如定量分析的范畴，是信息论发展的一个重要的里程碑。
 ~~~~
-#### 2.2.11 <font color=yellow>困惑度(perplexity)</font>
+#### 2.2.11 <font color=black>困惑度(perplexity)</font>
 在设计语言模型时，我们常用困惑度代替交叉熵衡量语言模型的好坏。给定语言`$L$`的样本 如下：
 $$
 L_1^n=l_1l_2...l_n
