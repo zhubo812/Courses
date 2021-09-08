@@ -15,15 +15,15 @@
 如果树中有一个结点被特别地标记，则这棵树被称之为根树，这个被特别标记的结点被称之为**根结点**。
 
 ~~~~
-![graph1](../cl/img/graph1.png)
+![graph1](../ComputationalLinguistics/img/graph1.png)
 ~~~~
 
 
-![graph2](../cl/img/graph2.png)
+![graph2](../ComputationalLinguistics/img/graph2.png)
 
 
 ~~~~
-![grap3](../cl/img/graph3.png)
+![grap3](../ComputationalLinguistics/img/graph3.png)
 
 
 ~~~~
@@ -271,7 +271,7 @@
 句子“学生学习语言学。”
 
 ~~~~
-![31](../cl/img/31.jpg)
+![31](../ComputationalLinguistics/img/31.jpg)
 
 ~~~~
 > 推导过程：
@@ -351,7 +351,7 @@ D --规则5--> E(abcc)
 E --规则7--> F(bacc)
 ```
 ~~~~
-![32](../cl/img/32.jpg)
+![32](../ComputationalLinguistics/img/32.jpg)
 #### P：
 1. `$S\rightarrow ABC$`
 2. `$A\rightarrow aA$`
@@ -510,7 +510,7 @@ E --规则7--> F(bacc)
 3. `$A\rightarrow a$`
 `$G$`产生句子`$bbaa$`可以由下面的生树表示:
 ~~~~
-![34](../cl/img/34.png)
+![34](../ComputationalLinguistics/img/34.png)
 ~~~~
 例如，
 `$G=\{V_n,V_t,P,S\}$` 
@@ -530,7 +530,7 @@ E --规则7--> F(bacc)
 ~~~~
 根据文法`$G$`生成句子"我喜欢红苹果"，并画出树形图。
 
-![33](../cl/img/33.png)
+![33](../ComputationalLinguistics/img/33.png)
 ~~~~
 
 #### 3.3.7 上下文无关文法的二义性
@@ -547,11 +547,11 @@ E --规则7--> F(bacc)
 
 ~~~~
 
-![3371](../cl/img/3371.png)
+![3371](../ComputationalLinguistics/img/3371.png)
 ~~~~
 
 
-![3372](../cl/img/3372.png)
+![3372](../ComputationalLinguistics/img/3372.png)
 
 
 ~~~~
@@ -588,7 +588,7 @@ D6(NP)-->E4(n)
 
 ```
 ~~~~
-![3373](../cl/img/3373.png)
+![3373](../ComputationalLinguistics/img/3373.png)
 
 ~~~~
 ### 自动机
@@ -607,7 +607,7 @@ D6(NP)-->E4(n)
 ~~~~
 从机械装置的角度来说，图灵机由一条可以（向右）无限延长的输入带、一个有限状态控制装置和一个连接控制器与输入带的读写头组成，如图所示
 
-![3376](../cl/img/3376.png)
+![3376](../ComputationalLinguistics/img/3376.png)
 ~~~~
 有限状态控制器的状态转换和动作规则是图灵机的核心要素。图灵机在当前状态下扫描到带上的一个字符时，要执行3件工作：
 1. 进行状态转换；
@@ -680,7 +680,7 @@ graph LR
 A((q))--a--\>B((q'))
 ```
 -->
-![3374](../cl/img/3374.png)
+![3374](../ComputationalLinguistics/img/3374.png)
 
 <!--为了明确起见，终止状态用双圈表示，起始状态用有“开始”标记的箭头表示。-->
 ~~~~
@@ -710,7 +710,7 @@ NFA与DFA的唯一区别是:
 在NFA中`$\delta(q,a)$`
 是一个状态集合,而在DFA中`$\delta(q,a)$`是一个状态。
 ~~~~
-![3375](../cl/img/3375.png)
+![3375](../ComputationalLinguistics/img/3375.png)
 <!--
 ```mermaid
 graph TD

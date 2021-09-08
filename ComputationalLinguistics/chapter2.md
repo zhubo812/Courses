@@ -47,7 +47,7 @@ $$
 `$N$`是试验总次数
 
 ~~~~
-![avatar](../cl/img/condiprob.jpg)
+![avatar](../ComputationalLinguistics/img/condiprob.jpg)
 
 ~~~~
 #### 2.1.3 乘法公式
@@ -79,7 +79,7 @@ $$
 事件组`$A_1,A_2,...A_n$`(`$n$`可为`$\infty$`)称为样本空间`$S$`的一个划分，若以下条件满足：
 1. `$\bigcup_{i=1}^nA_i=S$`
 2. `$A_iA_j=\phi,(i\neq j)(i,j=1,2,...n)$`
-![avatar](../cl/img/allprob.jpg)
+![avatar](../ComputationalLinguistics/img/allprob.jpg)
 ~~~~
 定理
 
@@ -156,7 +156,7 @@ $$
 ~~~~
 朴素贝叶斯失去了词语之间的顺序信息。这就相当于把所有的词汇扔进到一个袋子里随便搅和，贝叶斯都认为它们一样。因此这种情况也称作词袋子模型(bag of words)。
 
-![bw](../cl/img/bw.jpg)
+![bw](../ComputationalLinguistics/img/bw.jpg)
 ~~~~
 #### 2.1.5 最大似然估计(Maximum Likehood Estimation MLE)
 作业

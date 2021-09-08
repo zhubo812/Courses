@@ -498,7 +498,7 @@ Bi-direction Matching Method, BMM
 #### 5.8.6 最短路径法 
 基本思想：设待分字串`$S=c_1c_2...c_n$`，其中，`$c_i(i=1,2,...n)$`为单个的字,`$n$`为串的长度，`$n\geq1$`。建立一个节点数为`$n+1$`的切分有向无环图`$G$`各节点编号依次为`$V_0,V_1,V_2...V_n$`
 ~~~~
-![nsp](../cl/img/nsp.png)
+![nsp](../ComputationalLinguistics/img/nsp.png)
 
 求N-最短路径：贪心法(如Dijkstra算法)。
 ~~~~
@@ -918,7 +918,7 @@ $$
 `$p(t)$`词类`$t$`出现在句首的概率
 
 ~~~~
-![hmm](../cl/img/hmm.png)
+![hmm](../ComputationalLinguistics/img/hmm.png)
 
 ~~~~
 
@@ -965,9 +965,9 @@ $$
 “发生交通事故时，当事人应当迅速报告公安机关，听候处理...”中的“报告”是动词还是名词?
 ~~~~
 
-![pos1](../cl/img/pos.png)
+![pos1](../ComputationalLinguistics/img/pos.png)
 ~~~~
-![pos2](../cl/img/pos2.png)
+![pos2](../ComputationalLinguistics/img/pos2.png)
 
 ~~~~
 ## 课后习题

@@ -27,7 +27,7 @@ Question
 ~~~~
 英国天才的数学家、计算机科学家图灵（Turing）提出了“图灵测试”————如果有<font color = black>超过30%的测试者不能确定出被测试者是人还是机器</font>，那么这台机器就通过了测试，并被认为具有人类智能。
 
-![timg](../cl/img/timg.jpg)
+![timg](../ComputationalLinguistics/img/timg.jpg)
 
 ~~~~
 根据“图灵测试”的思想，计算机如果做到了下面四条中的一条，就可以认为它是智能的：
@@ -384,7 +384,7 @@ All grammar leak(Sapir1921)
 - 维诺格拉德于1972年在美国麻省理工学院建成著名的SHRDLU系统（积木世界）。 
 ~~~~
 ![SHRDLU系统（积木世界）](
-../cl/img/SHRDLU.jpg)
+../ComputationalLinguistics/img/SHRDLU.jpg)
 
 下面是 SHRDLU系统中人和计算机之间的一段对话：
 - <font color = black>Person</font>: Pick up a big red block.
@@ -522,7 +522,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 [<](#/2/84)
 ~~~~
-![nlm](../cl/img/nlm.jpg)
+![nlm](../ComputationalLinguistics/img/nlm.jpg)
 ~~~~
 
 <font color = black>多任务学习（Multi-task learning）</font>
@@ -531,7 +531,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 [Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)首次将多任务学习应用于NLP。在多任务学习框架下，词嵌入矩阵被两个在不同任务下训练的模型共享。
 
 ~~~~
-![mtl](../cl/img/mtl.png)
+![mtl](../ComputationalLinguistics/img/mtl.png)
 
 ~~~~
 共享词嵌入使模型能够在词嵌入矩阵中协作并共享一般的低级信息，这类信息常构成模型中大部分的参数。
@@ -575,13 +575,13 @@ word2vec包含两种模式：
 卷积神经网络（CNN）被广泛应用于计算机视觉，[Kalchbrenner,2014](https://arxiv.org/pdf/1404.2188.pdf)[Kim,2014](https://arxiv.org/pdf/1408.5882.pdf)将CNN应用于语言研究。下图显示了NLP中使用的典型CNN。
 
 ~~~~
-![cnn](../cl/img/cnn.png)
+![cnn](../ComputationalLinguistics/img/cnn.png)
 ~~~~
 <font color=black>循环神经网络（Recurrent Neural Networks）</font>
 
 循环神经网络从<font color=black>时间维度</font>展开，表示信息在时间维度上的传递和积累，后一个信息的概率建立在前面信息的基础上，在神经网络结构上表现为后面隐含层的输入是前面的隐含层的输出。
 ~~~~
-<img align="left" src="../cl/img/RecurrentNN0.jpg"/>
+<img align="left" src="../ComputationalLinguistics/img/RecurrentNN0.jpg"/>
 
 `$x$`是一个向量，它表示输入层的值；
 
@@ -595,9 +595,9 @@ word2vec包含两种模式：
 
 `$W$`就是隐含层上一次的值作为这一次的输入的权重。
 ~~~~
-![recurrentNN](../cl/img/RecurrentNN.jpg)
+![recurrentNN](../ComputationalLinguistics/img/RecurrentNN.jpg)
 ~~~~
-![recurrentNN1](../cl/img/RecurrentNN1.png)
+![recurrentNN1](../ComputationalLinguistics/img/RecurrentNN1.png)
 ~~~~
 <font color=black>长短期记忆模型(Long-short Term Memory,LSTM)</font>
 LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原始RNN算法中的梯度消失弥散（Vanishing Gradient）问题。
@@ -606,7 +606,7 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 
 同时，一个LSTM神经元也会产生两个信息，一个是当前轮的输出，另一个是当前轮的隐藏状态。
 ~~~~
-![LSTM](../cl/img/lstm2.jpg)
+![LSTM](../ComputationalLinguistics/img/lstm2.jpg)
 ~~~~
 
 相比RNN只有一个传递状态`$h^t$`，LSTM有两个传输状态，一个`$c^t$`（cell state），和一个`$h^t$`（hidden state）。（Tips：RNN中的`$h^t$`对于LSTM中的`$c^t$`）
@@ -614,12 +614,12 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 <font color=black>递归神经网络（Recursive Neural Networks）</font>
 
 递归神经网络从<font color=black>空间维度</font>的展开，是一个树结构。
-![RecursiveNN](../cl/img/RecursiveNN.png)
+![RecursiveNN](../ComputationalLinguistics/img/RecursiveNN.png)
 ~~~~
 
 递归神经网络把一个<font color=black>树型结构</font>信息编码为一个<font color=black>向量</font>,也就是把信息映射到一个语义向量空间中,语义相似的向量距离更近。两句话内容不同，但意思是相近，那么这两句话的向量的距离也相近；反之，语义差异越大，向量的距离则很远。
 ~~~~
-![RecursiveNN1](../cl/img/RecursiveNN1.png)
+![RecursiveNN1](../ComputationalLinguistics/img/RecursiveNN1.png)
 ~~~~
 
 <font color=black>序列到序列模型（Sequence-to-sequence models）</font>
@@ -628,12 +628,12 @@ LSTM是Recurrent Neural Networks算法中的一种。LSTM很好的解决了原�
 这种算法也是现在谷歌已经应用于线上机器翻译的算法，翻译质量基本达到、甚至超越人类水平。
 
 ~~~~
-![stsm](../cl/img/stsm.jpg)
+![stsm](../ComputationalLinguistics/img/stsm.jpg)
 ~~~~
 以机器翻译为例，"How are you"翻译为"你好吗"，模型示例如下：
 ~~~~
 
-![stsm1](../cl/img/stsm1.png)
+![stsm1](../ComputationalLinguistics/img/stsm1.png)
 
 ~~~~
 
@@ -644,7 +644,7 @@ RNN应用于翻译时依赖将整个句子压缩成固定输入的向量，当�
 
 注意力机制使得机器翻译中利用原始的句子信息，减少信息损失。在解码层，生成每个时刻的`$y$`，都会利用到`$x_1,x_2,x_3....$`，而不再仅仅利用最后时刻的隐藏状态向量。
 ~~~~
-![stsm](../cl/img/attention1.png)
+![stsm](../ComputationalLinguistics/img/attention1.png)
 
 
 ~~~~
@@ -715,7 +715,7 @@ CoVe更侧重于如何将现有数据上预训练得到的表征迁移到新任�
 <font color=black>[预训练模型](#/2/116)--ELMo(Embeddings from Language Models)</font>
 
 双向语言模型（Bidirectionbbal language models, biLM）
-![elmo](../cl/img/elmo.png)
+![elmo](../ComputationalLinguistics/img/elmo.png)
 ~~~~
 <font color=black>[预训练模型](#/2/116)-GPT</font>
 

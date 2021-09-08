@@ -169,14 +169,14 @@ S代表句子(Sentence)，M代表情态（Modality），P代表命题（proposit
 #### 7.4.3 语义角色标注基本方法
 1. 基于短语结构树的方法
 
-![701](../cl/img/701.png)
+![701](../ComputationalLinguistics/img/701.png)
 ~~~~
 
 2. 基于依存关系树的方法
-![702](../cl/img/702.png)
+![702](../ComputationalLinguistics/img/702.png)
 ~~~~
 3. 基于语块的方法
-![703](../cl/img/703.png)
+![703](../ComputationalLinguistics/img/703.png)
 ~~~~
 4. 语义角色标注的融合方法
 
