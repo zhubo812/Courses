@@ -257,7 +257,7 @@ str + '你好': Runoob你好
 Python字符串运算符总结
 
 下表实例变量a值为字符串 "Hello"，b变量值为字符串 "Python"：
-
+~~~~
 操作符 | 描述 | 实例 | 输出结果
 ---|---|--- | --- 
 +| 字符串链接 | a + b | HelloPython
@@ -318,6 +318,7 @@ python字符串格式化常用符号:
 Python字符串内建函数与方法
 ~~~~
 Python函数与方法的区别
+
 1. 形式方面
   - 函数：通过“函数名（）”的方式进行调用。
 
@@ -368,7 +369,8 @@ Python函数与方法的区别
 - 列表是最常用的Python数据类型，它可以作为一个<font color=black>方括号</font>内的<font color=black>逗号</font>分隔值出现。
 
 - 列表的数据项不需要具有相同的类型
-
+~~~~
+![imglist](../NLP/img/c1/list.jpg)
 ~~~~
 Python列表示例
 ```python
