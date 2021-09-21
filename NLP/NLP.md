@@ -1,2 +1,2 @@
-	[第一章 Python入门](/Courses/NLP/chapter1.html)
-	[第二章 语料库与知识图谱](/Courses/NLP/chapter2.html)
+- [第一章 Python入门](/Courses/NLP/chapter1.html)
+- [第二章 语料库与知识图谱](/Courses/NLP/chapter2.html)
