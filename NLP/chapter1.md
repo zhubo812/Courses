@@ -463,6 +463,227 @@ Python包含以下方法:
 6 | list.reverse() | 反向列表中元素
 7 | list.sort(cmp=None, key=None, reverse=False) | 对原列表进行排序
 8 | list.clear() | 清空列表
+
+~~~~
+#### Python 循环语句
+
+
+循环语句的控制结构图如下所示：
+![image](./pic/forwhile.png)
+
+Python中的循环语句有 for 和 while。
+~~~~
+while 循环
+
+Python中while语句的一般形式：
+```python
+while 判断条件：
+    语句
+```
+同样需要注意冒号和缩进。
+
+另外，在Python中没有do..while循环。
+~~~~
+以下实例使用了 while 来计算 1 到 100 的总和：
+```python
+#!/usr/bin/python3
+ 
+n = 100
+ 
+sum = 0
+counter = 1
+while counter <= n:
+    sum = sum + counter
+    counter += 1
+ 
+print("1 到 %d 之和为: %d" % (n,sum))
+```
+~~~~
+执行结果如下：
+```
+1 到 100 之和为: 5050
+```
+~~~~
+for 语句
+
+Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串。
+
+for循环的一般格式如下：
+```python
+for variable in sequence:
+  statements
+else:
+    statements
+```
+~~~~
+for循环实例
+```python
+languages = ["C", "C++", "Perl", "Python"] 
+for x in languages:
+  print (x)
+```
+~~~~
+执行结果如下：
+```
+C
+C++
+Perl
+Python
+```
+~~~~
+以下 for 实例中使用了 break 语句，break 语句用于跳出当前循环体：
+```python
+#!/usr/bin/python3
+ 
+sites = ["Baidu", "Google","Tencent","Ali"]
+for site in sites:
+    if site == "Google":
+        print("This is Google")
+        break
+    print("循环数据:" + site)
+else:
+    print("没有循环数据!")
+print("完成循环!")
+```
+~~~~
+执行以上脚本输出结果为：
+```
+当前字母为 : R
+当前字母为 : u
+当前字母为 : n
+当前字母为 : o
+当前字母为 : o
+当期变量值为 : 10
+当期变量值为 : 9
+当期变量值为 : 8
+当期变量值为 : 7
+当期变量值为 : 6
+Good bye!
+```
+
+~~~~
+continue语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。
+```python
+#!/usr/bin/python3
+ 
+for letter in 'Runoob':     # 第一个实例
+   if letter == 'o':        # 字母为 o 时跳过输出
+      continue
+   print ('当前字母 :', letter)
+ 
+var = 10                    # 第二个实例
+while var > 0:              
+   var = var -1
+   if var == 5:             # 变量为 5 时跳过输出
+      continue
+   print ('当前变量值 :', var)
+print ("Good bye!")
+```
+~~~~
+执行以上脚本输出结果为：
+```
+当前字母 : R
+当前字母 : u
+当前字母 : n
+当前字母 : b
+当前变量值 : 9
+当前变量值 : 8
+当前变量值 : 7
+当前变量值 : 6
+当前变量值 : 4
+当前变量值 : 3
+当前变量值 : 2
+当前变量值 : 1
+当前变量值 : 0
+Good bye!
+```
+~~~~
+#### 练习
+声明列表：
+```python
+parks = ['景山公园','颐和园','北京动物园','朝阳公园','香山公园']
+```
+截取每个字符串的后两个字
+~~~~
+#### Python 条件控制语句
+
+Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
+
+可以通过下图来简单了解条件语句的执行过程:
+
+![avatar](./pic/conditioncontrol.jpg)
+~~~~
+ if 语句
+Python中if语句的一般形式如下所示：
+
+```python
+if condition_1:
+    statement_block_1
+elif condition_2:
+    statement_block_2
+else:
+    statement_block_3
+```
+~~~~
+<font color=black>注意：</font>
+
+1. 每个条件后面要使用冒号<font color=black>:</font>，表示接下来是满足条件后要执行的语句块。
+2. 使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。
+3. 在Python中没有switch – case语句。
+~~~~
+以下是一个简单的 if 实例：
+```python
+#!/usr/bin/python3
+ 
+var1 = 100
+if var1>10:
+    print ("var1>10 - if 表达式条件为 true")
+    print (var1)
+ 
+var2 = 0
+if var2>10:
+    print ("var2>10 - if 表达式条件为 true")
+    print (var2)
+print ("Good bye!")
+```
+~~~~
+执行以上代码，输出结果为：
+
+```
+var1>10 - if 表达式条件为 true
+100
+Good bye!
+```
+~~~~
+if语句中常用的操作运算符:
+
+操作符 | 描述
+---|---
+< | 小于
+<= | 小于或等于
+\> | 大于
+\>= | 大于或等于
+== | 等于，比较对象是否相等
+!= | 不等于
+~~~~
+实例
+```python
+#!/usr/bin/python3
+ 
+# 程序演示了 == 操作符
+# 使用数字
+print(5 == 6)
+# 使用变量
+x = 5
+y = 8
+print(x == y)
+```
+~~~~
+以上实例输出结果：
+```python
+False
+False
+```
 ~~~~
 Python 字典
 
@@ -590,220 +811,8 @@ TypeError: 'type' object is not subscriptable
 ---|---|---
 4 | radiansdict.values() | 返回一个迭代器，可以使用 list() 来转换为列表
 5 | pop(key[,default]) | 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
-~~~~
-#### Python 条件控制语句
-
-Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
-
-可以通过下图来简单了解条件语句的执行过程:
-
-![avatar](./pic/conditioncontrol.jpg)
-~~~~
- if 语句
-Python中if语句的一般形式如下所示：
-
-```python
-if condition_1:
-    statement_block_1
-elif condition_2:
-    statement_block_2
-else:
-    statement_block_3
-```
-~~~~
-<font color=black>注意：</font>
-
-1. 每个条件后面要使用冒号<font color=black>:</font>，表示接下来是满足条件后要执行的语句块。
-2. 使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。
-3. 在Python中没有switch – case语句。
-~~~~
-以下是一个简单的 if 实例：
-```python
-#!/usr/bin/python3
- 
-var1 = 100
-if var1>10:
-    print ("var1>10 - if 表达式条件为 true")
-    print (var1)
- 
-var2 = 0
-if var2>10:
-    print ("var2>10 - if 表达式条件为 true")
-    print (var2)
-print ("Good bye!")
-```
-~~~~
-执行以上代码，输出结果为：
-
-```
-var1>10 - if 表达式条件为 true
-100
-Good bye!
-```
-~~~~
-if语句中常用的操作运算符:
-
-操作符 | 描述
----|---
-< | 小于
-<= | 小于或等于
-\> | 大于
-\>= | 大于或等于
-== | 等于，比较对象是否相等
-!= | 不等于
-~~~~
-实例
-```python
-#!/usr/bin/python3
- 
-# 程序演示了 == 操作符
-# 使用数字
-print(5 == 6)
-# 使用变量
-x = 5
-y = 8
-print(x == y)
-```
-~~~~
-以上实例输出结果：
-```
-False
-False
-```
-
-~~~~
-#### Python 循环语句
 
 
-循环语句的控制结构图如下所示：
-![image](./pic/forwhile.png)
-
-Python中的循环语句有 for 和 while。
-~~~~
-while 循环
-
-Python中while语句的一般形式：
-```python
-while 判断条件：
-    语句
-```
-同样需要注意冒号和缩进。
-
-另外，在Python中没有do..while循环。
-~~~~
-以下实例使用了 while 来计算 1 到 100 的总和：
-```python
-#!/usr/bin/python3
- 
-n = 100
- 
-sum = 0
-counter = 1
-while counter <= n:
-    sum = sum + counter
-    counter += 1
- 
-print("1 到 %d 之和为: %d" % (n,sum))
-```
-~~~~
-执行结果如下：
-```
-1 到 100 之和为: 5050
-```
-~~~~
-for 语句
-
-Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串。
-
-for循环的一般格式如下：
-```python
-for variable in sequence:
-	statements
-else:
-    statements
-```
-~~~~
-for循环实例
-```python
-languages = ["C", "C++", "Perl", "Python"] 
-for x in languages:
-	print (x)
-```
-~~~~
-执行结果如下：
-```
-C
-C++
-Perl
-Python
-```
-~~~~
-以下 for 实例中使用了 break 语句，break 语句用于跳出当前循环体：
-```python
-#!/usr/bin/python3
- 
-sites = ["Baidu", "Google","Tencent","Ali"]
-for site in sites:
-    if site == "Google":
-        print("This is Google")
-        break
-    print("循环数据:" + site)
-else:
-    print("没有循环数据!")
-print("完成循环!")
-```
-~~~~
-执行以上脚本输出结果为：
-```
-当前字母为 : R
-当前字母为 : u
-当前字母为 : n
-当前字母为 : o
-当前字母为 : o
-当期变量值为 : 10
-当期变量值为 : 9
-当期变量值为 : 8
-当期变量值为 : 7
-当期变量值为 : 6
-Good bye!
-```
-
-~~~~
-continue语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。
-```python
-#!/usr/bin/python3
- 
-for letter in 'Runoob':     # 第一个实例
-   if letter == 'o':        # 字母为 o 时跳过输出
-      continue
-   print ('当前字母 :', letter)
- 
-var = 10                    # 第二个实例
-while var > 0:              
-   var = var -1
-   if var == 5:             # 变量为 5 时跳过输出
-      continue
-   print ('当前变量值 :', var)
-print ("Good bye!")
-```
-~~~~
-执行以上脚本输出结果为：
-```
-当前字母 : R
-当前字母 : u
-当前字母 : n
-当前字母 : b
-当前变量值 : 9
-当前变量值 : 8
-当前变量值 : 7
-当前变量值 : 6
-当前变量值 : 4
-当前变量值 : 3
-当前变量值 : 2
-当前变量值 : 1
-当前变量值 : 0
-Good bye!
-```
 ~~~~
 #### Python File(文件) 方法
 open() 方法
