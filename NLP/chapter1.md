@@ -49,17 +49,17 @@ JupyterLab is a web-based interactive development environment for Jupyter notebo
 ~~~~
 学校局域网登陆http://corpus.bhu.edu.cn:9100/lab
 ~~~~
-![001](../NLP/img/001.png)
+![001](../NLP/img/c1/001.png)
 ~~~~
-![002](../NLP/img/002.png)
+![002](../NLP/img/c1/002.png)
 ~~~~
-![003](../NLP/img/003.png)
+![003](../NLP/img/c1/003.png)
 ~~~~
-![004](../NLP/img/004.png)
+![004](../NLP/img/c1/004.png)
 ~~~~
-![005](../NLP/img/005.png)
+![005](../NLP/img/c1/005.png)
 ~~~~
-![006](../NLP/img/006.png)
+![006](../NLP/img/c1/006.png)
 ~~~~
 1.6 Sublime介绍
 
@@ -469,7 +469,7 @@ Python包含以下方法:
 
 
 循环语句的控制结构图如下所示：
-![image](./pic/forwhile.png)
+![image](./img/c1/forwhile.png)
 
 Python中的循环语句有 for 和 while。
 ~~~~
@@ -611,7 +611,7 @@ Python条件语句是通过一条或多条语句的执行结果（True或者Fals
 
 可以通过下图来简单了解条件语句的执行过程:
 
-![avatar](./pic/conditioncontrol.jpg)
+![avatar](./img/c1/conditioncontrol.jpg)
 ~~~~
  if 语句
 Python中if语句的一般形式如下所示：
