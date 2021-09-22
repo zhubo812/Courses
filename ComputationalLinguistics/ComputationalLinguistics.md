@@ -1,0 +1,8 @@
+- [第一章 概述](/Courses/ComputationalLinguistics/chapter1.html)
+- [第二章 基本概念](/Courses/ComputationalLinguistics/chapter1.html)
+- [第三章 形式语言与自动机](/Courses/ComputationalLinguistics/chapter1.html)
+- [第四章 语言模型](/Courses/ComputationalLinguistics/chapter1.html)
+- [第五章 自动分词与词性标注](/Courses/ComputationalLinguistics/chapter1.html)
+- [第六章 句法分析](/Courses/ComputationalLinguistics/chapter1.html)
+- [第七章 语义分析](/Courses/ComputationalLinguistics/chapter1.html)
+- [第八章 篇章分析](/Courses/ComputationalLinguistics/chapter1.html)
