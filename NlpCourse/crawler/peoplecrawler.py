@@ -113,13 +113,15 @@ def download_rmrb(path,year, month, day):
 			writer.close()
 
 
-path = "data/"
-datelist=['2020-12-12','2020-12-13']
-for datestr in datelist:
-	dateArray= datestr.split("-")
-	year=dateArray[0]
-	month=dateArray[1]
-	day=dateArray[2]
-	download_rmrb(path,year,month,day)
 
 
+
+if __name__ == '__main__':
+	path = "data/"
+	datelist=['2020-12-12','2020-12-13']
+	for datestr in datelist:
+		dateArray= datestr.split("-")
+		year=dateArray[0]
+		month=dateArray[1]
+		day=dateArray[2]
+		download_rmrb(path,year,month,day)
