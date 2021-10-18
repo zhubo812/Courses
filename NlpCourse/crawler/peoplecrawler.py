@@ -118,7 +118,7 @@ def download_rmrb(path,year, month, day):
 
 if __name__ == '__main__':
 	path = "data/"
-	datelist=['2020-12-12','2020-12-13']
+	datelist=['2021-10-10','2021-10-13']
 	for datestr in datelist:
 		dateArray= datestr.split("-")
 		year=dateArray[0]
