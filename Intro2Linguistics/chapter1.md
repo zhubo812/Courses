@@ -48,7 +48,7 @@
 ~~~~
 - 信息交流——知识积累
 
-![img001](../Intro2Linguistics/img/c1/books.jpg)
+![books](../Intro2Linguistics/img/c1/books.jpg)
 ~~~~
 - 信息交流——文明进步
 
