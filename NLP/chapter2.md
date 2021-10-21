@@ -376,7 +376,39 @@ An annotation is the fundamental act of associating some content to a region in 
 ~~~~
 ##### 2.2.2  词性标注(Part-of-Speech tagging, POS)
 ~~~~
+让计算机将连续的语流串自动转换为以词为单位的形式。
+
+
+分词单位：汉语信息处理使用的、具有确定的语义或语法功能的基本单位。包括本规范的规则限定的词和词组，其中词和词组这两个概念与语言学中的相同。(国家标准《信息处理用现代汉语分词规范》)
+~~~~
+词的“真实境界”：清晰与模糊的混合体(孙茂松等，1997)
+![fc](../NLP/img/c2/fc.jpg)
+
+~~~~
+- 标记集的确立
+
+北大26个词类标记：
+名词n、时间词t、处所词s、方位词f、数词m、量词q、区别词b、代词r、动词v、形容词a、状态词z、副词d、介词p、连词c、助词u、语气词y、叹词e、拟声词o、成语i、习用语l、简称j、前接成分h、后接成分k、语素g、非语素字x、标点符号w
+~~~~
+增加的3类标记：
+1. 专有名词的分类标记，即人名nr，地名ns，团体机关单位名称nt，其他专有名词nz；
+2. 语素的子类标记，即名语素Ng，动语素Vg，形容语素Ag，时语素Tg，副语素Dg等；
+3. 动词和形容词的子类标记，即名动词vn（具有名词特性的动词），名形词an（具有名词特性的形容词），副动词vd（具有副词特性的动词），副形词ad（具有副词特性的形容词）。
+
+~~~~
+![fcsl](../NLP/img/c2/fcsl.jpg)
+~~~~
+- CLAWS标注示例
+CLAWS是英语Constituent-LikelihoodAutomaticWord-taggingSystem（成分似然性自动词性自动标注系统）的简称，它是1983年玛沙尔(Mashall)在给LOB语料库（拥有各类文体的英国英语语料库，库容量为100万词）作自动词性标注时提出的一种算法。
+~~~~
+Further research is needed to determine the optimum inclusion level of sorghum DDGS in the diet, determine the effects of sorghum DDGS in a one phase feeding regime (grower or finisher only), as well as to better understand the effects of sorghum DDGS on rumen metabolism and protein digestibility.
+~~~~
+<s>Further_JJR research_NN1 is_VBZ needed_VVN to_TO determine_VVI the_AT optimum_JJ inclusion_NN1 level_NN1 of_IO sorghum_NN1 DDGS_NP1 in_II the_AT diet_NN1 ,_, determine_VV0 the_AT effects_NN2 of_IO sorghum_NN1 DDGS_NP1 in_II a_AT1 one_MC1 phase_NN1 feeding_VVG regime_NN1 (_( grower_NN1 or_CC finisher_NN1 only_RR )_) ,_, as_RG well_RR as_CSA to_TO better_RRR understand_VVI the_AT effects_NN2 of_IO sorghum_NN1 DDGS_NP1 on_II rumen_NN1 metabolism_NN1 and_CC protein_NN1 digestibility_NN1 ._. </s>
+~~~~
 ##### 2.2.3  句法标注(Grammatical Parsing)
+
+1. 句法标注的形式
+2. 树库（存储句法分析结果的数据库）
 ~~~~
 1. 句法标注的形式
 	- 树形图
