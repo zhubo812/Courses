@@ -539,6 +539,7 @@ SB:述补结构ZZ:状中结构)
 
 ##### 2.2.6  [修辞结构理论](http://www.sfu.ca/rst/index.html
 )
+
 Mann, W.C., & Thompson, S.A. 1988. Rhetorical Structure Theory: Toward a functional theory of text organization. Text, Vol.8, No.3, pp. 243-281. 
 ~~~~
 在RST理论中，篇章整体关系是由上层的整篇文本的结构框架(Schema)和基层的局部段落中句与句之间的连贯关系(Coherence relations)这两个层次搭建起来的:
@@ -576,8 +577,10 @@ Mann, W.C., & Thompson, S.A. 1988. Rhetorical Structure Theory: Toward a functio
 ~~~~
 Jieba安装
 
-切换到当前anoconda的虚拟环境下
-activate YOURNAME
+1. 切换到当前anoconda的虚拟环境下,activate YOURNAME
+2. pip install jieba
+~~~~
+
 ~~~~
 ```Python
 # encoding=utf-8
