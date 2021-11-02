@@ -539,7 +539,6 @@ SB:述补结构ZZ:状中结构)
 
 ##### 2.2.6  [修辞结构理论](http://www.sfu.ca/rst/index.html
 )
-
 Mann, W.C., & Thompson, S.A. 1988. Rhetorical Structure Theory: Toward a functional theory of text organization. Text, Vol.8, No.3, pp. 243-281. 
 ~~~~
 在RST理论中，篇章整体关系是由上层的整篇文本的结构框架(Schema)和基层的局部段落中句与句之间的连贯关系(Coherence relations)这两个层次搭建起来的:
@@ -577,10 +576,8 @@ Mann, W.C., & Thompson, S.A. 1988. Rhetorical Structure Theory: Toward a functio
 ~~~~
 Jieba安装
 
-1. 切换到当前anoconda的虚拟环境下,activate YOURNAME
-2. pip install jieba
-~~~~
-
+切换到当前anoconda的虚拟环境下
+activate YOURNAME\
 ~~~~
 ```Python
 # encoding=utf-8
@@ -601,16 +598,181 @@ print(", ".join(seg_list))
 ```
 
 #### 2.4 数据存储
+1. 非关系数据库的使用
+2. 关系数据库的使用
+~~~~
+非关系数据库MongoDB
+
+- MongoDB 是一个基于分布式文件存储的数据库。由 C++语言编写。旨在为WEB 应用提供可扩展的高性能数据存储解决方案。
+- MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+~~~~
+MongoDB 将数据存储为一个文档，数据结构由键值(key=>value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。
+
+![mongodb](../NLP/img/c2/mongodb.png)
+~~~~
+[MongoDB的安装参见菜鸟教程](https://www.runoob.com/mongodb/mongodb-window-install.html)
+~~~~
+Pyhton for MongoDB
+
+安装PyMongo驱动来连接MongoDB
+```python
+pip3 install pymongo
+```
+~~~~
+创建数据库
+
+创建数据库需要使用 MongoClient 对象，并且指定连接的 URL 地址和要创建的数据库名。
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+```
+~~~~
+注意: 在 MongoDB 中，数据库只有在内容插入后才会创建! 就是说，数据库创建后要创建集合(数据表)并插入一个文档(记录)，数据库才会真正创建。
+~~~~
+MongoDB的增删改查
+
+1. 添加数据
+
+添加一条数据
+
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+mydict = { "coursename": "nlp", "grade": "2020", "stunum": 6}
+mycol.insert_one(mydict)
+```
+~~~~
+添加多条数据
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+mylist = [
+			{ "coursename": "nlp", "grade": "2020", "stunum": 6},
+			{ "coursename": "Computational Linguistics", "grade": "2021", "stunum": 8},
+			{ "coursename": "Intro2Linguistics", "grade": "2019", "stunum": 61}
+			]
+mycol.insert_many(mylist)
+```
+~~~~
+2. 查询数据
+
+查找最后一条数据
+
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+x = mycol.find_one()
+ 
+print(x)
+```
+~~~~
+查找所有数据
+
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+for x in mycol.find():
+  print(x)
+```
+~~~~
+根据指定条件查询 
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+myquery = { "grade": "2020" }
+rs =  mycol.find(myquery)
+for x in rs:
+  print(x)
+```
+~~~~
+3. 修改数据
 
 
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+myquery = { "coursename": "nlp" }
+newvalues = { "$set": { "coursename": "Natural Language Processing" } }
+
+mycol.update_one(myquery, newvalues)
+for x in mycol.find():
+  print(x)
+```
+~~~~
+4. 删除数据
+
+```python
+
+#!/usr/bin/python3
+ 
+import pymongo
+ 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["dbtest"]##创建数据库
+mycol = mydb["coltest"]##创建集合
+for x in mycol.find():
+  print(x)
+
+myquery = { "coursename": "Intro2Linguistics"}
+ 
+mycol.delete_one(myquery)
+for x in mycol.find():
+  print(x)
+```
+~~~~
 
 
 @@@
 ### 3 语料库基本功能及实现
 #### 3.1 语料库检索
+KWIC
 #### 3.2 词表及其生成
 #### 3.3 主题词表及其生成
 #### 3.4 语料库常用统计方法
+chi-squared, log-likelihood ratio, pointwise mutual information, and the bootstrap test.
+
 @@@
 
 
