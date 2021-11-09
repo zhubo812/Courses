@@ -761,17 +761,151 @@ mycol.delete_one(myquery)
 for x in mycol.find():
   print(x)
 ```
-~~~~
 
 
 @@@
 ### 3 语料库基本功能及实现
-#### 3.1 语料库检索
-KWIC
-#### 3.2 词表及其生成
-#### 3.3 主题词表及其生成
+~~~~
+1. 词表及其生成
+1. NGram及其生成
+1. 语料库检索
+1. 语料库常用统计方法
+~~~~
+#### 3.1 词表及其生成
+词表包含语料库中所有的词种数(type)及词次数(token),如果语料为英语词表还需统计词根数(lemmas)
+~~~~
+构建词表时，如果目标文本状态属于如下几种类型操作方式略有不同：
+
+1. 单一文件内容少
+1. 单一文件内容多
+1. 多文件且单个文件内容少
+1. 多文件且单个文件内容多
+~~~~
+1. 单一文件内容少
+```python
+#文件内容为分好词且无词性标记
+wordlist = open('**.txt', 'r',encoding='utf-8').read().split()
+```
+~~~~
+
+2. 单一文件内容多
+
+```python
+#文件内容为分好词且无词性标记
+wordlist[]
+file = open(path, 'r',encoding=encoding)
+	for line in file:
+		wordlist.append(line.split())
+```
+
+~~~~
+3. 多文件且单个文件内容少
+```python
+#文件内容为分好词且无词性标记
+def getFiles(self,dir):#首先要获取到指定文件夹(dir)内所有文本的路径
+	filelist=[]
+	filenames = os.listdir(dir)
+	for filename in filenames:
+		filepath = path + filename
+		filelist.append(filepath)
+	retrun filelist
+wordlist=[]
+
+for filePath in filelist:
+	singlewordlist = open(filePath, 'r',encoding='utf-8').read().split()
+	wordlist.append(singlewordlist)
+```
+
+~~~~
+4. 多文件且单个文件内容多
+```python
+#文件内容为分好词且无词性标记
+def getFiles(self,dir):#首先要获取到指定文件夹(dir)内所有文本的路径
+	filelist=[]
+	filenames = os.listdir(dir)
+	for filename in filenames:
+		filepath = path + filename
+		filelist.append(filepath)
+	retrun filelist
+wordlist=[]
+
+for filePath in filelist:
+	file = open(filePath, 'r',encoding=encoding)
+	for line in file:
+		wordlist.append(line.split())
+```
+~~~~
+上面的操作只把所有的词存入列表中，并未统计词种数(type)及词频(token)，仍需进一步修改代码
+```python
+#文件内容为分好词且无词性标记
+def getFiles(self,dir):#首先要获取到指定文件夹(dir)内所有文本的路径
+	filelist=[]
+	filenames = os.listdir(dir)
+	for filename in filenames:
+		filepath = path + filename
+		filelist.append(filepath)
+	retrun filelist
+worddic={}
+
+for filePath in filelist:
+	file = open(filePath, 'r',encoding=encoding)
+	for line in file:
+		words=line.split()
+		for word in words:
+			if word in worddic:
+				worddic[word]= worddic[word]+1
+			else:
+				worddic[word]=1
+```
+
+~~~~
+
+#### 3.2 NGram及其生成
+
+n元语法（n-gram）指文本中连续出现的n个语词。n元语法模型是基于(n-1)阶马尔可夫链的一种概率语言模型，通过n个语词出现的概率来推断语句的结构。这一模型被广泛应用于概率论、通信理论、计算语言学（基于统计的自然语言处理）、计算生物学（序列分析）、数据压缩等领域。
+
+当n分别为1、2、3时，又分别称为一元语法（unigram）、二元语法（bigram）与三元语法（trigram）。
+~~~~
+
+```python
+line = '今天 我们 继续 学习 语料库 建设 方面 的 内容'
+wordlist = line.split()
+
+def getNGrams(wordlist, n):
+    return [wordlist[i:i+n] for i in range(len(wordlist)-(n-1))]
+
+```
+
+#### 3.3 语料库检索
+语料库检索我们采用KWIC(Keyword in Content)方式进行。
+
+```python
+kwicdict = {}
+for n in ngrams:
+	if n[2] not in kwicdict:
+		kwicdict[n[2]] = [n]
+	else:
+		kwicdict[n[2]].append(n)
+
+print(kwicdict )
+
+# Finally, we will want to do a bit of formatting so that our results are printed in a way that is easy to read. The code below gets all of the contexts for the keyword 'Iroquois'.
+
+for key in sorted(kwicdict.keys()): 
+	for val in kwicdict[key]:
+	   outstring = ' '.join(val[:2]).rjust(20)
+	   outstring += ' '
+	   outstring += ' '.join(str(val[2]).center(len(n[2])+6))
+	   outstring +=' '
+	   outstring += ' '.join(val[3:])
+	   print (outstring)
+```
+
 #### 3.4 语料库常用统计方法
-chi-squared, log-likelihood ratio, pointwise mutual information, and the bootstrap test.
+1.  chi-squared
+1.  log-likelihood ratio
+1.  pointwise mutual information
+1.  the bootstrap test
 
 @@@
 

@@ -187,9 +187,9 @@ if __name__ == '__main__':
 
 ### jieba分词系统
 
-### pynlpir分词系统
 
 ### 其他中文分词系统
+pynlpir
 SnowNLP
 THULAC
 pkuseg
