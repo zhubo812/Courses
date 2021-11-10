@@ -804,37 +804,40 @@ print(wordlist)
 ~~~~
 3. 多文件且单个文件内容少
 ```python
-#文件内容为分好词且无词性标记
-def getFiles(self,dir):#首先要获取到指定文件夹(dir)内所有文本的路径
+def getFiles(direc):#首先要获取到指定文件夹(dir)内所有文本的路径
 	filelist=[]
-	filenames = os.listdir(dir)
+	filenames = os.listdir(direc)#相对路径
 	for filename in filenames:
-		filepath = path + filename
+		filepath = direc+'/' + filename
 		filelist.append(filepath)
-	retrun filelist
+	return filelist
+
 wordlist=[]
+filelist = getFiles('docs')
+print(filelist)
+
 for filePath in filelist:
 	singlewordlist = open(filePath, 'r',encoding='utf-8').read().split()
-	wordlist.append(singlewordlist)
+	for word in singlewordlist:
+		wordlist.append(word)
+
+print(wordlist)
 ```
 
 ~~~~
 4. 多文件且单个文件内容多
+
 ```python
 #文件内容为分好词且无词性标记
-def getFiles(self,dir):#首先要获取到指定文件夹(dir)内所有文本的路径
-	filelist=[]
-	filenames = os.listdir(dir)
-	for filename in filenames:
-		filepath = path + filename
-		filelist.append(filepath)
-	retrun filelist
-wordlist=[]
-
 for filePath in filelist:
-	file = open(filePath, 'r',encoding=encoding)
+	file = open(filePath,'r',encoding='utf-8')
 	for line in file:
-		wordlist.append(line.split())
+		for word in line.split():
+			wordlist.append(word)
+
+print(wordlist)
+
+print(len(wordlist))
 ```
 ~~~~
 上面的操作只把所有的词存入列表中，并未统计词种数(type)及词频(token)，仍需进一步修改代码
