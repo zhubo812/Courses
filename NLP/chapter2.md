@@ -792,10 +792,13 @@ wordlist = open('**.txt', 'r',encoding='utf-8').read().split()
 
 ```python
 #文件内容为分好词且无词性标记
-wordlist[]
-file = open(path, 'r',encoding=encoding)
-	for line in file:
-		wordlist.append(line.split())
+wordlist=[]
+file = open('text.txt', 'r',encoding='utf-8')
+for line in file:
+	# print(line)
+	for word in line.split():
+		wordlist.append(word)
+print(wordlist)
 ```
 
 ~~~~
@@ -810,7 +813,6 @@ def getFiles(self,dir):#首先要获取到指定文件夹(dir)内所有文本的
 		filelist.append(filepath)
 	retrun filelist
 wordlist=[]
-
 for filePath in filelist:
 	singlewordlist = open(filePath, 'r',encoding='utf-8').read().split()
 	wordlist.append(singlewordlist)
