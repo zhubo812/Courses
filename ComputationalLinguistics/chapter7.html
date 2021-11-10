@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="../../dist/theme/solarized.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
 	<body>
 		<div class="reveal">
@@ -36,7 +36,8 @@
 			Reveal.initialize({
 				hash: true,
 				math: {
-			      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			      // mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			      mathjax: '../../plugin/math/MathJax.js',
 			      config: 'TeX-AMS_HTML-full',
 			      // pass other options into `MathJax.Hub.Config()`
 			      TeX: { Macros: { RR: "{\\bf R}" } }
