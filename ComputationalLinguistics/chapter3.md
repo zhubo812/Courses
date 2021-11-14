@@ -451,7 +451,7 @@ E --规则7--> F(bacc)
 
 如`$Ab \rightarrow Bab$`虽然符合1型文法要求,但不符合2型文法要求，因为其`$\alpha=Ab$`，而`$Ab$`不是一个非终结符。
 ~~~~
-例如，2型文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b\}$`,规则`$P$`如下：
+例如，2型文法`$G=\{N,\Sigma,P,S\}$`,非终极符号`$N=\{S,A,B\}$`,终极符号 `$\Sigma=\{a,b,c\}$`,规则`$P$`如下：
 1. `$S\rightarrow ABC$`
 2. `$A\rightarrow aA|a$`
 3. `$B\rightarrow bB|b$`
@@ -507,7 +507,8 @@ E --规则7--> F(bacc)
 1. `$S\rightarrow bA$`
 2. `$A\rightarrow bAA$`
 3. `$A\rightarrow a$`
-`$G$`产生句子`$bbaa$`可以由下面的生树表示:
+
+文法`$G$`产生句子`$bbaa$`可以由下面的生树表示:
 ~~~~
 ![34](../ComputationalLinguistics/img/34.png)
 ~~~~
