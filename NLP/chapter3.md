@@ -89,7 +89,7 @@
 
 ### 最大匹配
 
-```
+```Python
 # -*- coding:utf-8 -*-
 #!/usr/bin/python3
 
@@ -108,7 +108,11 @@ def load_Dictionary():
         dic[word]=attr
     print(dic)
     return dic
+```
 
+~~~~
+
+```Python
 #sline是要切分的字符串
 def FMM(wordDict, sline):
     maxLen=3
@@ -133,8 +137,10 @@ def FMM(wordDict, sline):
 
     print(wordList)
     return wordList
+```
+~~~~
 
-
+```Python
 def RMM(wordDict, sline):
     maxLen=3
     wordList = []#用作存储已切分的词
@@ -158,7 +164,9 @@ def RMM(wordDict, sline):
     wordList.reverse()
     # print(wordList)
     return wordList
-
+```
+~~~~
+```Python
 def tag(wordDict, wordList):
     wlist =[]
     for word in wordList:
@@ -170,7 +178,8 @@ def tag(wordDict, wordList):
             natrue= "x"
             wlist.append("%s/%s"%(word,natrue))
     return wlist
-
+```
+```Python
 #入口函数
 if __name__ == '__main__':
     #HelloWorld()
@@ -184,6 +193,7 @@ if __name__ == '__main__':
     resultLine = " ".join(wordList)
     print(resultLine)
 ```
+~~~~
 
 ### jieba分词系统
 
