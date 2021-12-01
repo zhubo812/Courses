@@ -5,4 +5,7 @@
 - [第四章 语法](/Courses/Intro2Linguistics/chapter4.html)
 - [第五章 语义和语用](/Courses/Intro2Linguistics/chapter5.html)
 - [第六章 文字](/Courses/Intro2Linguistics/chapter6.html)
+- [第七章 语言演变与语言分化](/Courses/Intro2Linguistics/chapter7.html)
+- [第八章 语言的接触](/Courses/Intro2Linguistics/chapter8.html)
+- [第九章 语言系统的演变](/Courses/Intro2Linguistics/chapter9.html)
 - [语言学研究回顾](/Courses/Intro2Linguistics/history.html)
