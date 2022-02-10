@@ -3,9 +3,9 @@
  
 import pymongo
 
-myclient = pymongo.MongoClient("mongodb://10.13.0.5:27017/")
-mydb = myclient["Media"]
-mycol = mydb["Subtitle"]
+# myclient = pymongo.MongoClient("mongodb://10.13.0.5:27017/")
+# mydb = myclient["Media"]
+# mycol = mydb["Subtitle"]
 
 
 
@@ -42,7 +42,7 @@ def ASSParser():
 			subtDic['endTime'] = endTime
 			subtDic['text'] = text
 			
-			x = mycol.insert_one(subtDic)
+			# x = mycol.insert_one(subtDic)
 
 def SRTParser():
 	paths = ['4_Chinese.srt'];
@@ -72,7 +72,7 @@ def SRTParser():
 			subtDic['endTime'] = endTime
 			subtDic['text'] = text
 			
-			x = mycol.insert_one(subtDic)
+			# x = mycol.insert_one(subtDic)
 
 
 
