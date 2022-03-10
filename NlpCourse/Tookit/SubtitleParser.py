@@ -4,14 +4,16 @@
 import pymongo
 
 # myclient = pymongo.MongoClient("mongodb://10.13.0.5:27017/")
-# mydb = myclient["Media"]
-# mycol = mydb["Subtitle"]
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["Media"]
+mycol = mydb["Subtitle"]
 
 
 
 
 def ASSParser():
 	paths = ['Better.Days.chs.ass'];
+
 	for path in paths:
 		file = open(path, 'r',encoding='utf-8')
 		# for line in file.readlines():
@@ -42,10 +44,12 @@ def ASSParser():
 			subtDic['endTime'] = endTime
 			subtDic['text'] = text
 			
+
 			# x = mycol.insert_one(subtDic)
 
 def SRTParser():
-	paths = ['4_Chinese.srt'];
+	paths = ['爱很美味.srt'];
+	writer = open('ahmw.txt','w',encoding='utf-8')
 	for path in paths:
 		file = open(path, 'r',encoding='utf-8')
 		# for line in file.readlines():
@@ -66,18 +70,19 @@ def SRTParser():
 
 			subtDic = {}
 			subtDic['Type'] = 'Movie'
-			subtDic['Name'] ='中国爱情故事'##根据不同的字幕文件修改名称
+			subtDic['Name'] ='爱很美味'##根据不同的字幕文件修改名称
 			subtDic['Number'] = 1##根据不同的字幕文件修改序号
 			subtDic['startTime'] = startTime
 			subtDic['endTime'] = endTime
 			subtDic['text'] = text
 			
 			# x = mycol.insert_one(subtDic)
+			writer.write('Series'+'\t'+'爱很美味'+'\t'+str(1)+'\t'+str(startTime)+'\t'+str(endTime)+'\t'+text+'\n')
 
+		writer.close()
 
-
-# SRTParser()
-ASSParser()
+SRTParser()
+# ASSParser()
 
 
 
