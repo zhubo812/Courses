@@ -4,15 +4,16 @@
 
 def load_Dictionary():
     dic={}
-    path = "/Users/Jackie/Desktop/usr.dic"
+    path = "usr.dic"
     file = open(path,"r",encoding="UTF-8")
     for line in file:
+        print(line)
         array = line.strip().split("\t")
         if len(array) < 3:
             print(array)
-        attr ={}
+        attr ={}#存储词属性内容
         attr["natrue"]=array[1]
-        attr["freq"]= array[2]
+        attr["freq"]= array[2] 
         word = array[0]
         dic[word]=attr
     print(dic)

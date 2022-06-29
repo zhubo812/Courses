@@ -1,11 +1,11 @@
-# Copy input to output
+
 import requests
 import bs4
 import os
 import datetime
 import time
 import json
-import pandas as pd
+# import pandas as pd
 
 
 
@@ -34,14 +34,16 @@ def getPageList(year, month, day):
 	'''  
 	url = 'http://paper.people.com.cn/rmrb/html/' + year + '-' + month + '/' + day + '/nbs.D110000renmrb_01.htm'
 	html = fetchUrl(url)
-	bsobj = bs4.BeautifulSoup(html,'html.parser')
+	bsobj = bs4.BeautifulSoup(html,'html.parser')# 使用bs4解析页面内容
 
 
-	pageList = bsobj.findAll(id="pageLink")
+	pageList = bsobj.findAll(id="pageLink")#查找所有的pageLink
 	linkList = []
 	
+	#拼接版面连接
 	for page in pageList:
 		link = page.get('href')
+		link = link.replace('./','')
 		url = 'http://paper.people.com.cn/rmrb/html/'  + year + '-' + month + '/' + day + '/' + link
 		linkList.append(url)
 	
@@ -91,13 +93,13 @@ def getContent(html):
 	return resp
 
 def download_rmrb(path,year, month, day):
-	pageList = getPageList(year, month, day)
+	pageList = getPageList(year, month, day)# 抓取版面数据链接
 	print(pageList)
-	for page in pageList:
-		titleList = getTitleList(year, month, day, page)
-		for url in titleList:
+	for page in pageList:#循环每个版面链接
+		titleList = getTitleList(year, month, day, page)#获取一个版面所有文章的链接
+		for url in titleList:#循环文章链接
 			html = fetchUrl(url)
-			content = getContent(html)
+			content = getContent(html)#获取文章内容
 			#print(content)
 			temp = url.split('_')[2].split('.')[0].split('-')
 			pageNo = temp[1]
@@ -107,7 +109,7 @@ def download_rmrb(path,year, month, day):
 			newsid= newsid
 
 			filePath= path+str(newsid)
-			print(content)
+			# print(content)
 			writer = open(filePath,"w",encoding="utf-8")
 			writer.write(content)
 			writer.close()
@@ -118,10 +120,24 @@ def download_rmrb(path,year, month, day):
 
 if __name__ == '__main__':
 	path = "data/"
-	datelist=['2021-10-10','2021-10-13']
+	datelist=['2022-04-14','2022-04-15']
 	for datestr in datelist:
 		dateArray= datestr.split("-")
 		year=dateArray[0]
 		month=dateArray[1]
 		day=dateArray[2]
 		download_rmrb(path,year,month,day)
+
+
+# url = 'http://paper.people.com.cn/rmrb/html/2022-04/11/nw.D110000renmrb_20220411_1-01.htm'
+# htmlText = fetchUrl(url)
+
+# pagelist = getPageList('2022','04','15')
+# pagelink = 'http://paper.people.com.cn/rmrb/html/2022-04/15/nbs.D110000renmrb_20.htm'
+# titlelist = getTitleList('2022','04','15',pagelink)
+
+
+# artlink = 'http://paper.people.com.cn/rmrb/html/2022-04/15/nw.D110000renmrb_20220415_3-20.htm'
+# html = fetchUrl(artlink)
+# content = getContent(html)
+# print(content)

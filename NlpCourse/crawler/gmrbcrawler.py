@@ -1,13 +1,20 @@
-# Copy input to output
 import requests
 import bs4
 import os
 import datetime
 import time
 import json
-import pandas as pd
+import mysql.connector
 
 
+def getMySQL():
+	mydb = mysql.connector.connect(
+  	host="192.168.1.107",
+  	user="root",
+  	passwd="admin",
+  	database="test"
+	)
+	return mydb
 
 
 def fetchUrl(url):
@@ -27,29 +34,30 @@ def fetchUrl(url):
 	r.encoding = r.apparent_encoding
 	return r.text
 
+
+
 def getPageList(year, month, day):
 	'''
 	功能：获取当天报纸的各版面的链接列表
 	参数：年，月，日
 	'''  
-	url = 'https://epaper.gmw.cn/gmrb/html/' + year + '-' + month + '/' + day + '/nbs.D110000gmrb_01.htm'
-	# print(url)
+	url = 'http://epaper.gmw.cn/gmrb/html/' + year + '-' + month + '/' + day + '/nbs.D110000gmrb_01.htm'
 	html = fetchUrl(url)
-	bsobj = bs4.BeautifulSoup(html,'html.parser')
+	bsobj = bs4.BeautifulSoup(html,'html.parser')# 使用bs4解析页面内容
 
 
-	pageList = bsobj.findAll(id="pageLink")
+	pageList = bsobj.findAll(id="pageLink")#查找所有的pageLink
 	linkList = []
 	
+	#拼接版面连接
 	for page in pageList:
 		link = page.get('href')
-		link = link[link.find('nbs'):]##过滤掉nbs前面的.
-		# print(link)
-		url = 'https://epaper.gmw.cn/gmrb/html/'  + year + '-' + month + '/' + day + '/' + link
-		# print(url)
+		link = link.replace('./','')
+		url = 'http://epaper.gmw.cn/gmrb/html/'  + year + '-' + month + '/' + day + '/' + link
 		linkList.append(url)
-	# print(linkList)
+	
 	return linkList
+
 
 def getTitleList(year, month, day, pageUrl):
 	'''
@@ -57,22 +65,19 @@ def getTitleList(year, month, day, pageUrl):
 	参数：年，月，日，该版面的链接
 	'''
 	html = fetchUrl(pageUrl)
-	# print(pageUrl)
-	# print(pageUrl)
 	bsobj = bs4.BeautifulSoup(html,'html.parser')
 
 	titleList = bsobj.find('div', attrs = {'class': 'l_c'}).ul.find_all('li')
+	
+	# print('titleList:',len(titleList))
 	linkList = []
 	
 	for title in titleList:
-		print(title)
 		tempList = title.find_all('a')
 		for temp in tempList:
 			link = temp["href"]
-
 			if 'nw.D110000gmrb' in link:
-				url = 'https://epaper.gmw.cn/gmrb/html/'  + year + '-' + month + '/' + day + '/' + link
-				# print(url)
+				url = 'http://epaper.gmw.cn/gmrb/html/'  + year + '-' + month + '/' + day + '/' + link
 				linkList.append(url)
 	
 	return linkList
@@ -89,27 +94,25 @@ def getContent(html):
 	#print(title)
 	
 	# 获取文章 内容
-	pList = bsobj.find('div', attrs = {'class': 'text_c'}).find_all('p')
+	pList = bsobj.find('div', attrs = {'id': 'ozoom'}).find_all('p')
 	content = ''
 	for p in pList:
-		content += p.text + '\n'	  
+		content += p.text.strip() + '\n'	  
 	#print(content)
 	
 	# 返回结果 标题+内容
 	resp = title + content
 	return resp
 
-def download_rmrb(path,year, month, day):
-	pageList = getPageList(year, month, day)
 
-	# print(pageList)
-	
-	for page in pageList:
-		# print(page)
-		titleList = getTitleList(year, month, day, page)
-		for url in titleList:
+def download_gmrb(path,year, month, day):
+	pageList = getPageList(year, month, day)# 抓取版面数据链接
+	print(pageList)
+	for page in pageList:#循环每个版面链接
+		titleList = getTitleList(year, month, day, page)#获取一个版面所有文章的链接
+		for url in titleList:#循环文章链接
 			html = fetchUrl(url)
-			content = getContent(html)
+			content = getContent(html)#获取文章内容
 			#print(content)
 			temp = url.split('_')[2].split('.')[0].split('-')
 			pageNo = temp[1]
@@ -119,21 +122,119 @@ def download_rmrb(path,year, month, day):
 			newsid= newsid
 
 			filePath= path+str(newsid)
-			print(content)
+			# print(content)
 			writer = open(filePath,"w",encoding="utf-8")
 			writer.write(content)
 			writer.close()
 
+def download_gmrb2MySQL(path,year, month, day):
+	mydb = getMySQL()
+	mycursor = mydb.cursor()
+	pageList = getPageList(year, month, day)# 抓取版面数据链接
+	print(pageList)
+	for page in pageList:#循环每个版面链接
+		titleList = getTitleList(year, month, day, page)#获取一个版面所有文章的链接
+		for url in titleList:#循环文章链接
+			html = fetchUrl(url)
+			content = getContent(html).replace('\u2003',' ').replace('\xa0','').replace('\n\n','\n')#获取文章内容
+			#print(content)
+			temp = url.split('_')[2].split('.')[0].split('-')
+			pageNo = temp[1]
+			titleNo = temp[0] if int(temp[0]) >= 10 else '0' + temp[0]
+			newsid = year + month + day +  pageNo  + titleNo
 
+			date = year +'-'+ month+'-' + day
+			newsid = int(newsid)
+			print(type(newsid))
+			print(content)
+			# filePath= path+str(newsid)
+			# # print(content)
+			# writer = open(filePath,"w",encoding="utf-8")
+			# writer.write(content)
+			# writer.close()
+			source = '光明日报'
+			sql = "INSERT INTO paper (newsid, source, text) VALUES (%d, \"%s\", \"%s\")" % (newsid,source,content)
+			# sql = 'INSERT INTO paper (newsid) VALUES（11）'
+			#paper为表名，newsid为插入数据的字段
+			print(sql)
+			
+			mycursor.execute(sql)
+			 
+			mydb.commit()    # 数据表内容有更新，必须使用到该语句
+	mydb.close()
 
+def download_gmrb2MySQLMany(path,year, month, day):
+	mydb = getMySQL()
+	mycursor = mydb.cursor(prepared=True)
+	pageList = getPageList(year, month, day)# 抓取版面数据链接
+	# print(pageList)
+	valueList = []# 存放新闻数据的列表
+	for page in pageList:#循环每个版面链接
+		titleList = getTitleList(year, month, day, page)#获取一个版面所有文章的链接
+		for url in titleList:#循环文章链接
+			html = fetchUrl(url)
+			content = getContent(html).replace('\u2003',' ').replace('\xa0','').replace('\n\n','\n')#获取文章内容
+			#print(content)
+			temp = url.split('_')[2].split('.')[0].split('-')
+			pageNo = temp[1]
+			titleNo = temp[0] if int(temp[0]) >= 10 else '0' + temp[0]
+			newsid = year + month + day +  pageNo  + titleNo
+
+			date = year +'-'+ month+'-' + day
+			newsid = int(newsid)
+			# print(type(newsid))
+			# print(content)
+			# filePath= path+str(newsid)
+			# # print(content)
+			# writer = open(filePath,"w",encoding="utf-8")
+			# writer.write(content)
+			# writer.close()
+			source = '光明日报'
+			value = (newsid,source, content[0:10])
+			# value = (newsid,source)
+			# print(value)
+			# print(type(value))
+			valueList.append(value)
+			# break
+		break
+	sql = 'INSERT INTO paper (newsid, source, text) VALUES (%d, %s, %s)'
+	# sql = "INSERT INTO paper (newsid, source) VALUES (%d, %s)"
+	# sql = 'INSERT INTO paper (newsid) VALUES（11）'
+	#paper为表名，newsid为插入数据的字段
+	print(sql)
+	print(valueList)
+	mycursor.executemany(sql,valueList)
+			 
+	mydb.commit()    # 数据表内容有更新，必须使用到该语句
+	mydb.close()
 
 
 if __name__ == '__main__':
 	path = "data/"
-	datelist=['2021-10-10','2021-10-13']
+	datelist=['2022-03-21','2022-03-22']
 	for datestr in datelist:
 		dateArray= datestr.split("-")
 		year=dateArray[0]
 		month=dateArray[1]
 		day=dateArray[2]
-		download_rmrb(path,year,month,day)
+		download_gmrb2MySQLMany(path,year,month,day)
+
+# year = '2022'
+# month = '04'
+# day = '22'
+
+# pagelist = getPageList(year='2022',month='04',day='22')
+
+# for item in pagelist:
+# 	#获取每一个版面的文章链接
+# 	articleList = getTitleList(year='2022',month='04',day='22',pageUrl= item)
+# 	for artiLink in articleList:
+# 		html = fetchUrl(artiLink)
+# 		content = getContent(html)
+# 		writer = open('data/gmrb.txt','w',encoding='utf-8')
+# 		# print(content)
+# 		writer.write(content)
+# 		writer.close()
+# 		break
+# 	break
+
