@@ -21,19 +21,23 @@ def counter(ngrams):
 def searchWord(kwicdict):
 	for key in sorted(kwicdict.keys()): 
 		for val in kwicdict[key]:
-		   outstring = ' '.join(val[:2]).rjust(20)
-		   outstring += ' '
-		   outstring += ' '.join(str(val[2]).center(len(val[2])+6))
-		   outstring +=' '
-		   outstring += ' '.join(val[3:])
-		   print (outstring)
+			# print(type(val))
+			# print(val)
+			# print(val[:2])
+			outstring = ' '.join(val[:2]).rjust(20)
+			outstring += ' '
+			outstring += ' '.join(str(val[2]).center(len(val[2])+6))
+			outstring +=' '
+			outstring += ' '.join(val[3:])
+			print(outstring)
 
 
 nglist = getNGrams(wordlist,5)
 print(nglist)
-countrs = counter(nglist)
-# print(countrs)
+counters = counter(nglist)
+for counter in counters:
+	print(counter,':',counters[counter])
 # for k, w in countrs.items():
 # 	print(k,w)
 
-searchWord(countrs)
+searchWord(counters)
