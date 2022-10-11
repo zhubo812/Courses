@@ -350,7 +350,7 @@ All grammar leak(Sapir1921)
 **1. 萌芽期**(1956年以前)
 
 - <圣经•创世纪>巴别塔
-- 20世纪30年代初，法国科学家阿尔楚尼（Artsouni）的“机械脑”（mechanicalbrain）;
+- 20世纪30年代初，法国科学家阿尔楚尼（Artsouni）的“机械脑”（mechanical brain）;
 - 1933年，苏联发明家特洛扬斯基（Tроянский）设计了语言翻译机.
 - 1946年，美国宾夕法尼亚大学的埃克特（J.P.Eckert）和莫希来(J.W.Mauchly)设计并研制出世界上第一台电子计算机爱尼亚克(ENIAC)。
 
@@ -396,18 +396,18 @@ All grammar leak(Sapir1921)
 - <font color = black>Person</font>: Find a block which is taller than the one you are holding and put it into the box.
 	- <font color = red>Computer</font>: By "it", I assume you mean the block which is taller than the one I am holding.
 ~~~~
-商克(Schannk)及其学生于1973年在斯坦福大学 建成MARGIE系统。 
+- 商克(Schannk)及其学生于1973年在斯坦福大学建成MARGIE系统。 
 
-MARGIE系统能以推理或释义两种方式运行。在推理方式下，它接受一个输入句，然后利用推理器生成这个句子所蕴涵的事实。
+- MARGIE系统能以推理或释义两种方式运行。在推理方式下，它接受一个输入句，然后利用推理器生成这个句子所蕴涵的事实。
 ~~~~
 
-输入 <font color = black>John gave Mary some aspirin. </font>（约翰给玛丽一些阿司匹林。）
+- 输入 <font color = black>John gave Mary some aspirin. </font>（约翰给玛丽一些阿司匹林。）
 
 
-系统就可以作出推理： <font color = black>John believes Mary wants an aspirin. Mary is sick.</font> （约翰相信玛丽需要阿司匹林。玛丽病了。）
+- 系统就可以作出推理： <font color = black>John believes Mary wants an aspirin. Mary is sick.</font> （约翰相信玛丽需要阿司匹林。玛丽病了。）
 
 ~~~~
-**在释义方式下，它将以尽可能多的等价方式来复 述输入的句子。**
+**在释义方式下，它将以尽可能多的等价方式来复述输入的句子。**
 
 - 如输入<font color = black>John killed Mary by choking her.</font>(约翰扼杀了玛丽。)
 
@@ -416,9 +416,9 @@ MARGIE系统能以推理或释义两种方式运行。在推理方式下，它�
 	- <font color = black>John choked Mary and she died because she was unable to breathe. </font>(约翰扼住玛丽的脖子，她因为不能呼吸就死了。）
 
 ~~~~
-李家治、陈永明等人建成的“古汉语机器理解系统——ACLUS”。
+- 李家治、陈永明等人建成的“古汉语机器理解系统——ACLUS”。
 
-ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成现代汉语，并回答故事中的语法和词义问题。
+- ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成现代汉语，并回答故事中的语法和词义问题。
 ~~~~
 
 - <font color = black>问</font>：‘先度其足’中的‘度’是什么意思？ 
@@ -427,7 +427,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 	- <font color = red>答</font>：‘度’是名词，是尺寸的意思。
 
 ~~~~
-范继淹、徐志敏等人建成的“TK——84汉语人机对话实验系统”。这是一个铁路客运咨询系统。
+范继淹、徐志敏等人建成的“TK—84汉语人机对话实验系统”。这是一个铁路客运咨询系统。
 
 - <font color = black>问</font>：从北京到大连有高铁吗？
 	- <font color = red>答</font>：有。 
@@ -486,7 +486,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 - 日本富士通公司的ATLAS系统
 - 德国西门子公司与美国德克萨斯大学联合开发的METAL系统
 ~~~~
-- 1988年由中国军事科学院开发、中国计算机软件与技术公司投入 市场的第一个机器翻译系统“译星1号”实现了商品化
+- 1988年由中国军事科学院开发、中国计算机软件与技术公司投入市场的第一个机器翻译系统“译星1号”实现了商品化
 - 中国社科院与北京高立公司联合开发的“高立英汉机器翻译系统”
 - 中科院计算所开发的“863-IMT/EC智能型英汉机器翻译系统”
 - 先是国防科技大学开发、后由深圳桑夏公司进一步开发的“桑夏译王英汉机器翻译系统”
@@ -518,7 +518,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 [<](#/2/84)
 ~~~~
-神经概率语言模型以某个词语前面的n个词语作为输入向量。这样的向量现在被称为词嵌入（word embeddings）。这些词向量入被连接并输入隐含层，然后再将隐含层结果输入softmax层。
+- 神经概率语言模型以某个词语前面的n个词语作为输入向量。这样的向量现在被称为词嵌入（word embeddings）。这些词向量入被连接并输入隐含层，然后再将隐含层结果输入softmax层。
 
 
 [<](#/2/84)
@@ -528,7 +528,7 @@ ACLUS能分析句法，能把《郑人买履》、《刻舟求剑》文言译成
 
 <font color = black>多任务学习（Multi-task learning）</font>
 
-多任务学习是在多个任务下训练的模型之间共享参数的方法。在神经网络中，这可以通过绑定不同层的权重来轻松完成。多任务学习的想法于年由Rich Caruana(1993)首次提出，
+- 多任务学习是在多个任务下训练的模型之间共享参数的方法。在神经网络中，这可以通过绑定不同层的权重来轻松完成。多任务学习的想法于年由Rich Caruana(1993)首次提出，
 [Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)首次将多任务学习应用于NLP。在多任务学习框架下，词嵌入矩阵被两个在不同任务下训练的模型共享。
 
 ~~~~
