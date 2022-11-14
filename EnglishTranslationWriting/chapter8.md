@@ -7,48 +7,49 @@
 4. 很多介词从词义上往往看不出是介词。如against 的词义是“反对”，在汉语里是动词，在英语里却是介词。
 5. 介词与动词、名词、形容词常有比较固定的搭配，学习时应特别注意。
 ~~~~
-- 5.1 和动词的固定搭配。如：
-- add … to … （把… 加在… 上面）
-- belong to (属于)
-- compare … with … （拿… 和 … 比较）
-- rely on (upon)（依靠）
-- interfere with（干涉）
+#### 1.1 和动词的固定搭配。如：
+1. add … to … （把… 加在… 上面）
+1. belong to (属于)
+1. compare … with … （拿… 和 … 比较）
+1. rely on (upon)（依靠）
+1. interfere with（干涉）
 ~~~~
-- 5.2 和形容词、过去分词的固定搭配。如：
-- afraid of （害怕） 
-- concerned about（关心）
-- responsible for（对… 负责） 
-- familiar with（熟悉）
-- faithful to （对… 忠实） 
-- full of （充满）
-- satisfied with（对… 满意）
+#### 1.2 和形容词、过去分词的固定搭配。如：
+1. afraid of （害怕） 
+1. concerned about（关心）
+1. responsible for（对… 负责） 
+1. familiar with（熟悉）
+1. faithful to （对… 忠实） 
+1. full of （充满）
+1. satisfied with（对… 满意）
 ~~~~
-- 5.3 和名词的固定搭配。如：
-- love for（对… 的爱） 
-- neglect of （对… 的疏忽）
-- contribution to（对… 的贡献） 
-- victory over（对… 的战胜）
-- struggle against（对… 的斗争）
+#### 1.3 和名词的固定搭配。如：
+1. love for（对… 的爱） 
+1. neglect of （对… 的疏忽）
+1. contribution to（对… 的贡献） 
+1. victory over（对… 的战胜）
+1. struggle against（对… 的斗争）
 ~~~~
 ### 2 介词的种类
 ~~~~
-1. 简单介词(simple preposition) 如：
+#### 2.1 简单介词(simple preposition) 如：
 - at, in, on, since, from
 ~~~~
-2. 复合介词(compound preposition) 如：
-- as for（至于） 
-- as to（至于、关于） 
-- into（进入）
-- onto （到…上面去） 
-- out of（从、出自）
+#### 2.2 复合介词(compound preposition) 如：
+1. as for（至于） 
+1. as to（至于、关于） 
+1. into（进入）
+1. onto （到…上面去） 
+1. out of（从、出自）
 ~~~~
-3. 二重介词(double preposition) 如：
-- from under（从…的下面） 
-- from behind（从…的后面）
-- until after（直至…之后） 
-- from among（从…当中）
+#### 2.3 二重介词(double preposition) 如：
+1. from under（从…的下面） 
+1. from behind（从…的后面）
+1. until after（直至…之后） 
+1. from among（从…当中）
 ~~~~
-4. 短语介词(phrasal preposition) 如：
+#### 2.4 短语介词(phrasal preposition) 如：
+
 according to（按照、根据） ahead of（在…之前）
 apart from（在…之外、且莫说） as compared with（和…比起来）
 because of（由于） by means of（以…为手段）
@@ -62,44 +63,46 @@ on the part of（在…方面，出于…之所为） owing to（由于）
 up to（直到） with reference to（关于）
 with regard to（关于） with the exception of（除去，以…为例外）
 ~~~~
-5. 分词介词(participle preposition) 如：
-- considering（考虑到） 
-- regarding（关于）
-- including（包括） 
-- concerning（关于）
+#### 2.5 分词介词(participle preposition) 如：
+1. considering（考虑到） 
+1. regarding（关于）
+1. including（包括） 
+1. concerning（关于）
 ~~~~
 ### 3 介词的位置
 - 介词一般用在名词（或代词宾格）之前。如:
-	- Be prepared against war, be prepared against natural disasters, and do everything for the people.（备战、备荒、为人民）
-	- Comrade Mao Zedong wrote On the Protracted War in his Yanan cave-dwelling in May 1938.（一九三八年五月，毛泽东同志在延安窑洞里写了《论持久战》）
-	- China is self-sufficient in oil.（中国石油自给自足）
+1. Be prepared against war, be prepared against natural disasters, and do everything for the people.（备战、备荒、为人民）
+1. Comrade Mao Zedong wrote On the Protracted War in his Yanan cave-dwelling in May 1938.（一九三八年五月，毛泽东同志在延安窑洞里写了《论持久战》）
+1. China is self-sufficient in oil.（中国石油自给自足）
 ~~~~
-- 但注意下面几句中的介词并不位于名词或代词的前面。
-	- Where are you from?（你是什么地方人）
-	- What are you talking about?（你在讲什么）
-	- Do you remember the name of the book which the teacher referred us to?（你记得老师要我们参考的那本书的名字吗）
-	- The doctor has been sent for.（已经派人去请大夫了）
+#### 但注意下面几句中的介词并不位于名词或代词的前面。
+1. Where are you from?（你是什么地方人）
+1. What are you talking about?（你在讲什么）
+1. Do you remember the name of the book which the teacher referred us to?（你记得老师要我们参考的那本书的名字吗）
+1. The doctor has been sent for.（已经派人去请大夫了）
 ~~~~
 - 注意：介词亦可放在句首疑问词或关系代词之前。如：
-	- With whom did you get to the top of the mountain?（你和谁一起爬到山顶上去的）
-	- At what time do you begin work every day?（你每天几点开始工作）at 在口语中可省去。
-	- This is the book from which I got the story.（我就是从这本书知道这个故事的）
+1. With whom did you get to the top of the mountain?（你和谁一起爬到山顶上去的）
+1. At what time do you begin work every day?（你每天几点开始工作）at 在口语中可省去。
+1. This is the book from which I got the story.（我就是从这本书知道这个故事的）
 
 
 ~~~~
 ### 4 介词兼作副词和连词，有些介词可兼作副词和连词
+~~~~
 #### 4.1 有些介词可兼作副词。如：
-- I have never read the book before.（以前我从未读过这本书）
-- He looked around.（他向四周看看）
-- Please come over at once.（请你立刻过来）
-- Come in.（请进）
-- Tired as we were, we walked on.（我们尽管很累，但仍继续前进）
-- Come along; we’re late already.（快，我们已经迟了）
-- He went to Shanghai in 1958. He has never visited Beijing since.（他一九五八年到上海去了。从那以后他再没有来过北京）
+1. I have never read the book before.（以前我从未读过这本书）
+2. He looked around.（他向四周看看）
+3. Please come over at once.（请你立刻过来）
+~~~~
+4. Come in.（请进）
+5. Tired as we were, we walked on.（我们尽管很累，但仍继续前进）
+6. Come along; we’re late already.（快，我们已经迟了）
+7. He went to Shanghai in 1958. He has never visited Beijing since.（他一九五八年到上海去了。从那以后他再没有来过北京）
 ~~~~
 #### 4.2 有些介词可兼作连词。如：
-- The train had started before I got to the station.（在我到达火车站前，火车已经开了）
-- I have been home only once since I came to the army farm.（自到军垦农场以后，我- 只回过一次家）
+1. The train had started before I got to the station.（在我到达火车站前，火车已经开了）
+1. I have been home only once since I came to the army farm.（自到军垦农场以后，我- 只回过一次家）
 @@@
 
 ### 5 介词短语(preposition phrase)
@@ -111,18 +114,18 @@ with regard to（关于） with the exception of（除去，以…为例外）
 2. 作状语
 3. 作表语
 ~~~~
-1. 作定语
-- I have lost the key to the door of my room.（我把房间的钥匙丢了）
-- A friend in need is a friend indeed. （患难朋友才是真朋友）
+#### 6.1 作定语
+1. I have lost the key to the door of my room.（我把房间的钥匙丢了）
+1. A friend in need is a friend indeed. （患难朋友才是真朋友）
 ~~~~
-2. 作状语
-- Lu Xun wrote a lot of revolutionary articles under the white terror.（鲁讯在白色恐怖下写了许多革命的文章）
-- With Professor Liu’s help, the young man has made rapid progress in his studies.（通过刘教授的帮助，这个青年人的学习进步很快）
-- Lessons begin at eight a.m.（上午八点开始上课）
-3. 作表语
-- Lao Zhu and I are from the same county.（老朱和我是同一个县的人）
-- The houses are of wood.（这些房子是木料做的）
-- The child is like his mother.（这个孩子象他母亲）
+#### 6.2 作状语
+1. Lu Xun wrote a lot of revolutionary articles under the white terror.（鲁讯在白色恐怖下写了许多革命的文章）
+1. With Professor Liu’s help, the young man has made rapid progress in his studies.（通过刘教授的帮助，这个青年人的学习进步很快）
+1. Lessons begin at eight a.m.（上午八点开始上课）
+#### 6.3 作表语
+1. Lao Zhu and I are from the same county.（老朱和我是同一个县的人）
+1. The houses are of wood.（这些房子是木料做的）
+1. The child is like his mother.（这个孩子象他母亲）
 ~~~~
 ### 7 介词短语与短语介词的区别
 - 介词短语是由介词加宾语所构成，可以单独作为一个句子成分。短语介词是一个相当于介词的词组，不能单独作句子成分。试比较：

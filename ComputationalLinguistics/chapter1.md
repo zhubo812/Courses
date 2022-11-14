@@ -537,7 +537,7 @@ All grammar leak(Sapir1921)
 ~~~~
 共享词嵌入使模型能够在词嵌入矩阵中协作并共享一般的低级信息，这类信息常构成模型中大部分的参数。
 
-[Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)证明了共享词嵌入在多任务学习中的应用，引领了诸如预训练词嵌入和使用卷积神经网络（CNN）相关的方法，他们因此获得了2018年机器学习国际会议（ICML）的“时间测试”奖。
+- [Collobert,Jason(2008)](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)证明了共享词嵌入在多任务学习中的应用，引领了诸如预训练词嵌入和使用卷积神经网络（CNN）相关的方法，他们因此获得了2018年机器学习国际会议（ICML）的“时间测试”奖。
 ~~~~
 多任务学习应用于多项NLP任务，实际应用中通常预先定义共享参数，然后通过参数优化，学习到不同的共享模式。随着NLP各项任务对模型的泛化能力有更高的要求，使得多任务学习越来越重要。
 
@@ -545,9 +545,9 @@ All grammar leak(Sapir1921)
 ~~~~
 <font color = black>词嵌入（Word embeddings）</font>
 
-[Bengio et al. (2003)](https://jmlr.csail.mit.edu/papers/volume3/bengio03a/bengio03a.pdf)证明使用神经网络训练的语言模型可以生成更好的词向量,并且提出了很多优化训练的方法。
+- [Bengio et al. (2003)](https://jmlr.csail.mit.edu/papers/volume3/bengio03a/bengio03a.pdf)证明使用神经网络训练的语言模型可以生成更好的词向量,并且提出了很多优化训练的方法。
 
-[Mikolov et al. (2003)](https://arxiv.org/pdf/1310.4546.pdf)通过删除隐含层和近似目标来使这些词嵌入的训练更有效。
+- [Mikolov et al. (2003)](https://arxiv.org/pdf/1310.4546.pdf)通过删除隐含层和近似目标来使这些词嵌入的训练更有效。
 ~~~~
 <font color = black>word2vec--高效的词嵌入工具</font>
 
