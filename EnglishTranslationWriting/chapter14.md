@@ -1,2 +1,11 @@
-## 第十四章 短文的分类和写作手法
-(PARTERNS OF ESSAY WRITING DEVELOPMENT)
+## 第十三章 短文写作(ESSAY WRITING)
+~~~~
+Here is a question.
+
+- What are the difficulties in writing?
+~~~~
+Vocabulary?
+Grammar?
+Idea?
+~~~~
+L

@@ -1,1 +1,2 @@
-## 第十五章 实用写作技巧(SPECIAL SKILLS)
+## 第十四章 短文的分类和写作手法
+(PARTERNS OF ESSAY WRITING DEVELOPMENT)

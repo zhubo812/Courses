@@ -545,3 +545,59 @@ struggle.（这部电影描写一个九岁的男孩在革命斗争的大风暴�
 12. Today's vessels can find their prey using satellites and sonar, which were not available 50 years ago. That means a higher proportion of what is in the sea is being caught.
 13. One difficulty is that almost all of what is called behavioral science continues to trace behavior to states of mind, feelings, traits of character, human nature, and so on.
 ~~~~
+14. What money I have has been given to you.
+15. Lend me what reference books you have on the subject.
+16. The accident completely wiped out what little sight he had left.
+~~~~
+17. After sharing what little food they had, the old couple let the two angels sleep in their bed where they could have a good night's rest.
+
+~~~~
+18. Wild Bill Donovan would have loved the Internet. The American spymaster who built the Office of Strategic Services in World War II and later laid the roots for the CIA was fascinated with information. Donovan believed in using whatever tools come to hand in the“great game”of espionage-spying as a“profession”. 
+
+~~~~
+19. As is so often pointed out, knowledge is a two-edged weapon which can be used equally for good or evil.
+~~~~
+20. As is true of any developed society, in America a complex set of cultural signals, assumptions, and conventions underlies all social interrelationships.
+
+~~~~
+
+21. There is, as Robert Rubin, the treasury secretary, says, a“disjunction”between the mass of business anecdote that points to a leap in productivity and the picture reflected by the statistics.
+
+~~~~
+22. There is, as has been suggested, a growing body of research literature in journalism and broadcasting, but very little significant attention has been devoted to the study of the interview itself.
+~~~~
+##### as引导的非限定性定语从句在作文中的应用
+23. As is seen from the chart, the average hours a student spends on the computer per week have increased dramatically in the past decade.
+~~~~
+24. As is vividly betrayed in the cartoon above, a hen is promising what it should conduct to the public.
+
+
+~~~~
+25. As is obviously betrayed by the pictures above, three facts which are associated with smoking can be clearly realized by the public all over the world.
+
+26. As can be seen from the table/graph/figure, there is a marked increase/decline/favorable change in ...
+
+27. As we can see from the table/graph/figure, drastic/considerable/great changes have taken place in ... over the period of time from ... year to ... year.
+
+~~~~
+
+28. Now the tide appears to be turning. As personal injury claims continue as before, some courts are beginning to side with defendants, especially in cases where a warning label probably wouldn't have changed anything.
+~~~~
+29. Cheating is most likely in situations where the vital interests are high and the chances of getting caught are low.
+~~~~
+30. He has reached the point where a change is needed.
+~~~~
+##### 如何区分where引导的定语从句和地点状语从句？
+- 若是定语从句，则where前边必然有被修饰的地点名词；
+- 若where前边没有被修饰的名词，则视为地点状语从句。请比较：
+
+31. 45 percent of the world's population live where mosquitoes transmit malaria.
+32. Approximately 45 percent of the world's population live in the climate zone where mosquitoes transmit malaria.
+
+~~~~
+##### 特殊关系副词whereby
+
+33. The definition also excludes the majority of teachers, despite the fact that teaching has traditionally been the method whereby many intellectuals earn their living.
+
+~~~~
+34. He sees the firm's outsider status as the key to its success. Straitford's briefs don't sound like the usual Washington back-and-forthing, whereby agencies avoid dramatic declarations on the chance they might be wrong. 
