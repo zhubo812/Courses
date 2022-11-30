@@ -7,13 +7,16 @@
 - [第六章 语气和虚拟语气](/Courses/EnglishTranslationWriting/chapter6.html)
 - [第七章 非限定动词](/Courses/EnglishTranslationWriting/chapter7.html)
 - [第八章 介词](/Courses/EnglishTranslationWriting/chapter8.html) 
+@@@
 - [第九章 连词和感叹词](/Courses/EnglishTranslationWriting/chapter9.html)
 - [第十章 并列句和复合句](/Courses/EnglishTranslationWriting/chapter10.html)
 - [第十一章 独立成分及形式主语](/Courses/EnglishTranslationWriting/chapter11.html)
 - [第十二章 省略和倒装](/Courses/EnglishTranslationWriting/chapter12.html)
-- [第十三章 短文写作](/Courses/EnglishTranslationWriting/chapter13.html)
-- [第十四章 短文的分类和写作手法](/Courses/EnglishTranslationWriting/chapter14.html)
-- [第十五章 实用写作技巧](/Courses/EnglishTranslationWriting/chapter15.html)
-- [第十六章 句子写作技巧指南](/Courses/EnglishTranslationWriting/chapter16.html)
-- [第十七章 以阅读带动写作](/Courses/EnglishTranslationWriting/chapter17.html)
+- [第十三章 英语惯用法及其翻译](/Courses/EnglishTranslationWriting/chapter13.html)
+@@@
+- [第十四章 短文写作](/Courses/EnglishTranslationWriting/chapter14.html)
+- [第十五章 短文的分类和写作手法](/Courses/EnglishTranslationWriting/chapter15.html)
+- [第十五章 实用写作技巧](/Courses/EnglishTranslationWriting/chapter16.html)
+- [第十六章 句子写作技巧指南](/Courses/EnglishTranslationWriting/chapter17.html)
+- [第十七章 以阅读带动写作](/Courses/EnglishTranslationWriting/chapter18.html)
 
